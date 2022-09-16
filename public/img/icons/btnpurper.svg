@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="50" height="51" viewBox="0 0 50 51">
+  <defs>
+    <filter id="Retângulo_22" x="0" y="0" width="50" height="51" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Grupo_764" data-name="Grupo 764" transform="translate(9 6)">
+    <g transform="matrix(1, 0, 0, 1, -9, -6)" filter="url(#Retângulo_22)">
+      <path id="Retângulo_22-2" data-name="Retângulo 22" d="M13,0h4A15,15,0,0,1,32,15v8A10,10,0,0,1,22,33H5a5,5,0,0,1-5-5V13A13,13,0,0,1,13,0Z" transform="translate(9 6)" fill="#5e3d95"/>
+    </g>
+    <circle id="Elipse_5" data-name="Elipse 5" cx="2" cy="2" r="2" transform="translate(14 10)" fill="#fff"/>
+    <circle id="Elipse_6" data-name="Elipse 6" cx="2" cy="2" r="2" transform="translate(14 15)" fill="#fff"/>
+    <circle id="Elipse_7" data-name="Elipse 7" cx="2" cy="2" r="2" transform="translate(14 20)" fill="#fff"/>
+  </g>
+</svg>

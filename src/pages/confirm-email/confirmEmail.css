@@ -1,0 +1,22 @@
+.confirm-email-page{
+    background-color: #F0F0F0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.confirm-email-page img{
+    width: 300px;
+    z-index: 2;
+}
+.message-confirmEmail{
+    background-color: #fff;
+    max-width: 400px;
+    border-radius: 20px;
+    padding: 30px;
+    margin-top: -60px;
+    text-align: center;
+    
+}

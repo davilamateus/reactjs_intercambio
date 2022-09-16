@@ -1,0 +1,54 @@
+.message-page{
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.message-page-bg{
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    z-index: 2;
+    background-color: rgba(142, 142, 142, 0);
+    backdrop-filter: blur(0px);
+    transition: 0.3s;
+    
+}
+
+.message-bg-animation{
+    background-color: rgba(142, 142, 142, 0.103);
+    backdrop-filter: blur(2px);
+}
+
+.message-box{
+    z-index: 3;
+    background-color: #fff;
+    width: max-content;
+    height: max-content;
+    max-width: 400px;
+    border-radius: 10px;
+    text-align: center;
+    margin-top: 500px;
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.message-box-animation{
+    margin-top: 0px;
+    opacity: 1;
+}
+
+.message-box p{
+    padding-left: 30px;
+    padding-right: 30px;
+    font-size: 14px;
+}
+

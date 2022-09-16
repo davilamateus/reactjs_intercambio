@@ -1,0 +1,164 @@
+body, page{
+  padding: 0;
+  margin: auto 0;
+  font-family: 'Montserrat';
+  background-color: #F7F7F7;
+}
+
+p{
+  color: rgba(0, 0, 0, 0.49);
+  font-size: 14px;
+}
+
+hr{
+  width: 90%;
+  opacity: 0.2;
+  margin-bottom: 50px;
+}
+
+h5{
+  font-weight: 600;
+  margin: 2px;
+}
+
+h3{
+  margin: 0;
+  padding: 0;
+  margin-top: 30px;
+}
+h6{
+  padding: 0;
+  margin: 10px;
+  font-size: 14px;
+  color: #585858;
+}
+input{
+  border: none;
+  border-bottom: 1px solid rgba(178, 178, 178, 0.462);
+  margin-bottom: 50px;
+  width: 200px;
+}
+
+input[type="date"] { 
+  background: transparent;
+  color: rgb(93, 93, 93);
+  font-size: 15px;
+  padding: 5px 20px;
+  margin-top: 10px;
+}
+
+select{
+  margin-bottom: 30px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 10px;
+  background-color: #F7F7F7;
+  padding: 10px 20px;
+  min-width: 200px;
+}
+
+.input-money{
+  padding: 10px 20px;
+
+}
+
+
+button{
+  cursor: pointer;
+}
+
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
+
+.btn-success, .btn-error, .btn-atention{
+  width: 260px;
+  height: 40px;
+  border: none;
+  border-radius: 10px;
+  transition: 0.3s;
+  
+}
+
+.btn-success{
+  background-color: #9AC344;
+
+}
+
+
+.btn-atention{
+  background-color: #eee533;
+
+}
+
+.btn-success:hover, .btn-error:hover, .btn-atention:hover{
+  width: 270px;
+  opacity: 0.9;
+
+}
+.btn-error{
+  width: 260px;
+  height: 40px;
+  border: none;
+  border-radius: 10px;
+  background-color: #E84660;
+  transition: 0.3s;
+  color: #fff;
+  
+}
+
+.btn-error:hover{
+  width: 270px;
+  background-color: #E84660;
+
+
+}
+
+.btn-selections{
+  width: 260px;
+  height: 37px;
+  margin-bottom: 7px;
+  border: none;
+  color: #9f9f9f;
+  border-radius: 5px;
+}
+
+.btn-selected{
+  background-color: #6F49A1;
+  color: #fff;
+}
+
+
+.opacityNone{
+  display: none!important;
+  opacity: 0;
+}
+.opacityShow{
+  display: inline;
+  opacity: 1;
+}
+
+.space{
+  margin: 30px;
+}
+
+.space-medium{
+  margin: 20px;
+}
+
+.space-button{
+  margin-bottom: 20px;
+}
+.btn-inative{
+  opacity: 0.3!important;
+  cursor: none!important;
+}
+.box-header{
+  display: flex;
+  justify-content: space-between;
+    
+}
