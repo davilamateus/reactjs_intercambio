@@ -15,7 +15,6 @@ const BlogDashboard = ({countryId}) => {
         if(countryId !== undefined){
 
        
-        console.log(`O pais e ${countryId}`)
         async function loadBlog(){
           const res =   await Api.get(`/blog/articles?country=${countryId}`)
         
@@ -26,13 +25,6 @@ const BlogDashboard = ({countryId}) => {
     },[countryId])
 
 
-
-
-
-    useEffect(()=>{
-
-        console.log(article)
-    },[article])
 
 
     

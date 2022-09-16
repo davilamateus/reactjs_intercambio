@@ -5,6 +5,7 @@ import Header from '../../components/header/Header';
 import {useState, useEffect} from 'react'
 import './home.css'
 import WeatherComponet from '../../components/weather/WeatherComponet';
+import Radio from './../../components/radio//Radio'
 
 const Home = () => {
 
@@ -45,13 +46,13 @@ const Home = () => {
       }
     },[])
 
-    console.log(user)
 
   return (
     <>  
         <div className='page-container'>
           <WeatherComponet country={user.country} city={user.city}/>
           <BlogDashboard countryId={user.country}/>
+          <Radio country={user.country}/>
         </div>
     </>
   )

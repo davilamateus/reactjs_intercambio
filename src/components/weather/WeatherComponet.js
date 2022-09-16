@@ -12,7 +12,6 @@ const WeatherComponet = ({city,country}) => {
 
 
         async function requestApi () {
-         console.log(city)
              let  api = `https://api.openweathermap.org/data/2.5/weather?q=${city},${country}&appid=82dc6076ac2dc00fcd49a3b1d3f698fc`
              fetch(api).then(response => response.json()).then(result => setWeather(result)).catch(()=>{setWeather(false)});
          }
@@ -30,7 +29,6 @@ const WeatherComponet = ({city,country}) => {
          
         },[country])
         
-console.log(weather)
 
 
   return (
