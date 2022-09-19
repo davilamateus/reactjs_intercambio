@@ -55,6 +55,8 @@ const Home = () => {
       }
     },[])
 
+
+    console.log(user)
     /*
 
     
@@ -74,9 +76,9 @@ const Home = () => {
               <BlogDashboard countryId={user.country}/>
               <Radio country={user.country}/>
               <ToDoList/>
-              <Ads/>
+              <Ads country={user.country}/>
               <Money/>
-              <Finance/>
+              <Finance goal={user.goal}/>
               <Study/>
               <DaysToTravel/>
               <InforsBtns/>

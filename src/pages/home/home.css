@@ -1,6 +1,8 @@
 .page-container{
     height: 100vh;
     margin-left: 100px;
+    transform: scale(0.93);
+    
     
 
 }
@@ -24,7 +26,8 @@
     display: flex;
     align-items: center;   
     justify-content: space-between;
-    padding: 10px 60px;
+    padding: 0px 60px;
+    padding-bottom: 10px;
     max-width: 1200px;
     margin: 0 auto;
 }
@@ -40,11 +43,14 @@
     grid-column-start: 8;
     grid-row-start: 1;
     grid-row-end: 2;
+    box-shadow: 5px 2px 20px rgba(0, 0, 0, 0.063);
+
 }
 .perfil-box{
     grid-column-end: 3;
     grid-row-start: 1;
     grid-row-end: 2;
+
 }
 
 .city-div{
@@ -52,6 +58,7 @@
     grid-column-end: 11;
     grid-row-start: 1;
     grid-row-end: 2;
+
 }
 
 .blog-div{
@@ -62,6 +69,7 @@
 }
 
 .radio-box{
+    box-shadow: 5px 2px 20px rgba(0, 0, 0, 0.063);
     grid-column-start: 1;
     grid-column-end: 4;
     grid-row-start: 5;
@@ -74,6 +82,8 @@
     grid-column-end: 9;
     grid-row-start: 1;
     grid-row-end: 5;
+    box-shadow: 5px 2px 20px rgba(0, 0, 0, 0.063);
+
 }
 
 .ads-box{
@@ -81,6 +91,8 @@
     grid-column-end: 12;
     grid-row-start: 5;
     grid-row-end: 9;
+    box-shadow: 5px 2px 20px rgba(0, 0, 0, 0.063);
+
 }
 
 .money-div{
@@ -88,18 +100,24 @@
     grid-column-end: 9;
     grid-row-start: 1;
     grid-row-end: 2;
+    box-shadow: 5px 2px 20px rgba(0, 0, 0, 0.063);
+
 }
 .finance-box{
     grid-column-start: 7;
     grid-column-end: 9;
     grid-row-start: 2;
     grid-row-end: 4; 
+    box-shadow: 5px 2px 20px rgba(0, 0, 0, 0.063);
+
 }
 .study-box{
     grid-column-start: 7;
     grid-column-end: 9;
     grid-row-start: 4;
     grid-row-end: 9; 
+    box-shadow: 5px 2px 20px rgba(0, 0, 0, 0.063);
+
 }
 
 .daysToTravel-box{
@@ -107,6 +125,8 @@
     grid-column-end: 14;
     grid-row-start: 1;
     grid-row-end: 2; 
+    box-shadow: 5px 2px 20px rgba(0, 0, 0, 0.063);
+
 
 }
 .inforbtnsbox{

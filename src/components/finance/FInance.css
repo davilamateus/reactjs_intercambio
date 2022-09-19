@@ -5,3 +5,48 @@
     height: 300px;
     margin-left: 10px;
 }
+
+.finance-container {
+    display: flex;
+}
+
+.finance-right{
+    width: 154px;
+    margin-top: 40px;
+    margin-left: 15px;
+}
+
+.finance-left{
+    margin-left: 15px;
+}
+
+.finance-left h2, .finance-left h4{
+    margin: 0px;
+    padding: 0;
+}
+
+.finance-left h2{
+    color: #9EC36E;
+}
+
+.finance-lessToFoal{
+    color: #FB355E;
+}
+
+.finance-goal{
+    color: #5E3D95;
+}
+
+.finance-left p{
+    padding: 0;
+    margin: 0;
+    margin-top: 20px;
+    margin-bottom: 5px;
+}
+
+.finance-porcents{
+    font-weight: 800;
+    color: #000;
+    margin-top: -88px;
+    margin-left: 66px;
+}

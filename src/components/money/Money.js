@@ -12,10 +12,8 @@ const Money = () => {
 
   useEffect(()=>{
     async function requestApi () {
-      console.log('kalskdls')
       let  api = "https://economia.awesomeapi.com.br/json/daily/EUR-BRL/15"
       fetch(api).then(response => response.json()).then(result => setData(result)).catch(()=>{setData(undefined)});
-      console.log(api)
     }
     requestApi()
   },[])
@@ -89,16 +87,15 @@ const Money = () => {
   useEffect(()=>{
 
     if(data !==undefined){
-      console.log(data)
 
-    if(data[1].ask<data[2].ask){
-      setColor('#9dc3660d')
-      setColorBorder('#9DC366')
+        if(data[1].ask<data[2].ask){
+          setColor('#9dc3660d')
+          setColorBorder('#9DC366')
 
-    } else{
-      setColor('#FA385F0a')
-      setColorBorder('#FA3850')
-    }
+        } else{
+          setColor('#FA385F0a')
+          setColorBorder('#FA3850')
+        }
           
   }
   },[data])
