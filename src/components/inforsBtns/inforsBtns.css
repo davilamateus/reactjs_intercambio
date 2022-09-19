@@ -1,0 +1,21 @@
+.inforbtnsbox{
+    margin-left: -10px;
+    width: 230px;
+    margin-top: 5px;
+}
+
+.infor-bts-rows div{
+    background-color: #fff;
+    width: 105px;
+    height: 85px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.infor-bts-rows{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}

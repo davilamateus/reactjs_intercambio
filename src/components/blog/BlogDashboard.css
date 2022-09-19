@@ -9,7 +9,7 @@
     width: 300px;
     background-color: #fff;
     padding: 10px;
-    height: 470px;
+    height: 450px;
     border-radius: 20px;
 }
 
@@ -40,6 +40,6 @@
 .btn-blog button{
     background: none;
     border: none;
-    margin-top: 14px;
+    margin-top: 4px;
     color: rgb(115, 115, 115);
 }

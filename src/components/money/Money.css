@@ -1,0 +1,31 @@
+.money-div{
+    background-color: #fff;
+    width: 290px;
+    height: 150px;
+    border-radius: 20px;
+    overflow: hidden;
+    margin-left: 10px;
+
+}
+
+
+  #myChart{
+    z-index: 2;
+    margin-top: 20px;
+    margin-left: -140px;
+    height: 130px!important;
+
+  }
+
+.box-Chart{
+    width:312px;
+    height: 140px;
+    overflow: hidden;
+}
+
+.Cot-number{
+    margin-bottom: -138px;
+    margin-top: 70px;
+    margin-left: 14px;
+    font-size: 22px;
+}

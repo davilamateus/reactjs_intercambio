@@ -1,5 +1,117 @@
 .page-container{
     height: 100vh;
     margin-left: 100px;
-    margin-top: 30px;
+    
+
+}
+.img-home{
+    position: absolute;
+    bottom: -50px;
+    width: 500px;
+    right: 0;
+}
+
+.home-medium{
+    display: grid;
+    grid-template-columns: repeat(11, 100px);
+    grid-template-rows: repeat(5, 150px);
+    justify-content: center;
+    gap: 10px;
+}
+
+
+.home-top{
+    display: flex;
+    align-items: center;   
+    justify-content: space-between;
+    padding: 10px 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.dashboard-title{
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+
+.seach-box{
+    grid-column-start: 8;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+.perfil-box{
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+
+.city-div{
+    grid-column-start: 1;
+    grid-column-end: 11;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+
+.blog-div{
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 2;
+    grid-row-end: 5;
+}
+
+.radio-box{
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 5;
+    grid-row-end: 6;
+
+}
+
+.todolist-box{
+    grid-column-start: 4;
+    grid-column-end: 9;
+    grid-row-start: 1;
+    grid-row-end: 5;
+}
+
+.ads-box{
+    grid-column-start: 4;
+    grid-column-end: 12;
+    grid-row-start: 5;
+    grid-row-end: 9;
+}
+
+.money-div{
+    grid-column-start: 7;
+    grid-column-end: 9;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+.finance-box{
+    grid-column-start: 7;
+    grid-column-end: 9;
+    grid-row-start: 2;
+    grid-row-end: 4; 
+}
+.study-box{
+    grid-column-start: 7;
+    grid-column-end: 9;
+    grid-row-start: 4;
+    grid-row-end: 9; 
+}
+
+.daysToTravel-box{
+    grid-column-start:10;
+    grid-column-end: 14;
+    grid-row-start: 1;
+    grid-row-end: 2; 
+
+}
+.inforbtnsbox{
+    grid-column-start:10;
+    grid-column-end: 14;
+    grid-row-start: 2;
+    grid-row-end: 4; 
 }

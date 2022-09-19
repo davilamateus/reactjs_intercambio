@@ -92,8 +92,9 @@ const ForgetPassword = () => {
     <div className='forget-password-page'>
         <img className='person-img' src='./../../../img/3dperson3.png' alt="3D Person" />
         <form onClick={(e)=>e.preventDefault()} >
-             <h3>Esqueci a senha.</h3>
-            <p className='forget-description'>Digite o seu endereço de email que enviaremos um link com a página para a redefinição de senha.</p>
+             <h3>Redefinindo a senha.</h3>
+            <p className='forget-description'>Digite uma nova senha.</p>
+            <hr />
         <label>
                     <h5>Nova senha:</h5>
                     <input 

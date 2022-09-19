@@ -12,7 +12,7 @@
 }
 
 .radio-controls{
-    width: 175px;
+    width: 162px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -39,7 +39,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 90px;
+    width: 100px;
     
 }
 

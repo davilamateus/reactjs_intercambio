@@ -59,7 +59,6 @@ useEffect(()=>{
     } else {setNextArticleStatus(true)}
  
 
- 
 
 
 },[page])
@@ -82,7 +81,7 @@ useEffect(()=>{
                 <div className="blog-container">
                     <div style={{backgroundImage: `url("${article[page].img}")`}} className="blog-img"></div>
                     <h3>{article[page].title}</h3>
-                    <p>{article[page].description}</p>
+                    <p>{article[page].description.split('').slice(0,150).join('')}...</p>
                     <button>Continuar lendo</button>
                 </div>
             </div>

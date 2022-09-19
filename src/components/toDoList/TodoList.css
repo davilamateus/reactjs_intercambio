@@ -1,0 +1,53 @@
+.todolist-box{
+    width: 320px;
+    height: 630px;
+    background-color: #fff;
+    border-radius: 20px;
+    overflow: hidden;
+}
+.todolist-item{
+    background-color: #f7f7f7;
+    width: 95%;
+    margin-left: 8px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+    align-items: center;
+}
+
+.todolist-item p{
+    padding: 10px 10px;
+    margin: 0;
+}
+
+.todolist-item button{
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    margin-right: 10px;
+    font-size: 25px;
+    margin-top: -10px;
+}
+
+.todolist-comply{
+    background-color:#FA385F ;
+}
+
+.todolist-comply p{
+    color: #fff!important;
+}
+
+.todolist-comply button{
+    color: #fff!important;
+}
+
+.todolist-scrol{
+    height: 610px;
+    overflow: scroll;
+}
+
+.todolist-scrol::-webkit-scrollbar {
+    display: none;
+  }

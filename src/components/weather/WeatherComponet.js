@@ -32,7 +32,6 @@ const WeatherComponet = ({city,country}) => {
 
 
   return (
-      <div>
        <div className='city-div'>
         <div className="city-box">
             <h1>{city}</h1>
@@ -47,7 +46,6 @@ const WeatherComponet = ({city,country}) => {
 
             :<h1>.....</h1>}
         </div>
-    </div>
   )
 }
 
