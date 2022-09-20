@@ -128,8 +128,8 @@ const Finance = ({goal}) => {
   return (
     <div className='finance-box'>
       <div className="box-header">
-                <h6>Lista de Tarefas</h6>
-                <img src="./../../../img/icons/addbtn.svg" alt="Adicionar" />
+                <h6>Financeiro</h6>
+                <img src="./../../../img/icons/btnpurper.svg" alt="Adicionar" />
           </div>
           <div className='finance-container'>
             {finance !== undefined && total? 
@@ -159,7 +159,36 @@ const Finance = ({goal}) => {
             </>
             
             
-            :''}
+            :
+            
+<>
+
+        <div className="finance-left">
+                  <div className="finance-left-top">
+                    <p>Investido:</p>
+                    <h2>{0}</h2>
+                  </div>
+                  <div className="finance-left-bottom">
+                    <div>
+                      <p>Faltam:</p>
+                      <h4 className='finance-lessToFoal'>{goal}</h4>
+                    </div>
+                    <div>
+                      <p>Planejamento:</p>
+                      <h4 className='finance-goal'>{goal}</h4>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="finance-right">
+                <canvas id="myChart2" width="100px" height="50px"></canvas>
+                <p className='finance-porcents'>0%</p>
+                </div>
+                
+                </>                
+
+            
+            }
 
             </div>
     </div>

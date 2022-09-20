@@ -29,11 +29,11 @@ const CreateUserOptions = () => {
 
   const country = [
     {title:'Selecione um pais', slug:null, city:[{title:'Selecione uma cidade'}]},
-    {title:'Irlanda', slug:'ireland', city:[{title:'Selecione uma cidade'},{title:'Dublin'},{title:'Cork'},{title:'Galway'},{title:'Limerick'},{title:'Waterford'},]},
-    {title:'Canadá', slug:'canada', city:[{title:'Selecione uma cidade'},{title:'Quebec'},{title:'Ottawa'},{title:'Montreal'},{title:'Toronto'},{title:'Vancouver'},]},
-    {title:'Estados Unidos', slug:'usa', city:[{title:'Selecione uma cidade'},{title:'Quebec'},{title:'Ottawa'},{title:'Montreal'},{title:'Toronto'},{title:'Vancouver'},]},
-    {title:'Austrália', slug:'australia', city:[{title:'Selecione uma cidade'},{title:'New York'},{title:'Los Angeles'},{title:'Chicago'},{title:'Denver'},{title:'California'},]},
-    {title:'Nova Zelândia', slug:'newzeland', city:[{title:'Selecione uma cidade'},{title:'Wellington'},{title:'Christchurch'},{title:'Queenstown'},]},
+    {title:'Irlanda', slug:'ie', city:[{title:'Selecione uma cidade'},{title:'Dublin'},{title:'Cork'},{title:'Galway'},{title:'Limerick'},{title:'Waterford'},]},
+    {title:'Canadá', slug:'ca', city:[{title:'Selecione uma cidade'},{title:'Quebec'},{title:'Ottawa'},{title:'Montreal'},{title:'Toronto'},{title:'Vancouver'},]},
+    {title:'Estados Unidos', slug:'eu', city:[{title:'Selecione uma cidade'},{title:'Quebec'},{title:'Ottawa'},{title:'Montreal'},{title:'Toronto'},{title:'Vancouver'},]},
+    {title:'Austrália', slug:'au', city:[{title:'Selecione uma cidade'},{title:'New York'},{title:'Los Angeles'},{title:'Chicago'},{title:'Denver'},{title:'California'},]},
+    {title:'Nova Zelândia', slug:'nz', city:[{title:'Selecione uma cidade'},{title:'Wellington'},{title:'Christchurch'},{title:'Queenstown'},]},
   ]
 
 
@@ -108,9 +108,12 @@ function nextConfig(){
 
 
     Api.post('/user/useroptions/', body, customConfig).then((res)=>{
-
     })
 
+    
+    Api.post('/admin/study/create', body, customConfig).then((res)=>{
+
+    })
 
 
   }

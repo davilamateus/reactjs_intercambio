@@ -1,7 +1,7 @@
 body, page{
   padding: 0;
   margin: auto 0;
-  font-family: 'Montserrat';
+  font-family: 'Lato';
   background-color: #F7F7F7;
 }
 
@@ -161,4 +161,8 @@ button:focus {
   display: flex;
   justify-content: space-between;
     
+}
+
+.box-header h6{
+  padding: 8px;
 }

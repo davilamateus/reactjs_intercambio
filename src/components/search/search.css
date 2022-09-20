@@ -1,6 +1,30 @@
 .seach-box{
     width: 300px;
-    height: 60px;
+    height: 45px;
     background-color: #fff;
-    border-radius: 20px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.search-btn{
+    background: none;
+    border: none;
+    margin-top: -0px;
+    margin-right: -10px;
+}
+
+
+.search-input {
+    height: 40px;
+    margin: 0;
+    padding: 0;
+    margin-left: 20px;
+    font-size: 18px;
+    border-bottom: 1px solid #f7f7f7;
+}
+
+.search-input::placeholder{
+    color: #c9c9c9;
+    font-style: italic;
 }

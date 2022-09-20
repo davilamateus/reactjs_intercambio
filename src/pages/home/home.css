@@ -1,16 +1,20 @@
 .page-container{
     height: 100vh;
     margin-left: 100px;
-    transform: scale(0.93);
     
     
 
 }
+
+.dashboard-title{
+    font-weight: 800;
+    margin: 0;
+}
 .img-home{
     position: absolute;
-    bottom: -50px;
-    width: 500px;
-    right: 0;
+    bottom: -20px;
+    width: 300px;
+    right: -160px;
 }
 
 .home-medium{

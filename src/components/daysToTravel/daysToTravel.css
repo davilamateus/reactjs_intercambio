@@ -3,4 +3,48 @@
     border-radius: 20px;
     width: 230px;
     margin-left: -10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
+.daysToTravel-city{
+    text-transform: capitalize;
+
+}
+
+.daysToTravel-box h4{
+    padding: 0;
+    margin: 0;
+    font-size: 14px;
+}
+
+
+.daysToTravel-box h1{
+    padding: 0;
+    margin: -10px;
+    font-size: 80px;
+    color: #FB355E;
+}
+
+.infor-bts-rows div a{
+    text-decoration: none;
+    color: #000;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+
+}
+.infor-bts-rows div{
+    height: 100%;
+}
+
+.infor-bts-rows div a p {
+    font-size: 12px!important;
+}
+

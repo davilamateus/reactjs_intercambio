@@ -62,14 +62,15 @@ const Home = () => {
     
     */
 
+   
 
   return (
     <>  
         <div className='page-container'>
           <div className='home-top'>
-            <div className='dashboard-title'>Dashboad</div>
+            <h2 className='dashboard-title'>Dashboad</h2>
               <Seach/>
-              <Perfil/>
+              <Perfil userPhoto={user.photo}/>
           </div>
           <div className="home-medium">
               <WeatherComponet country={user.country} city={user.city}/>
@@ -80,12 +81,11 @@ const Home = () => {
               <Money/>
               <Finance goal={user.goal}/>
               <Study/>
-              <DaysToTravel/>
+              <DaysToTravel when={user.when} city={user.city}/>
               <InforsBtns/>
 
 
-          <img  className='img-home' src="./../../../img/3dpersoninvert.svg"  />
-
+              <img  className='img-home' src="./../../../img/3dpersoninvert.png"  />
           </div>
 
 

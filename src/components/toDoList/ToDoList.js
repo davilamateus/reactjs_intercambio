@@ -33,14 +33,13 @@ const ToDoList = () => {
     <div className='todolist-box'>
            <div className="box-header">
                 <h6>Lista de Tarefas</h6>
-                <img src="./../../../img/icons/addbtn.svg" alt="Adicionar" />
+                <img src="./../../../img/icons/btnpurper.svg"  />
           </div>
           <div className='todolist-scrol'>
             {toDoList !== undefined ? 
               toDoList.map((item)=>(
                 <div className={`todolist-item ${item.status == true? 'todolist-comply':''}`} key={item.id}>
                   <p>{item.title}</p>
-                  <button className="todolist-bts">...</button>
                 </div>
               ))
             
