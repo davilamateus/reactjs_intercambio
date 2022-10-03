@@ -1,8 +1,7 @@
 .daysToTravel-box{
-    background-color: #fff;
-    border-radius: 20px;
-    width: 230px;
-    margin-left: -10px;
+    background-color: var(--9);
+    border-radius: 4px;
+    width: 220px;
     display: flex;
     justify-content: center;
     align-items: center;

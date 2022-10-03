@@ -1,0 +1,131 @@
+.finance-grafics{
+    background-color: var(--9);
+    width: 120px;
+    height: 150px;
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.finance-grafic-bar{
+    margin-top: auto;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+}
+.finance-grafic-text{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    width: 100px;
+    margin-left: 10px;
+}
+
+.finance-grafic-text p{
+    color: var(--7);
+    margin: 0;
+}
+.finance-grafic-text h5{
+    margin: 5px 0px;
+    font-size: 17px;
+    color: var(--5);
+}
+
+.finance-grafics-box{
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.finance-grafic-total{
+    width: 200px;
+    height: 150px;
+    background-color: var(--9);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 4px;
+}
+.finance-grafic-total-grafic{
+    width: 100px;
+    margin-right: 10px;
+}
+
+.finance-table{
+    width: 830px;
+    height: 400px;
+    background-color: var(--9);
+    margin: 0 auto;
+    margin-top: 20px;
+    padding: 10px;
+}
+.finance-table::-webkit-scrollbar {
+    display: none;
+  }
+
+.finance-table-box{
+    width: 100%;
+}
+
+.finance-table table{
+    width: 100%;
+    margin: 0 auto;
+    border-collapse: collapse;
+    height: 400px;
+    overflow: hidden;
+    
+    
+}
+
+.finance-table-title{
+    width: 400px;
+    margin-bottom: 10px!important;
+}
+
+.finance-table-header {
+    border-bottom: 1px solid var(--11);
+    font-weight: 800;
+    margin-bottom: 20px!important;
+    height: 40px;
+    padding: 20px;
+    margin-left: 10px!important;
+
+    
+}
+
+.finance-table tablet tr{
+    padding: 10px;
+
+}
+
+
+
+.finance-table-item:hover{
+    background-color: var(--8);
+}
+
+.finance-table-btn button{
+    background: none;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.6;
+    transition: 0.4s;
+}
+
+.finance-table-btn button:hover{
+    opacity: 1;
+}
+
+.finance-table-btn img{
+    width: 16px;
+    margin-right: 3px;
+
+}
+.finance-table-btn {
+    flex-direction: row;
+    display: flex;
+    height: 50px;
+}
+

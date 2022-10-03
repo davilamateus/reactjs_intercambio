@@ -5,7 +5,7 @@
     min-height: 100vh;
     justify-content: center;
     align-items: center;
-    background-color: #F0F0F0;
+    background-color: var(--8);
 }
 .login-div-left{
     width: 400px;
@@ -16,13 +16,13 @@
 .login-div-right{
     width: 90vw;
     height: 97vh;
-    background-color: #fff;
+    background-color: var(--9);
     border-top-left-radius: 50px;
     border-bottom-left-radius: 50px;
 }
 
 .login-left-text {
-    width: 370px;
+    width: 320px;
 }
 
 .login-logo{
@@ -67,4 +67,36 @@
     0% { transform: translate(-70px,   0px); }
     50%  { transform: translate(0, 50px); }
     100%   { transform: translate(-70px, -0px); }   
+}
+
+
+@media only screen and (max-width: 700px) {
+
+
+    .login-div{
+        flex-direction: column-reverse;
+        margin: 0 auto!important;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .login-div-right{
+        border-radius: 10px;
+        width: 95vw;
+        margin-top: 10px;
+    }
+    .login-3dperson{
+        width: 200px;
+        position: absolute;
+
+        margin-top: 50px;
+        margin-left: -70px;
+    }
+    .login-left-top{
+        height: 100px;
+        margin-top: -120px;
+    }
+    .login-left-text{
+    display:none;
+    }
 }

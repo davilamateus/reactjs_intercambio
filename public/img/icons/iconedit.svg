@@ -1,0 +1,7 @@
+<svg id="Icons_Actions_ic-actions-settings" data-name="Icons / Actions / ic-actions-settings" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+  <rect id="Retângulo_159" data-name="Retângulo 159" width="24" height="24" fill="none"/>
+  <g id="ic-actions-settings" transform="translate(0 -0.01)">
+    <path id="Caminho_37" data-name="Caminho 37" d="M10.43,3.39l.09-.22a2,2,0,0,1,3.73.16l.07.23A2,2,0,0,0,17,4.8l.21-.09a2,2,0,0,1,2.53,2.75l-.11.21a2,2,0,0,0,1,2.76l.22.09a2,2,0,0,1-.16,3.73l-.23.07A2,2,0,0,0,19.2,17l.09.21a2,2,0,0,1-2.75,2.53l-.21-.11a2,2,0,0,0-2.76,1l-.09.22a2,2,0,0,1-3.73-.16l-.07-.23A2,2,0,0,0,7,19.2l-.21.09a2,2,0,0,1-2.53-2.75l.11-.21a2,2,0,0,0-1-2.76l-.22-.09a2,2,0,0,1,.16-3.73l.23-.07A2,2,0,0,0,4.8,7l-.09-.21A2,2,0,0,1,7.46,4.28l.21.11a2,2,0,0,0,2.76-1Z" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="bevel" stroke-width="1.5" fill-rule="evenodd"/>
+    <circle id="Elipse_16" data-name="Elipse 16" cx="3.91" cy="3.91" r="3.91" transform="translate(8.09 8.09)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="bevel" stroke-width="1.5"/>
+  </g>
+</svg>

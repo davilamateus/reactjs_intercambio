@@ -1,7 +1,9 @@
-import {useEffect, useState} from 'react'
+import {useEffect, useState, useRef} from 'react'
 import './FInance.css'
 import Api from './../../axios/Axios'
 import Chart from 'chart.js/auto';
+import Skeleton, { SkeletonTheme } from 'react-loading-skeleton'
+
 
 
 
@@ -9,10 +11,12 @@ const Finance = ({goal}) => {
 
   const token = sessionStorage.getItem('token');
 
-  const [finance,setFinance] = useState(undefined)
+  const [finance,setFinance] = useState([{value:0}])
   const [total,setTotal] = useState(0)
   const [lessToGoal ,setLessToGoal] = useState(0)
   const [porcents ,setPorcents] = useState(0)
+  const [graficStatus, setGraficStatus] = useState(false)
+  const [loading,setLoading] = useState(false)
 
   useEffect(()=>{
 
@@ -27,7 +31,8 @@ const Finance = ({goal}) => {
 
     async function loadToDoList(){
       await Api('/user/finance' ,customConfig).then((data)=>{
-        setFinance(data.data.data)
+        setFinance(data.data)
+        setLoading(true)
       })
     }
     loadToDoList()
@@ -35,6 +40,21 @@ const Finance = ({goal}) => {
   
 
 
+
+  
+      
+
+  const ctx2  = document.getElementById('myChart2')
+
+  useEffect(()=>{
+    if(goal !== undefined){
+      setLessToGoal(goal-total)
+      setGraficStatus(true)
+      
+    }
+
+  },[goal])
+  
   useEffect(()=>{
 
     if(finance !== undefined){
@@ -54,31 +74,24 @@ const Finance = ({goal}) => {
     return total
   }
 
-
   useEffect(()=>{
     setLessToGoal((total-goal)*(-1) || 0)
     if(goal !== undefined){
-      setPorcents(((total*100)/goal)+"%")
+      setPorcents(((total*100)/goal).toFixed(1))
 
     }
   },[total])
   
 
+  const ctx = document.getElementById('myChart2');
+  if(ctx!== undefined){
 
-
-  const ctx2 = document.getElementById('myChart2');
-
-  if(lessToGoal !== null & total !== null && ctx2 !== null){
-
-  if(finance!== undefined){
-    let chartStatus2 = Chart.getChart("myChart2"); 
-    if (chartStatus2 != undefined) {
-      chartStatus2.destroy();
-    }}
   
-
-
-
+    let chartStatus = Chart.getChart("myChart2"); // <canvas> id
+    if (chartStatus != undefined) {
+      chartStatus.destroy();
+    }
+  
 
 
   var myChart2 = new Chart(ctx2, {
@@ -119,6 +132,9 @@ const Finance = ({goal}) => {
         }
     },
 });
+
+
+
 }
 
 
@@ -127,13 +143,13 @@ const Finance = ({goal}) => {
   
   return (
     <div className='finance-box'>
+            {loading == true ? 
+                <>
       <div className="box-header">
-                <h6>Financeiro</h6>
+                <h5>Financeiro</h5>
                 <img src="./../../../img/icons/btnpurper.svg" alt="Adicionar" />
           </div>
           <div className='finance-container'>
-            {finance !== undefined && total? 
-            <>
             
                 <div className="finance-left">
                   <div className="finance-left-top">
@@ -152,46 +168,38 @@ const Finance = ({goal}) => {
                   </div>
                 </div>
                 <div className="finance-right">
-                <canvas id="myChart2" width="100px" height="50px"></canvas>
-                <p className='finance-porcents'>{porcents}</p>
+                  { <canvas  id="myChart2" width="100px" height="50px"></canvas>
+}
+                <p className='finance-porcents'>{porcents}%</p>
 
                 </div>
+              
+            </div>
             </>
-            
-            
             :
             
-<>
-
-        <div className="finance-left">
-                  <div className="finance-left-top">
-                    <p>Investido:</p>
-                    <h2>{0}</h2>
-                  </div>
-                  <div className="finance-left-bottom">
+            <SkeletonTheme baseColor="var(--8)" highlightColor="var(--11)">
+                <Skeleton style={{width:'150px',height:'30px', margin:'10px'}}/>
+                  <div style={{display:'flex'}}>
                     <div>
-                      <p>Faltam:</p>
-                      <h4 className='finance-lessToFoal'>{goal}</h4>
+                      <Skeleton style={{width:'100px',height:'20px', margin:'3px 10px' }}/>
+                      <Skeleton style={{width:'120px',height:'30px', margin:'3px 10px 25px 10px' }}/>
+                      <Skeleton style={{width:'100px',height:'20px', margin:'3px 10px' }}/>
+                      <Skeleton style={{width:'120px',height:'30px', margin:'3px 10px 25px 10px' }}/>
+                      <Skeleton style={{width:'100px',height:'20px', margin:'3px 10px' }}/>
+                      <Skeleton style={{width:'120px',height:'30px', margin:'3px 10px 25px 10px' }}/>
+
                     </div>
                     <div>
-                      <p>Planejamento:</p>
-                      <h4 className='finance-goal'>{goal}</h4>
+                      <Skeleton style={{width:'150px',height:'150px', margin:'40px 10px',borderRadius:'100px' }}/>
+
                     </div>
                   </div>
-                </div>
-
-                <div className="finance-right">
-                <canvas id="myChart2" width="100px" height="50px"></canvas>
-                <p className='finance-porcents'>0%</p>
-                </div>
-                
-                </>                
-
+            </SkeletonTheme>
             
-            }
+          }
 
-            </div>
-    </div>
+          </div>
   )
 }
 

@@ -1,23 +1,28 @@
 .inforbtnsbox{
-    margin-left: -10px;
-    width: 230px;
+    width: 220px;
     margin-top: 5px;
 }
 
 .infor-bts-rows div{
-    background-color: #fff;
+    background-color: var(--9);
     width: 105px;
-    height: 85px;
-    border-radius: 20px;
+    height: 92px;
+    border-radius: 4px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     box-shadow: 5px 2px 20px rgba(0, 0, 0, 0.063);
+    margin-top: -4px;
 
 }
 .infor-bts-rows{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
+}
+
+.infor-bts-rows div a p{
+    margin-right: 0!important;
+    margin-top: 5px;
 }

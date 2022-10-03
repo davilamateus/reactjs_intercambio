@@ -1,13 +1,11 @@
-import React from 'react'
 import Api from '../../axios/Axios'
 import BlogDashboard from '../../components/blog/BlogDashboard';
-import Header from '../../components/header/Header';
 import {useState, useEffect} from 'react'
 import './home.css'
 import WeatherComponet from '../../components/weather/WeatherComponet';
 import Radio from './../../components/radio//Radio'
 import Money from './../../components/money/Money'
-import ToDoList from '../../components/toDoList/ToDoList';
+import ToDoList from '../../components/toDoList/ToDoListDashboard';
 import Ads from './../../components/ads/Ads'
 import Perfil from './../../components/perfil/Perfil'
 import Seach from './../../components/search/Seach'
@@ -56,9 +54,9 @@ const Home = () => {
     },[])
 
 
-    console.log(user)
     /*
-
+              <Ads country={user.countryId}/>
+              <Study/>
     
     */
 
@@ -66,21 +64,19 @@ const Home = () => {
 
   return (
     <>  
-        <div className='page-container'>
           <div className='home-top'>
             <h2 className='dashboard-title'>Dashboad</h2>
-              <Seach/>
-              <Perfil userPhoto={user.photo}/>
+              <Perfil />
           </div>
+        <div className='page-container'>
           <div className="home-medium">
-              <WeatherComponet country={user.country} city={user.city}/>
-              <BlogDashboard countryId={user.country}/>
-              <Radio country={user.country}/>
+              <WeatherComponet country={user.countryId} city={user.city}/>
+              <BlogDashboard countryId={user.countryId}/>
+              <Radio country={user.countryId}/>
               <ToDoList/>
-              <Ads country={user.country}/>
+
               <Money/>
               <Finance goal={user.goal}/>
-              <Study/>
               <DaysToTravel when={user.when} city={user.city}/>
               <InforsBtns/>
 

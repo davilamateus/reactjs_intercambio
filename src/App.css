@@ -1,13 +1,47 @@
+:root {
+  --1: #FB355E;
+  --2: #5E3D9B;
+  --3: #9DC366;
+  --4: #fb9535;
+  --5: #454545;
+  --6: #838383;
+  --7: #BCBCBC;
+  --8: #F8F8F8;
+  --9: #FFFFFF;
+  --10: #bcbcbc3e;
+  --11: #fbfbfb;
+}
+
+
+.dark {
+  --1: #FB355E;
+  --2: #8754e4;
+  --3: #9DC366;
+  --4: #FBFB35;
+  --5: #FFFFFF;
+  --6: #545454;
+  --7: #BCBCBC;
+  --8: #171717;
+  --9: #1E1E1E;
+  --11: #1c1c1cf1;
+
+}
 body, page{
   padding: 0;
   margin: auto 0;
   font-family: 'Lato';
-  background-color: #F7F7F7;
+  background-color: var(--8);
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+a{
+  text-decoration: none;
 }
 
 p{
-  color: rgba(0, 0, 0, 0.49);
-  font-size: 14px;
+  color: var(--6);
+  font-size: 15px;
 }
 
 hr{
@@ -16,45 +50,90 @@ hr{
   margin-bottom: 50px;
 }
 
-h5{
-  font-weight: 600;
-  margin: 2px;
+h1{
+  font-size: 40px;
+  color: var(--5);
+  font-weight: 900;
+}
+
+h2{
+  font-size: 30px;
+  color: var(--5);
+  font-weight: 900;
 }
 
 h3{
-  margin: 0;
-  padding: 0;
-  margin-top: 30px;
+  font-size: 25px;
+  color: var(--5);
+  font-weight: 800;
 }
-h6{
-  padding: 0;
-  margin: 10px;
-  font-size: 14px;
-  color: #585858;
+
+h4{
+  font-size: 20px;
+  color: var(--5);
+  font-weight: 900;
 }
+
+h5{
+  font-size: 16px;
+  color: var(--5);
+  font-weight: 900;
+}
+
+
 input{
   border: none;
-  border-bottom: 1px solid rgba(178, 178, 178, 0.462);
-  margin-bottom: 50px;
+  border-bottom: 0.4px solid var(--10);
   width: 200px;
+  margin-bottom: 20px;  
+  background: none;
+  color: var(--5);
+  font-size: 15px;
+  margin-top: 10px;
+  padding: 5px;
+}
+
+input::placeholder{
+  color: var(--5);
+  opacity: 0.3;
+  margin-bottom: 10px;
+  
 }
 
 input[type="date"] { 
   background: transparent;
-  color: rgb(93, 93, 93);
+  color: var(--7);
   font-size: 15px;
   padding: 5px 20px;
   margin-top: 10px;
 }
 
+textarea{
+  border: 1px solid var(--10);
+  border-radius: 5px;
+  font-family: 'Lato';
+  padding: 10px;
+}
+
+textarea::placeholder{
+  color: var(--5);
+  opacity: 0.3;
+
+}
+
+label h5{
+  margin-bottom: 15px;
+}
+
 select{
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   margin-top: 10px;
   border: none;
   border-radius: 10px;
-  background-color: #F7F7F7;
+  background-color: var(--8);
   padding: 10px 20px;
   min-width: 200px;
+  color: var(--6);
 }
 
 .input-money{
@@ -65,6 +144,7 @@ select{
 
 button{
   cursor: pointer;
+  align-self: center;
 }
 
 
@@ -85,13 +165,13 @@ button:focus {
 }
 
 .btn-success{
-  background-color: #9AC344;
+  background-color: var(--3)!important;
 
 }
 
 
 .btn-atention{
-  background-color: #eee533;
+  background-color: var(--4);
 
 }
 
@@ -105,32 +185,51 @@ button:focus {
   height: 40px;
   border: none;
   border-radius: 10px;
-  background-color: #E84660;
+  background-color: var(--1);
   transition: 0.3s;
   color: #fff;
   
 }
 
-.btn-error:hover{
-  width: 270px;
-  background-color: #E84660;
-
-
+.btn-add-new{
+  background-color: var(--3)!important;
+  font-weight: 400;
+  padding: 10px 20px;
+  width: max-content!important;
+  border-radius: 10px;
+  color: var(--9);
+  display: flex;
+  align-items: center;
+  opacity: 0.9;
+  transition: 0.4s;
+  text-align: center;
+  justify-content: center;
 }
 
-.btn-selections{
-  width: 260px;
-  height: 37px;
-  margin-bottom: 7px;
+.btn-add-new:hover{
+  opacity: 1;
+
+}
+.btn-add-new svg{
+  margin-right: 4px;
+}
+
+.btn-edit{
   border: none;
-  color: #9f9f9f;
-  border-radius: 5px;
 }
 
-.btn-selected{
-  background-color: #6F49A1;
-  color: #fff;
+.btn-add-new svg g line{
+  stroke: var(--9) ;;
 }
+.btn-add-new p{
+  color: var(--9);
+  margin: 0;
+}
+
+
+
+
+
 
 
 .opacityNone{
@@ -160,6 +259,8 @@ button:focus {
 .box-header{
   display: flex;
   justify-content: space-between;
+  padding-left: 10px;
+  margin-top: -10px;
     
 }
 

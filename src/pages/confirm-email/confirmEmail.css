@@ -1,5 +1,5 @@
 .confirm-email-page{
-    background-color: #F0F0F0;
+    background-color: var(--8);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -12,7 +12,7 @@
     z-index: 2;
 }
 .message-confirmEmail{
-    background-color: #fff;
+    background-color: var(--9);
     max-width: 400px;
     border-radius: 20px;
     padding: 30px;

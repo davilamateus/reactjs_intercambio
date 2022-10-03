@@ -1,33 +1,56 @@
 .blog-img{
-    width: 300px;
-    height: 200px;
-    background-size: contain;
-    border-radius: 8px;
+    width: 100%;
+    height: 160px;
+    background-size: cover;
+    border-radius: 2px;
+    margin-bottom: 20px;
+    margin-top: -10px;
 }
 
 .blog-box{
-    width: 300px;
-    background-color: #fff;
-    padding: 10px;
-    height: 450px;
-    border-radius: 20px;
+    background-color: var(--9);
+    height: 480px;
+    border-radius: 4px;
     box-shadow: 5px 2px 20px rgba(0, 0, 0, 0.063);
-
+    width: 310px;
+    
 }
 
-.blog-container {
+.blog-container a {
+    padding: 0px 10px;
     text-align: justify;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.blog-container button{
+
+.blog-container a button{
     background: none;
     border: 1px solid #5E3D98;
     border-radius: 10px;
     padding: 6px 30px;
-    color: #5E3D98;
+    color: var(--2);
+    width: 180px;
+
+    transition: 0.4s;
+}
+.blog-container a button:hover{
+    width: 190px;
+}
+.blog-container a h4{
+    margin: 0;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    padding: 0;
+    text-align: left;
+}
+
+.blog-container {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    height: 400px;
 }
 
 .blog-div{
@@ -36,7 +59,7 @@
     justify-content: center;
     flex-direction: column;
     width: 300px;
-    height: 500px;
+    margin-left: 5px;
 }
 
 .btn-blog button{
@@ -45,3 +68,42 @@
     margin-top: 4px;
     color: rgb(115, 115, 115);
 }
+
+.blog-dashboard-article-category{
+    margin: 0!important;
+    color: var(--2);
+    margin-right: auto!important;
+    margin-top: -12px!important;
+    margin-bottom: 10px!important;
+    font-size: 14px;
+}
+.article-time{
+    margin-right: auto;  
+    display: flex;
+    align-items: center;
+    justify-content: center;  
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
+
+.article-time img{
+    width: 12px;
+    margin-top: 2px;
+    margin-right: -2px;
+}
+.blog-container a h4{
+    font-size: 18px!important;
+}
+.blog-container a p{
+    font-size: 14px!important;
+    margin-bottom: 0px!important;
+    margin-top: 10px!important;
+    color: var(--7);
+}
+.blog-container a .article-time p{
+    font-size: 12px!important;
+    color: var(--7);
+    margin: 0!important;
+    margin-left: 5px!important;
+}
+

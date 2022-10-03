@@ -1,6 +1,9 @@
 .perfil-box{
-    width: 80px;
+    width: 180px;
     height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .perfil-box img{
@@ -12,4 +15,18 @@
     height: 60px;
     background-size: contain;
     border-radius: 300px;
+    margin-left: 5px;
+}
+.perfil-text h5,p{
+    margin: 0;
+}
+.perfil-text {
+    text-align: right;
+}
+.perfil-text p{
+    font-size: 13px;
+    margin-top: -2px;
+}
+.dashboard-title{
+    font-size: 23px;
 }

@@ -20,6 +20,7 @@
     font-weight: bold;
     cursor: pointer;
     transition: 0.3s;
+    color: var(--5);
     
 }
 
@@ -35,12 +36,12 @@
 
 .login-header-active{
     opacity: 1!important;
-    border-bottom: 5px solid #6940A3!important;
+    border-bottom: 5px solid var(--2)!important;
 }
 
 .login-form-text{
-    padding-top: 30px;
-    padding-bottom: 50px;
+    padding-top: 10px;
+    padding-bottom: 30px;
 }
 
 .password-eyes{
@@ -82,9 +83,10 @@
 }
 
 .remember p{
-    font-weight: 300;
+    font-weight: 400;
     font-style: italic;
     font-size: 14px;
+    color: var(--5);
 }
 
 .forgetPassword{
@@ -92,9 +94,9 @@
     padding: 19px;
     margin-top: 40px;
     border-radius: 100px;
-    border:2px solid #6940A3;
-    color: #6940A3;
-    opacity: 0.5;
+    border:2px solid var(--2);
+    color: var(--2);
+    opacity: 0.8;
     transition: 0.2s;
 }
 .forgetPassword:hover{
@@ -112,7 +114,7 @@
 }
 
 .require-password{
-    margin-top: -40px;
+    margin-top: -20px;
     margin-bottom: 40px;
 }
 

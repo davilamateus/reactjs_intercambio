@@ -1,0 +1,20 @@
+.todolist-box{
+    background-color: var(--9);
+    overflow: hidden;
+    height: 630px;
+    border-radius: 4px;
+    width: 300px;
+  
+}
+.todolist-scrol{
+    overflow: scroll;
+    height: 570px;
+
+}
+.todolist-scrol::-webkit-scrollbar {
+    display: none;
+}
+
+.todolist-status{
+    display: flex;
+}

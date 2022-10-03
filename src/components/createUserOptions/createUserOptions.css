@@ -1,14 +1,20 @@
 .create-options-box{
-    max-width: 280px;
+    max-width: 400px;
+    width: 80vw;
     text-align: center;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    text-align: left;
     justify-content: center;
+    align-items: center;
+
 }
 
-.create-options-box form{
-    text-align: left;
+.create-options-box p{
+    padding: 0;
+}
+.create-options-box h5{
+    margin-bottom: 10px;
 }
 
 .photouser-box{
@@ -37,3 +43,89 @@
     height: 100%;
     background-size: 60px;
 }
+
+
+
+.city-img{
+    width: 500px;
+    height: 200px;
+    background-size: cover;
+    border-radius: 10px;
+    max-width: 85vw;
+}
+
+.city-country-flag{
+    width: 30px;
+    height: 20px;
+    background-size: cover;
+    margin-left: 10px;
+}
+
+.city-country{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.city-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: -20px;
+}
+
+
+.create-options-box h2{
+    margin: 0;
+
+}
+
+
+.question-citys button{
+    width: 300px;
+    background: none;
+    height: 40px;
+    border-radius: 10px;
+    margin-bottom: 5px;
+    opacity: 0.7;
+}
+
+.question-citys button:hover{
+    opacity: 1!important;
+}
+.question-citys {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.question-citys span{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.button-option01{
+    border: solid 2px var(--3);
+    color: var(--3);
+    transition: 0.4s;
+}
+
+.button-option02{
+    border: solid 2px var(--2);
+    color: var(--2);
+    transition: 0.4s;
+
+}
+
+.button-option03{
+    border: solid 2px var(--1);
+    color: var(--1);
+    transition: 0.4s;
+
+}
+
+
+
+

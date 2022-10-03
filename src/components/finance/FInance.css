@@ -1,9 +1,8 @@
 .finance-box{
-    background-color: #fff;
-    border-radius: 20px;
-    width: 290px;
+    background-color: var(--9);
+    border-radius: 4px;
+    width: 310px;
     height: 300px;
-    margin-left: 10px;
 }
 
 .finance-container {
@@ -13,7 +12,7 @@
 .finance-right{
     width: 154px;
     margin-top: 40px;
-    margin-left: 15px;
+    margin-left: 30px;
 }
 
 .finance-left{
@@ -26,15 +25,15 @@
 }
 
 .finance-left h2{
-    color: #9EC36E;
+    color: var(--3);
 }
 
 .finance-lessToFoal{
-    color: #FB355E;
+    color: var(--1);
 }
 
 .finance-goal{
-    color: #5E3D95;
+    color: var(--2);
 }
 
 .finance-left p{
@@ -42,11 +41,12 @@
     margin: 0;
     margin-top: 20px;
     margin-bottom: 5px;
+    font-size: 14px;
 }
 
 .finance-porcents{
     font-weight: 800;
-    color: #000;
+    color: var(--5);
     margin-top: -88px;
-    margin-left: 66px;
+    margin-left: 58px;
 }

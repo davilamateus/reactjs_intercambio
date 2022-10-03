@@ -11,23 +11,29 @@ import Blog from './pages/blog/Blog';
 import User from './pages/user/User';
 import React from 'react'
 import Header from './components/header/Header';
+import Style from './components/Style/Style'
+import Articles from './pages/blog/Articles';
+
 
 const Routers = () => {
   return (
     
     <>
+    <Style/>
     <BrowserRouter>
         <Routes>
             <Route element={<Login/>} path='/login' />
             <Route element={<ConfirmEmail/>} path='/confirm-email/:token' />
             <Route element={<ForgetPassword/>} path='/forget-password/:token' />
             <Route element={<CreateUserOptions/>} path='/createuseroptions' />
-
                     <Route element={<><Home/> <Header/></>} path='/' />
                    <Route element={<><ToDoList/> <Header/></>} path='/listadetarefas' />
                     <Route element={<><Money/>  <Header/></>} path='/cotacao' />
                     <Route element={<><Finance/> <Header/></>} path='/financeiro' />
-                    <Route element={<><Blog/> <Header/></>} path='/blog' />
+                    <Route element={<><Blog/> <Header/></>} path='/blog/category/:id' />
+                    <Route element={<><Blog/> <Header/></>} path='/blog/search/:search' />
+                    <Route element={<><Articles/> <Header/></>} path='/blog/article/:article' />
+                    <Route element={<><Blog/> <Header/></>} path='/blog/' />
                     <Route element={<><User/> <Header/></>} path='/minhaconta' />
         </Routes>
     </BrowserRouter>

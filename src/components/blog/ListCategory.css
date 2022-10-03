@@ -1,0 +1,30 @@
+.blog-list-category ul{
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.blog-list-category {
+    width: 100%;
+    max-width: 800px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.blog-list-category ul a{
+    text-decoration: none;
+    padding: 10px 0px;
+    text-align: center;
+    color: var(--5);
+    transition: 0.4s;
+
+
+}
+
+.categorySelected{
+    background-color: var(--2);
+    border-radius: 10px;
+    color:var(--9)!important;
+    padding: 10px 10px!important;
+}

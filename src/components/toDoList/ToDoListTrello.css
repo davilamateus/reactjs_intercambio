@@ -1,0 +1,42 @@
+.toDoList-page-tables{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.toDoList-page-simple-table{
+    background-color: var(--9);
+    min-height: 120px;
+    height: max-content;
+    width: 300px;
+    margin: 10px;
+}
+
+.toDoList-page-table-title{
+    display: inline-block;
+    border-radius: 4px;
+    margin: 0px 0px 12px 8px;
+    padding: 4px 6px;
+    color: var(--6);
+}
+
+.toDoList-page-table-title{
+    font-weight: 800;
+    font-size: 15px;
+    margin-top: 10px;
+}
+.toDoList-page-counter{
+    color: var(--7);
+}
+
+.todolist-status{
+}
+
+.toDoList-page-simple-table div div div div .todolist-status{
+    display: none;
+}
+
+.toDoList-page-simple-table div div div div.todolist-container{
+    margin-top: 10px;
+}

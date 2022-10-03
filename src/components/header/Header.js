@@ -12,7 +12,6 @@ const Header = () => {
       
       },[useNavigate()])
 
-      console.log(pageActived)
   return (
     <div className='header-page'>
         <div className="logo-menu">

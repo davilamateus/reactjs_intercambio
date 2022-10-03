@@ -1,0 +1,124 @@
+
+
+
+.todolist-page{
+    max-width: 92vw!important;
+    width: 970px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 120px;
+    margin: 0 auto;
+}
+.todolist-page button{
+    background: none;
+    border: none;
+    width: 100%;
+    text-align: right;
+}
+
+.todolist-header-page{
+    display: flex   ;
+    align-items: center!important;
+    justify-content: space-between;
+    width: 100%;
+}
+.todolist-header-page h1{
+    margin: 0!important;
+    padding: 0!important;
+}
+
+
+
+@media only screen and (max-width: 1064px) {
+    .todolist-page{
+        margin-left: 110px!important;
+    }
+    .toDoList-page-tables{
+        margin-left: -50px!important;
+    }
+    .todolist-header-page{
+        width: 80vw;
+
+    }
+
+}
+
+
+.todolist-skeleton div{
+    background-color: var(--9);
+    width: 300px;
+    height: 600px;
+
+}
+.todolist-skeleton{
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+
+@media only screen and (max-width: 700px) {
+    .todolist-page{
+        margin-left: 0!important;
+        width: 100vw;
+    }
+    .todolist-header-page{
+        flex-direction: column;
+        margin-top: 20px;
+        justify-content: end!important;
+        align-items: flex-end!important;
+        width: 100vw;
+    }
+
+    .todolist-header-page h1{
+        font-size: 30px;
+    }
+    .btn-add-new{
+        position: fixed;
+        bottom: 60px;
+        display: flex;
+        margin: 0 auto;
+        margin-top: 10px!important;
+        right: 12px;
+        padding: 13px 10px 13px 13px;
+     }
+     .btn-add-new svg{
+        transform: scale(1.4);
+     }
+
+    .toDoList-page-tables{
+        width: 100vw!important;
+        margin: 0 auto!important;
+        margin-bottom: 100px!important; 
+    }
+    .toDoList-page-simple-table{
+        width: 98vw!important;
+    }
+    .btn-add-new p{
+        display: none;
+    }
+
+    .todolist-item {
+        width: 98%;
+    }
+    .todolist-text{
+        width: 95%;
+    }
+    .todolist-container{
+        width: 95%;
+    }
+
+
+.add-todolist-container{
+    flex-direction: column;
+    gap: 0;
+
+}
+    .add-todolist-title{
+        display: none;
+    }
+    }

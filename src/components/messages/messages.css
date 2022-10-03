@@ -16,7 +16,7 @@
     display: flex;
     width: 100vw;
     height: 100vh;
-    z-index: 2;
+    z-index: 4;
     background-color: rgba(142, 142, 142, 0);
     backdrop-filter: blur(0px);
     transition: 0.3s;
@@ -30,10 +30,10 @@
 
 .message-box{
     z-index: 3;
-    background-color: #fff;
+    background-color: var(--9);
     width: max-content;
     height: max-content;
-    max-width: 400px;
+    max-width: 320px;
     border-radius: 10px;
     text-align: center;
     margin-top: 500px;

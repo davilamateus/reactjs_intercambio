@@ -12,21 +12,29 @@ useEffect(()=>{
   async function loadAds(){
     await Api.get(`/ads?country=${country}`).then((data)=>{
       setAdsList(data.data[0])
-      console.log(data.data)
+
     })
   }
 loadAds()
 },[country])
-console.log(adsList)
 
 
 
   return (
     <div className='ads-box'>
       {adsList !== undefined?  
-      <a  target={'bank'} href={adsList.link}>
-          <div style={{backgroundImage : `url(${adsList.img})`}}> </div> 
-      </a>
+      <>
+          <a className='ads-web' target={'bank'} href={adsList.link}>
+              <div style={{backgroundImage : `url(./../../../img/ads/${adsList.imgWeb})`}}> </div> 
+          </a>
+          <a className='ads-tablet'  target={'bank'} href={adsList.link}>
+              <div style={{backgroundImage : `url(./../../../img/ads/${adsList.imgTablet})`}}> </div> 
+          </a>
+           <a  className='ads-mobile'  target={'bank'} href={adsList.link}>
+              <div style={{backgroundImage : `url(./../../../img/ads/${adsList.imgMobile})`}}> </div> 
+          </a>
+      </>
+      
       : ''}
     </div>
   )

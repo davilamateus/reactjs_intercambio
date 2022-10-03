@@ -1,10 +1,9 @@
 .radio-box{
-    background-color: #fff;
-    width: 320px;
+    background-color: var(--9);
+    width: 310px;
     height: 150px;
-    margin-top: 20px;
-    border-radius: 20px;
-    margin-left: -10px;
+    margin-top: 0px;
+    border-radius: 4px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -18,18 +17,24 @@
     justify-content: center;
     align-items: center;
     height: 70px;
+    
 }
 
 
 .radio-controls h4{
     padding: 0;
-    margin-top: -10px;
+    margin-top: 5px;
     margin-bottom: 10px;
+}
+
+.radio-controls  p{
+    font-size: 14px;
+    align-self: center;
 }
 .radio-img{
     height: 140px;
     width: 140px;
-    border-radius: 20px;
+    border-radius: 4px;
     margin-left: 5px;
     background-size: contain;
 }

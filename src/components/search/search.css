@@ -1,8 +1,8 @@
 .seach-box{
-    width: 300px;
-    height: 45px;
-    background-color: #fff;
-    border-radius: 10px;
+    width: 220px;
+    height: 35px;
+    background-color: var(--9);
+    border-radius: 4px;
     display: flex;
     justify-content: space-between;
 }
@@ -10,8 +10,11 @@
 .search-btn{
     background: none;
     border: none;
-    margin-top: -0px;
-    margin-right: -10px;
+    margin-top: 2px;
+    margin-left: -40px;
+}
+.search-btn img{
+    width: 30px;
 }
 
 
@@ -20,8 +23,10 @@
     margin: 0;
     padding: 0;
     margin-left: 20px;
-    font-size: 18px;
-    border-bottom: 1px solid #f7f7f7;
+    font-size: 15px;
+    border-bottom: none;
+    margin-top: -3px;
+    
 }
 
 .search-input::placeholder{

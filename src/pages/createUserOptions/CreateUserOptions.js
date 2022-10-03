@@ -2,6 +2,7 @@ import React from 'react'
 import './CreateUserOptions.css'
 import CreateUserOptionsComponent from '../../components/createUserOptions/CreateUserOptions.'
 
+
 const CreateUserOptions = () => {
   return (
     <div className='create-options-page'>
@@ -9,7 +10,7 @@ const CreateUserOptions = () => {
           <CreateUserOptionsComponent/>
         </div>
         <div className="create-options-right">
-          <img src="./../../../img/3dperson5.png"  />
+          <img src="./../../../img/3dperson2.png"  />
         </div>
     </div>
   )

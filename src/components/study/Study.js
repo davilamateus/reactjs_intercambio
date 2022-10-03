@@ -51,7 +51,6 @@ const Study = () => {
       
       setListStudy(data.data)
       
-      console.log('carregou')
     })
   }
   useEffect(()=>{
@@ -95,7 +94,7 @@ const Study = () => {
   return (
     <div className='study-box'>
                  <div className="box-header">
-                <h6>Pratique o seu inglês</h6>
+                <h5>Pratique o seu inglês</h5>
                 <img src="./../../../img/icons/btnpurper.svg" alt="Adicionar" />
           </div>
           {listStudy !== undefined? <>

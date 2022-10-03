@@ -1,28 +1,29 @@
 .page-container{
     height: 100vh;
     margin-left: 100px;
-    
-    
-
+    background-color: var(--8);
+    max-width: 100vw;
 }
 
-.dashboard-title{
-    font-weight: 800;
-    margin: 0;
-}
+
 .img-home{
     position: absolute;
     bottom: -20px;
     width: 300px;
     right: -160px;
+    z-index: 0;
+    display: none;
 }
 
 .home-medium{
     display: grid;
-    grid-template-columns: repeat(11, 100px);
-    grid-template-rows: repeat(5, 150px);
+    grid-template-columns: repeat(auto, 300px);
+    grid-template-rows: repeat(auto, 100px);
     justify-content: center;
     gap: 10px;
+    margin-top: -20px;
+    padding-bottom: 20px;
+
 }
 
 
@@ -32,8 +33,12 @@
     justify-content: space-between;
     padding: 0px 60px;
     padding-bottom: 10px;
-    max-width: 1200px;
+    max-width: 1100px;
     margin: 0 auto;
+    border-radius: 4px;
+    height: 30px;
+    margin-top: 40px;
+    margin-bottom: 40px;
 }
 
 .dashboard-title{
@@ -41,6 +46,7 @@
     grid-column-end: 3;
     grid-row-start: 1;
     grid-row-end: 2;
+    margin-left: 100px;
 }
 
 .seach-box{
@@ -54,12 +60,14 @@
     grid-column-end: 3;
     grid-row-start: 1;
     grid-row-end: 2;
+    margin-right: 60px;
+
 
 }
 
 .city-div{
     grid-column-start: 1;
-    grid-column-end: 11;
+    grid-column-end: 2;
     grid-row-start: 1;
     grid-row-end: 2;
 
@@ -67,66 +75,92 @@
 
 .blog-div{
     grid-column-start: 1;
-    grid-column-end: 4;
+    grid-column-end: 2;
     grid-row-start: 2;
     grid-row-end: 5;
+    width: 310px;
+    margin-left: 0px;
+
+
 }
 
 .radio-box{
     box-shadow: 5px 2px 20px rgba(0, 0, 0, 0.063);
     grid-column-start: 1;
-    grid-column-end: 4;
+    grid-column-end: 2;
     grid-row-start: 5;
-    grid-row-end: 6;
+    grid-row-end: 5;
+
 
 }
 
 .todolist-box{
-    grid-column-start: 4;
-    grid-column-end: 9;
+    grid-column-start: 2;
+    grid-column-end: 3;
     grid-row-start: 1;
     grid-row-end: 5;
     box-shadow: 5px 2px 20px rgba(0, 0, 0, 0.063);
 
+
 }
 
 .ads-box{
-    grid-column-start: 4;
-    grid-column-end: 12;
+    grid-column-start: 2;
+    grid-column-end: 5;
     grid-row-start: 5;
-    grid-row-end: 9;
+    grid-row-end: 5;
     box-shadow: 5px 2px 20px rgba(0, 0, 0, 0.063);
+    height: 180px;
+    margin-top: -30px;
+
 
 }
-
+.ads-web{
+    height: 190px;
+}
+.ads-mobile,.ads-tablet{
+    display: none;
+}
 .money-div{
-    grid-column-start: 7;
-    grid-column-end: 9;
+    grid-column-start: 3;
+    grid-column-end: 4;
     grid-row-start: 1;
     grid-row-end: 2;
     box-shadow: 5px 2px 20px rgba(0, 0, 0, 0.063);
 
+
 }
 .finance-box{
-    grid-column-start: 7;
-    grid-column-end: 9;
+    grid-column-start: 3;
+    grid-column-end: 4;
     grid-row-start: 2;
     grid-row-end: 4; 
     box-shadow: 5px 2px 20px rgba(0, 0, 0, 0.063);
 
+
 }
 .study-box{
-    grid-column-start: 7;
-    grid-column-end: 9;
+    grid-column-start: 3;
+    grid-column-end: 5;
     grid-row-start: 4;
-    grid-row-end: 9; 
+    grid-row-end: 5; 
     box-shadow: 5px 2px 20px rgba(0, 0, 0, 0.063);
+    margin-top: -30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 
+
+
+}
+
+.study-box div{
+    
 }
 
 .daysToTravel-box{
-    grid-column-start:10;
-    grid-column-end: 14;
+    grid-column-start:4;
+    grid-column-end: 5;
     grid-row-start: 1;
     grid-row-end: 2; 
     box-shadow: 5px 2px 20px rgba(0, 0, 0, 0.063);
@@ -134,8 +168,400 @@
 
 }
 .inforbtnsbox{
-    grid-column-start:10;
-    grid-column-end: 14;
+    grid-column-start:4;
+    grid-column-end: 5;
     grid-row-start: 2;
     grid-row-end: 4; 
+
+}
+
+@media only screen and (max-width: 1320px) {
+    .style-box{
+        margin-top: 10px;
+    }
+
+    .home-top{
+        display: flex;
+        align-items: center;   
+        justify-content: space-around;
+        padding: 0px 0px;
+        padding-bottom: 10px;
+        max-width: 600px;
+        margin: 0 auto;
+        margin-top: 60px;
+        margin-left: 120px;
+        margin-bottom: 20px;
+
+
+    }
+
+    .home-medium{
+        display: grid;
+        grid-template-columns: repeat(2, 310px);
+        grid-template-rows: repeat(5, 150px);
+        justify-content: center;
+        gap: 10px;
+        margin-top: 0px;
+    }
+    
+
+    
+    .seach-box{
+        grid-column-start: 8;
+        grid-row-start: 1;
+        grid-row-end: 2;
+        box-shadow: 5px 2px 20px rgba(0, 0, 0, 0.063);
+        display: none;
+        margin-left: 30px;
+        
+
+    }
+    .perfil-box{
+        grid-column-end: 3;
+        grid-row-start: 1;
+        grid-row-end: 2;
+        margin-right: 30px;
+
+
+    }
+    
+    .city-div{
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 1;
+        grid-row-end: 2;
+        margin-top: 0px;
+
+    }
+
+
+    .blog-div{
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 2;
+        grid-row-end: 5;
+        margin-top:10px;
+        height:465px;
+
+
+    }
+    .blog-container{
+        height: 410px!important;
+    }
+
+    .blog-container button{
+        margin-top: 0px;
+        margin-bottom: 10px;
+    }
+    .blog-container p {
+        font-size: 14px;
+    }
+    
+    .radio-box{
+        box-shadow: 5px 2px 20px rgba(0, 0, 0, 0.063);
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 8;
+        grid-row-end: 8;
+        margin-top: -5px!important;
+        width:270px!important;
+        margin-left: 40px;
+    }
+    .radio-controls{
+    }
+    
+    .todolist-box{
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 1;
+        grid-row-end: 4;
+        height: 630px!important;
+        width: 310px!important;
+
+    }
+    
+    .ads-box{
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 8;
+        grid-row-end: 9;
+        box-shadow: 5px 2px 20px rgba(0, 0, 0, 0.063);
+        width: 350px!important;
+        margin-top: -5px!important;
+        height: 150px!important;
+
+
+    
+    }
+    .ads-tablet{
+        display: inline;
+
+    }
+    .ads-web,.ads-mobile{
+        display: none;
+    }
+    .money-div{
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 6;
+        grid-row-end: 7;
+        box-shadow: 5px 2px 20px rgba(0, 0, 0, 0.063);
+        width: 350px!important;
+    
+    }
+
+    .box-Chart{
+        transform: scale(1.13);
+        margin-left: 20px;
+    }
+    .Cot-number{
+        margin-top: -4px!important;
+    }
+
+
+    .finance-box{
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 7;
+        grid-row-end: 8; 
+        box-shadow: 5px 2px 20px rgba(0, 0, 0, 0.063);
+        width: 350px!important;
+    
+    }
+    .finance-right{
+        margin-left: 40px!important;
+        margin-top: 14px!important;
+    }
+
+    #myChart2{
+        width: 190px!important;
+        height: 190px!important;
+    }
+
+    .finance-porcents{
+        font-size: 20px;
+        font-weight: 900;
+        margin-top: -105px!important;
+        margin-left: 70px!important;
+    }
+    .study-box{
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 5;
+        grid-row-end: 6; 
+        box-shadow: 5px 2px 20px rgba(0, 0, 0, 0.063);
+        margin-top: 0px!important;
+        width: 630px!important;
+        height: 150px!important;
+    }
+
+    
+    .daysToTravel-box{
+        grid-column-start:2;
+        grid-column-end: 3;
+        grid-row-start: 6;
+        grid-row-end: 7; 
+        box-shadow: 5px 2px 20px rgba(0, 0, 0, 0.063);
+        margin-left: 40px;
+        width: 270px!important;
+        height: 150px;
+
+
+    
+    
+    }
+    .inforbtnsbox{
+        grid-column-start:2;
+        grid-column-end: 3;
+        grid-row-start: 7;
+        grid-row-end: 7; 
+        margin-left: 40px;
+        width: 270px!important;
+    }
+    .infor-bts-rows div{
+        width: 130px!important;
+        height: 91px!important;
+    }
+    .infor-bts-rows {
+        margin-bottom: 10px!important;
+    }
+  
+}
+
+@media only screen and (max-width: 700px) {
+    .logo-menu, .exit{
+        display: none;
+    }
+
+    .header-page{
+        width: 100vw!important;
+        min-height: 50px!important;
+        bottom: -10px;
+        top: auto!important;
+        margin: 0!important;
+    
+    }
+    .menu{
+        flex-direction: row!important;
+        justify-content: space-around;
+        width: 360px;
+        height: 15px!important;
+    }
+    .menu a{
+        margin-top: -5px!important;
+        margin-left: 10px!important;
+        margin-right: 10px!important;
+
+    }
+    .active{
+
+    }
+    .page-container{
+        max-width: 400px!important;
+        margin: 0 auto;
+
+    }
+
+
+    .home-medium{
+        max-width: 400px!important;
+
+        display: grid;
+        grid-template-columns: repeat(1, 95%);
+        grid-template-rows: repeat(auto, 100px);
+        gap: 10px;
+        width: 100vw;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto!important;
+        margin-top: -30px!important;
+        padding-bottom: 70px!important;
+    
+    }
+    .home-top{
+        width: 100%!important;
+        justify-content: center!important;
+        align-content: center;
+        margin-left: 10px!important;
+        gap: 20px;
+        margin-top: 50px;
+    }
+
+    .search-input{
+        width: 130px;
+    }
+    .city-div{
+        width: 100%!important;
+        height: 100px!important;
+    }
+    .city-box{
+        width: 60%!important;
+        height: 100px!important;
+
+    }
+    
+    .weather-box{
+        width: 40%!important;
+        height: 100px!important;
+
+
+    }
+
+    .weather-box h1{
+        font-size: 18px!important;
+    }
+
+    .blog-div{
+        width: 100%;
+        margin-top: -55px;
+
+    }
+
+    .blog-container button{
+        margin-top: 0px;
+    }
+    .radio-box{
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 20;
+        grid-row-end: 20;
+        width: 100%!important;
+        margin: 0 auto!important;
+        margin-top: -20px!important;
+    }
+
+    .radio-controls{
+        width: 220px!important;
+    }
+    .todolist-box{
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 5;
+        grid-row-end: 12;
+        width: 100%!important;
+        margin-top: -20px;
+    }
+
+    .ads-box{
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 22;
+        grid-row-end: 22;
+        width: 100%!important;
+        margin-top: -10px!important;
+
+    }
+    .money-div{
+        grid-column-start: 1;
+        grid-row-start: 12;
+        grid-row-end: 12;
+        width: 100%!important;
+    }
+    .finance-box{
+        grid-column-start: 1;
+        grid-row-start: 13;
+        grid-row-end: 16;
+        width: 100%!important;
+    }
+    .study-box{
+        grid-column-start: 1;
+        grid-row-start: 16;
+        grid-row-end: 18;
+        width: 100%!important;
+        height: 200px!important;
+    }
+    .daysToTravel-box{
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 18;
+        grid-row-end: 19;
+        width: 52%!important;
+        margin: 0!important;
+        height: 230px!important;
+        margin-top: -30px!important;
+    }
+    .inforbtnsbox{
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 18;
+        grid-row-end: 19;
+        margin-top: -20px!important;
+        justify-self: right;
+
+
+    }
+    .infor-bts-rows div{
+        width: 30%!important;
+        height: 70px!important;
+        border-radius: 10px!important;
+        margin-left: 10px;
+    }
+    .infor-bts-rows{
+        justify-content: end!important;
+    }
+
+    .style-box{
+        margin-top: -17px;
+    }
+
 }

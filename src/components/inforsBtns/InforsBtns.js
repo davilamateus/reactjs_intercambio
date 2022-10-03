@@ -3,7 +3,7 @@ import './inforsBtns.css'
 const InforsBtns = () => {
   return (
     <div className='inforbtnsbox'>
-        <div className='infor-bts-rows'>
+        <div className='infor-bts-rows row1'>
             <div>
               <a href="#">
                 <img src="./../../../img/icons/iconmonstr-police-10.svg"/>

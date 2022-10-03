@@ -1,10 +1,10 @@
 .study-box{
-    background-color: #fff;
+    background-color: var(--9);
     border-radius: 20px;
     width: 540px;
-    height: 140px;
+    height: 155px;
     margin-bottom: 20px;
-    margin-left: 10px;
+    margin-top: -40px;
 }
 
 .study-btn-levels button{
@@ -17,6 +17,7 @@
 }
 .study-btn-levels{
     margin: 0px 17px;
+    margin-bottom: 10px;
 
 }
 .study-btn-trans{
@@ -26,6 +27,7 @@
 .study-container{
     display: flex;
     flex-direction: column;
+    margin-top: -10px;
 }
 
 .study-container div{
@@ -43,6 +45,7 @@
 .study-container div h2{
     padding: 0;
     margin: 0;
+    font-size: 25px;
 }
 
 .study-container  p{
@@ -55,8 +58,9 @@
 }
 
 .study-btn-trans{
-    border: 1px solid #000;
+    border: 1px solid var(--5);
     opacity: .7;
+    color:var(--5);
 }
 
 .study-btn-hard{
@@ -74,3 +78,4 @@
     border: 1px solid #A5C278;
     color: #A5C278;
 }
+

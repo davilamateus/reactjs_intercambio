@@ -2,7 +2,7 @@
     min-height: 95vh;
     position: fixed;
     z-index: 2;
-    background-color: #fff;
+    background-color: var(--9);
     display: flex;
     flex-direction: column;
     width: 70px;
@@ -37,6 +37,8 @@
 }
 .menu a img{
     width: 20px;
+    filter: contrast(0.1);
+
 }
 
 .menu a:hover{
@@ -57,4 +59,9 @@
     display: flex;
     align-items: center;
     justify-content: baseline;
+}
+
+.active img{
+    filter: contrast(1)!important;
+
 }

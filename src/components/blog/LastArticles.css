@@ -1,0 +1,28 @@
+.last-articles-div{
+    width: 220px;
+    position: fixed;
+    margin-top: 360px;
+}
+
+.last-blog-img{
+    width: 60px;
+    height: 60px;
+    background-size: cover;
+
+}
+
+.last-blog-item{
+    display: flex;
+    margin-bottom: 10px;
+    background-color: var(--9);
+    height: 60px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.last-blog-item h5{
+    font-size: 12px;
+    width: 170px;
+    margin: 0;
+    padding: 7px;
+
+}

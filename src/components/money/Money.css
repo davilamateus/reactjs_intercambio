@@ -1,18 +1,21 @@
 .money-div{
-    background-color: #fff;
-    width: 290px;
-    height: 140px;
-    border-radius: 20px;
+    background-color: var(--9);
+    width: 310px;
+    height: 150px;
+    border-radius: 4px;
     overflow: hidden;
-    margin-left: 10px;
 
 }
 
 
   #myChart{
     z-index: 2;
-    margin-top: 20px;
-    margin-left: -140px;
+    margin-top: -px;
+    margin-left: -87px;
+    transform: scale(0.7);
+    width: 470px!important;
+    height: 110px!important;
+
 
   }
 
