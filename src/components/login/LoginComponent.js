@@ -41,7 +41,7 @@ const LoginComponent = () => {
 
     function passwordCreateChange(value){
         if (value.search(/[a-z]/) >= 0) {setLower(true)} else{setLower(false)}
-        if(value.search(/[A-Z]/) >= 0) {setUpper(true)} else{setUpper(false)}
+        if (value.search(/[A-Z]/) >= 0) {setUpper(true)} else{setUpper(false)}
         if (value.search(/[0-9]/) >= 0) {setNumber(true)} else{setNumber(false)}
         if (value.length >= 8) {setMin(true)} else{setMin(false)}
     }
@@ -151,51 +151,49 @@ const LoginComponent = () => {
 
     <div className={`login-right `}>
         <div className="login-header">
-            <button onClick={()=>{headerChange('login')}} className={loginHeader === 'login' ? 'login-header-active':''}>Login</button>
-            <button onClick={()=>{headerChange('singup')}} className={loginHeader === 'singup' ? 'login-header-active':''}>Cadastrar</button>
+            <button onClick={()=>{headerChange('login')}} className={loginHeader === 'login' ? 'login-header-active':''}><h4>Login</h4></button>
+            <button onClick={()=>{headerChange('singup')}} className={loginHeader === 'singup' ? 'login-header-active':''}><h4>Cadastrar</h4></button>
         </div>
-            <div className={`login-form ${loginHeader === 'login'? '':'opacityNone'}`}>
-                <p className="login-form-text">Entre com seus dados de acesso.</p>
-                <form>
-                    <label ></label>
+        <div className={`login-form ${loginHeader === 'login'? '':'opacityNone'}`}>
+            <p className="login-form-text">Entre com seus dados de acesso.</p>
+            <form>
                 <label>
                     <h5>Email:</h5>
                     <input 
-                    name='Email-Login'
-                    onChange={(e)=>{setLoginEmailValue(e.target.value)}} type="text" 
-                     placeholder='exemplo@google.com' />
+                        name='Email-Login'
+                        onChange={(e)=>{setLoginEmailValue(e.target.value)}} type="text" 
+                        placeholder='exemplo@google.com' />
                 </label>
                 <label>
                     <h5>Senha:</h5>
                     <input 
-                    onChange={(e)=>{setLoginPasswordlValue(e.target.value)}} 
-                    type={loginPasswordType} 
-                    name='password-login'
-                    placeholder='*******'/>
-                    <img
-                    className='password-eyes'
-                    onMouseOver={()=>{setLoginPasswordType('text')}} 
-                    onMouseLeave={()=>{setLoginPasswordType('password')}}
-                    src="../../../img/icons/eyes.svg" 
-                    alt="Ver Password" />
+                        onChange={(e)=>{setLoginPasswordlValue(e.target.value)}} 
+                        type={loginPasswordType} 
+                        name='password-login'
+                        placeholder='*******'/>
+                        <img
+                        className='password-eyes'
+                        onMouseOver={()=>{setLoginPasswordType('text')}} 
+                        onMouseLeave={()=>{setLoginPasswordType('password')}}
+                        src="../../../img/icons/eyes.svg" 
+                        alt="Ver Password" />
                 </label> 
-                </form>
-                <div className="remember" onClick={()=>{rememberChange()}}>
-                    <div className={`remember-btn ${remember === true? 'remember-btn-box-selected':''}`}>
-                        <div className={`remember-btn-cicle ${remember === true? 'remember-btn-selected':''}`}></div>
-                    </div>
-                    <p>Lembrar senha.</p>
+            </form>
+            <div className="remember" onClick={()=>{rememberChange()}}>
+                <div className={`remember-btn ${remember === true? 'remember-btn-box-selected':''}`}>
+                    <div className={`remember-btn-cicle ${remember === true? 'remember-btn-selected':''}`}></div>
+                </div>
+                <p>Lembrar senha.</p>
                 </div>
                 <button onClick={()=>{userLogin()}} className='btn-success'>Entrar</button>
                 <button  onClick={()=>{setForgetStatus(true)}} className='forgetPassword'>Esqueceu a senha?</button>
-            </div>
-            <div className={`singup-form ${loginHeader != 'login'? '':'opacityNone'}`}>
-                    <p className="login-form-text">Preencha com seus dados.</p>
-                <form>
-
+        </div>
+        <div className={`singup-form ${loginHeader != 'login'? '':'opacityNone'}`}>
+            <p className="login-form-text">Preencha com seus dados.</p>
+            <form>
                 <label>
-                        <h5>Nome Completo:</h5>
-                        <input 
+                    <h5>Nome Completo:</h5>
+                    <input 
                         type="text" 
                         name='nome'
                         placeholder='Pedro da Costa' 
@@ -206,27 +204,27 @@ const LoginComponent = () => {
                 <label>
                     <h5>Email:</h5>
                     <input 
-                    type="text" 
-                    placeholder='exemplo@google.com' 
-                    onChange={(e)=>{setCreateEmailValue(e.target.value) 
-                                    setLoginEmailValue(e.target.value)}}
-                    />
+                        type="text" 
+                        placeholder='exemplo@google.com' 
+                        onChange={(e)=>{setCreateEmailValue(e.target.value) 
+                                        setLoginEmailValue(e.target.value)}}
+                        />
                 </label>
                 <label>
                     <h5>Senha:</h5>
                     <input 
-                    type={createPasswordType} 
-                    placeholder='*******'
-                    onFocus={()=>{setRequire(true)}} 
-                    onBlur={()=>{setRequire(false)}}
-                    onChange={(e)=>{setPasswordCreateValue(e.target.value)}}
-                    />
+                        type={createPasswordType} 
+                        placeholder='*******'
+                        onFocus={()=>{setRequire(true)}} 
+                        onBlur={()=>{setRequire(false)}}
+                        onChange={(e)=>{setPasswordCreateValue(e.target.value)}}
+                        />
                     <img
-                    className='password-eyes'
-                    onMouseOver={()=>{setCreatePasswordType('text')}} 
-                    onMouseLeave={()=>{setCreatePasswordType('password')}}
-                    src="../../../img/icons/eyes.svg" 
-                    alt="Ver Password" />
+                        className='password-eyes'
+                        onMouseOver={()=>{setCreatePasswordType('text')}} 
+                        onMouseLeave={()=>{setCreatePasswordType('password')}}
+                        src="../../../img/icons/eyes.svg" 
+                        alt="Ver Password" />
                 </label>
                 <div className={`require-password ${require === false ? 'opacityNone':''}`}>
                     <p className={min == true? 'require-password-sucess':''}>Minimo 8 caracteres.</p>
@@ -237,36 +235,29 @@ const LoginComponent = () => {
                 <label>
                     <h5>Confirme a senha:</h5>
                     <input 
-                    type={confirmPasswordType} 
-                    placeholder='*******'
-                    onFocus={()=>{setRequire2(true)}} 
-                    onBlur={()=>{setRequire2(false)}}
-                    onChange={(e)=>{setCreatePasswordValue(e.target.value)
-                                    }}
-                    />
-                    
+                        type={confirmPasswordType} 
+                        placeholder='*******'
+                        onFocus={()=>{setRequire2(true)}} 
+                        onBlur={()=>{setRequire2(false)}}
+                        onChange={(e)=>{setCreatePasswordValue(e.target.value)}}
+                        />
                     <img
-                    className='password-eyes'
-                    onMouseOver={()=>{setConfirmPasswordType('text')}} 
-                    onMouseLeave={()=>{setConfirmPasswordType('password')}}
-                    src="../../../img/icons/eyes.svg" 
-                    alt="Ver Password" />
+                        className='password-eyes'
+                        onMouseOver={()=>{setConfirmPasswordType('text')}} 
+                        onMouseLeave={()=>{setConfirmPasswordType('password')}}
+                        src="../../../img/icons/eyes.svg" 
+                        alt="Ver Password" />
                     <div className={`require-password confirm-password ${require2 === false ? 'opacityNone':''}`}>
                         <p className={samePassword === true? 'require-password-sucess':''}>A senhas devem ser iguais.</p>
-
                     </div>
                 </label>
                 </form>
-
-
-                <button onClick={samePassword==true? ()=>{createUser()}:null} className={`btn-success ${samePassword==true? '':'btn-inative'}`}>Cadatrar</button>
+                <button onClick={samePassword==true? ()=>{createUser()}:null} className={`btn-success space-top ${samePassword==true? '':'btn-inative'}`}>Cadatrar</button>
             </div>
                 {forgetStatus === true? <ForgetPassword closeMessage={closeMessage}/> : ''}
-        
-
-    </div>
+    </div> 
     </>
   )
 }
 
-export default LoginComponent
+export default LoginComponent;

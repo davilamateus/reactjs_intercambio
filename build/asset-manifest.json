@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/static/css/main.33ce0b63.css",
+    "main.js": "/static/js/main.4111f416.js",
+    "static/media/alfa-slab-one-all-400-normal.woff": "/static/media/alfa-slab-one-all-400-normal.f01f444003a2e09f1cd2.woff",
+    "static/media/alfa-slab-one-latin-400-normal.woff2": "/static/media/alfa-slab-one-latin-400-normal.799470b733b3a5c4db21.woff2",
+    "static/media/alfa-slab-one-latin-ext-400-normal.woff2": "/static/media/alfa-slab-one-latin-ext-400-normal.da760c2e5309a8e7a961.woff2",
+    "static/media/alfa-slab-one-vietnamese-400-normal.woff2": "/static/media/alfa-slab-one-vietnamese-400-normal.2cd2afa9197c6bc6911b.woff2",
+    "index.html": "/index.html",
+    "main.33ce0b63.css.map": "/static/css/main.33ce0b63.css.map",
+    "main.4111f416.js.map": "/static/js/main.4111f416.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.33ce0b63.css",
+    "static/js/main.4111f416.js"
+  ]
+}

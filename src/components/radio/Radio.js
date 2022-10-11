@@ -77,7 +77,7 @@ return (
       <div style={{backgroundImage: `url("${listRadio[page].img}")`}} className='radio-img'></div>
       <div className="radio-controls">
         <p>Você esta ouvindo</p>
-        <h4>{listRadio[page].title}</h4>
+        <h5>{listRadio[page].title}</h5>
         <div className="radios-btns-controler">
           <div className="radio-volume">
                    <audio ref={audioRef}   >

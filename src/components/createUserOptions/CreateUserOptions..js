@@ -287,12 +287,12 @@ if(cityInfor !== undefined){
          <div className='question-citys'>
 
         {resQuestionStage === -1? <>
-          <h2>Olá {(user.name).split(' ')[0]}!</h2>
+          <h3>Olá {(user.name).split(' ')[0]}!</h3>
         <p>Bem vindo a ferramenta que vai te ajudara realizar seu sonho de intercambista.
           <br /> <br/>Vamos começar te fazendo algumas perguntas.
         </p>
             <span>
-            <h4>Você já sabe qual pais e cidade ir?</h4>
+            <h5>Você já sabe qual pais e cidade ir?</h5>
             <button onClick={()=>{ setResAlreadyKnow(true)
                 next() }} className='button-option01'>Sim</button>
             <button onClick={()=>{
@@ -303,12 +303,12 @@ if(cityInfor !== undefined){
         </>:''}
 
         {resQuestionStage === 0? <>
-          <h2>Legal! {(user.name).split(' ')[0]}!</h2>
+          <h3>Legal! {(user.name).split(' ')[0]}!</h3>
         <p>Bem vindo a ferramenta que vai te ajudara realizar seu sonho de intercambista.
           <br /> <br/>Vamos começar te fazendo algumas perguntas.
         </p>
             <span>
-            <h4>Você já comprou o seu curso??</h4>
+            <h5>Você já comprou o seu curso??</h5>
             <button onClick={()=>{setStage(1) 
             setResAlreadyBuy(true)
                 }} className='button-option01'>Sim</button>
@@ -321,11 +321,11 @@ if(cityInfor !== undefined){
         {resQuestionStage === 1 ?
         
         <span>
-                  <h2>Legal!</h2>
+                  <h3>Legal!</h3>
         <p>Agora nos diga qual resposta mais se parece com você.
          
         </p>
-            <h4>Eu prefiro morar em cidade…</h4>
+            <h5>Eu prefiro morar em cidade…</h5>
             <button onClick={()=>{setResQuestion01(0) 
                 next()}} className='button-option01'>Pequena</button>
             <button onClick={()=>{setResQuestion01(1)
@@ -336,11 +336,11 @@ if(cityInfor !== undefined){
          :''}
                  {resQuestionStage === 2 ?
         <span>
-                  <h2>Legal!</h2>
+                  <h3>Legal!</h3>
         <p>Agora nos diga qual resposta mais se parece com você.
          
         </p>
-            <h4>Viajar para outros países durante o intercambio é…</h4>
+            <h5>Viajar para outros países durante o intercambio é…</h5>
             <button onClick={()=>{setResQuestion02(0)
              next()}} className='button-option01'>Essencial</button>
             <button onClick={()=>{setResQuestion02(1)
@@ -351,11 +351,11 @@ if(cityInfor !== undefined){
          :''}
                  {resQuestionStage === 3?
         <span>
-                            <h2>Legal!</h2>
+                            <h3>Legal!</h3>
         <p>Agora nos diga qual resposta mais se parece com você.
          
         </p>
-            <h4>Quando se trata de dias frios eu…</h4>
+            <h5>Quando se trata de dias frios eu…</h5>
             <button onClick={()=>{setResQuestion03(0)
              next()}} className='button-option01'>Eu amo</button>
             <button onClick={()=>{setResQuestion03(1)
@@ -366,11 +366,11 @@ if(cityInfor !== undefined){
          :''}
                  {resQuestionStage === 4 ?
         <span>
-                            <h2>Legal!</h2>
+                            <h3>Legal!</h3>
         <p>Agora nos diga qual resposta mais se parece com você.
          
         </p>
-            <h4>Prefiro cidades…</h4>
+            <h5>Prefiro cidades…</h5>
             <button onClick={()=>{setResQuestion04(0)
              next()}} className='button-option01'>Históricas</button>
             <button onClick={()=>{setResQuestion04(1)
@@ -381,11 +381,11 @@ if(cityInfor !== undefined){
          :''}
                  {resQuestionStage === 5 ?
         <span>
-                            <h2>Legal!</h2>
+                            <h3>Legal!</h3>
         <p>Agora nos diga qual resposta mais se parece com você.
          
         </p>
-            <h4>Me interesso mais por…</h4>
+            <h5>Me interesso mais por…</h5>
             <button onClick={()=>{setResQuestion05(0)
              next()}} className='button-option01'>Baladas</button>
             <button onClick={()=>{setResQuestion05(1)
@@ -396,14 +396,14 @@ if(cityInfor !== undefined){
          :''}
                           {cityInfor !== undefined?
         <div>
-          <h2>Eba! {(user.name).split(' ')[0]}!</h2>
+          <h3>Eba! {(user.name).split(' ')[0]}!</h3>
         <p>De acordo com nosso questionário a cidade que mais se adapta a sua personalidade é {cityInfor.title}.
         </p>
              <div style={{backgroundImage:`url(${cityInfor.img})`}} className="city-img"></div>   
              <div className="city-header">
-                 <h1>{cityInfor.title}</h1>
+                 <h3>{cityInfor.title}</h3>
                  <div className="city-country">
-                  <h4>{cityInfor.country.title}</h4>
+                  <h5>{cityInfor.country.title}</h5>
                   <div style={{backgroundImage:`url(${cityInfor.country.flag})`}} className="city-country-flag"></div>
 
                  </div>
@@ -418,7 +418,7 @@ if(cityInfor !== undefined){
       </> : ''}
       {stage == 1 ?     
       <>  <div className='space'></div>
-         <h2>Olá {(user.name).split(' ')[0]}!</h2>
+         <h3>Olá {(user.name).split(' ')[0]}!</h3>
         <p>Agora vamos configurar o seu “Dashboard”.</p>
         <form >
           <label>
@@ -465,7 +465,7 @@ if(cityInfor !== undefined){
                 :'' }
                 {stage ==2 ?
           <>
-            <h2>Estamos quase lá!</h2>
+            <h3>Estamos quase lá!</h3>
 
             <h5>Lista de tarefas.</h5>
             <p>Por fim vamos te da algumas sugestões detarefas para realizar seu plano.</p>

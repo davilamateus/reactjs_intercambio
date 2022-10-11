@@ -1,0 +1,88 @@
+
+
+@import './../../styles/color';
+@import './../../styles/mixin';
+
+.login-div{
+    @include displayFlex;
+
+}
+.login-left-text-mobile{
+    display: none;
+}
+.login-div-left{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    align-items: center;
+    justify-content: end;
+
+
+}
+.login-div-right{
+    width: 65vw;
+    height: 100vh;
+    min-width: 400px;
+    margin-left: auto;
+
+}
+.login-logo{
+    width: 150px;
+    margin-bottom: 64px;
+
+}
+.login-left-text {
+    width: 220px;
+    margin-bottom: 64px;
+}
+.login-3dperson{
+    max-width: 400px;
+    z-index: 2;
+    left:15%;
+    top: 25%;
+    position: absolute;
+
+}
+.login-3dperson { 
+    animation-name: floating;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    margin-top: 5px;
+}
+ 
+@keyframes floating {
+    0% { transform: translate(-70px,   0px); }
+    50%  { transform: translate(0, 50px); }
+    100%   { transform: translate(-70px, -0px); }   
+}
+
+@media only screen and (max-width: 1024px){
+    .login-div{
+        flex-direction: column-reverse;
+
+    }
+    .login-div-right{
+        width: 100vw;
+    }
+    .login-3dperson{
+        left:-10vw;
+        width: 330px;
+        top: 70%;
+    }
+    .login-div-left{
+        height: 300px;
+    }
+    .login-left-text-mobile{
+        display: block;
+        width: 300px;
+    }
+    .login-left-text{
+        display: none;
+    }
+}
+@media only screen and (max-width: 500px){
+    .login-3dperson{
+        width: 180px;
+    }
+}

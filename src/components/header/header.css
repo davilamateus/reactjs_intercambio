@@ -1,67 +1,58 @@
-.header-page{
-    min-height: 95vh;
-    position: fixed;
-    z-index: 2;
-    background-color: var(--9);
-    display: flex;
-    flex-direction: column;
-    width: 70px;
-    align-items: center;
-    justify-content: space-between;
-    border-radius: 20px;
-    margin: 10px;
-    top: 0;
-
+.header-page {
+  min-height: 95vh;
+  position: fixed;
+  z-index: 2;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  width: 70px;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 20px;
+  margin: 10px;
+  top: 0;
+  width: 70px;
+  margin-left: -70px;
 }
-.header-page div{
-    margin: 20px 0px;
-}
-
-.menu{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    
-}
-.menu a{
-    margin-top: 30px;
-    opacity: 0.6;
-    transition: 0.4s;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-
-    
-}
-.menu a img{
-    width: 20px;
-    filter: contrast(0.1);
-
+.header-page div {
+  margin: 20px 0px;
 }
 
-.menu a:hover{
-    opacity: 1;
+.menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.menu a {
+  margin-top: 30px;
+  opacity: 0.6;
+  transition: 0.2s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.menu a img {
+  width: 20px;
+  filter: contrast(0.7);
 }
 
-.logo-menu img{
-    width: 50px;
+.logo-menu img {
+  width: 50px;
 }
 
-.active{
-    background-color: #FB355E;
-    border-radius: 100px;
-    padding: 20px;
-    opacity: 1!important;
-    width: 30px;
-    height: 30px;
-    display: flex;
-    align-items: center;
-    justify-content: baseline;
+.active {
+  background-color: #FA385F;
+  border-radius: 100px;
+  opacity: 1 !important;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: baseline;
 }
 
-.active img{
-    filter: contrast(1)!important;
-
-}
+.active img {
+  filter: contrast(1) !important;
+}/*# sourceMappingURL=header.css.map */

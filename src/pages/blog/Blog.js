@@ -4,7 +4,6 @@ import ListArticles from '../../components/blog/ListArticles'
 import ListCategory from '../../components/blog/ListCategory'
 import Seach from '../../components/search/Seach'
 import Api from '../../axios/Axios'
-import Perfil from '../../components/perfil/Perfil'
 import './BlogPage.css'
 const Blog = () => {
 
@@ -52,10 +51,7 @@ const Blog = () => {
 
   return (
     <>  
-      <div className='home-top'>
-        <h2 className='dashboard-title'>Blog</h2>
-          <Perfil />
-      </div>
+
     <div className='blog-page'>
         <Seach/>
         <ListCategory/>

@@ -1,0 +1,21 @@
+.money-page{
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    
+}
+
+
+
+.moneyFullChar-Box{
+    width: 900px;
+    padding: 10px;
+
+    
+}
+
+.money-table{
+    
+}

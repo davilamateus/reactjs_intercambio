@@ -1,5 +1,4 @@
 import {useState, useEffect} from 'react'
-import Perfil from '../../components/perfil/Perfil'
 import Api from '../../axios/Axios';
 import './Finance.css'
 import Chart from 'chart.js/auto';
@@ -202,10 +201,7 @@ function titleCategory(i){
     {loading == true? 
     <>
 
-        <div className='home-top'>
-            <h2 className='dashboard-title'>Controle de Gatos</h2>
-              <Perfil userFather={getUser} />
-        </div>
+
         <div className="todolist-header-page">
             <button onClick={()=>{setAddShow(true)}} className='btn-add-new'>
               <svg xmlns="http://www.w3.org/2000/svg" width="17.371" height="17.371" viewBox="0 0 17.371 17.371">

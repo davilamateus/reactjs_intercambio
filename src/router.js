@@ -1,4 +1,4 @@
-import {BrowserRouter, Routes, Route ,Sw} from 'react-router-dom';
+import {BrowserRouter, Route, Routes  } from 'react-router-dom';
 import Login from './pages/login/login';
 import ConfirmEmail from './pages/confirm-email/confirmEmail';
 import Home from './pages/home/Home';
@@ -13,31 +13,30 @@ import React from 'react'
 import Header from './components/header/Header';
 import Style from './components/Style/Style'
 import Articles from './pages/blog/Articles';
-
+import NavegationDiv from './components/navegation/NavegationDiv'
 
 const Routers = () => {
   return (
     
-    <>
-    <Style/>
+   
     <BrowserRouter>
         <Routes>
             <Route element={<Login/>} path='/login' />
             <Route element={<ConfirmEmail/>} path='/confirm-email/:token' />
             <Route element={<ForgetPassword/>} path='/forget-password/:token' />
             <Route element={<CreateUserOptions/>} path='/createuseroptions' />
-                    <Route element={<><Home/> <Header/></>} path='/' />
-                   <Route element={<><ToDoList/> <Header/></>} path='/listadetarefas' />
-                    <Route element={<><Money/>  <Header/></>} path='/cotacao' />
-                    <Route element={<><Finance/> <Header/></>} path='/financeiro' />
-                    <Route element={<><Blog/> <Header/></>} path='/blog/category/:id' />
-                    <Route element={<><Blog/> <Header/></>} path='/blog/search/:search' />
-                    <Route element={<><Articles/> <Header/></>} path='/blog/article/:article' />
-                    <Route element={<><Blog/> <Header/></>} path='/blog/' />
-                    <Route element={<><User/> <Header/></>} path='/minhaconta' />
+                    <Route element={<><Header/><NavegationDiv/> <Home/>  </>} path='/' />
+                    <Route element={<><Header/><NavegationDiv/><ToDoList/> </>} path='/listadetarefas' />
+                    <Route element={<><Header/><NavegationDiv/><Money/>  </>} path='/cotacao' />
+                    <Route element={<><Header/><NavegationDiv/><Finance/> </>} path='/financeiro' />
+                    <Route element={<><Header/><NavegationDiv/><Blog/> </>} path='/blog/category/:id' />
+                    <Route element={<><Header/><NavegationDiv/><Blog/> </>} path='/blog/search/:search' />
+                    <Route element={<><Header/><NavegationDiv/><Articles/> </>} path='/blog/article/:article' />
+                    <Route element={<><Header/><NavegationDiv/><Blog/> </>} path='/blog/' />
+                    <Route element={<><Header/><NavegationDiv/><User/>  </>} path='/minhaconta' />
         </Routes>
     </BrowserRouter>
-    </>
+ 
 
   
 

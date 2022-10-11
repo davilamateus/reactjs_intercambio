@@ -1,7 +1,7 @@
 import {useParams} from 'react-router-dom'
 import Api from '../../axios/Axios'
 import { useState, useEffect } from 'react'
-import './forget-password.css'
+import './forgetPassowrd.css'
 import Messages from '../../components/messages/Messages'
 
 
@@ -92,7 +92,8 @@ const ForgetPassword = () => {
     <div className='forget-password-page'>
         <img className='person-img' src='./../../../img/3dperson3.png' alt="3D Person" />
         <form onClick={(e)=>e.preventDefault()} >
-             <h3>Redefinindo a senha.</h3>
+             <h4>Redefinindo a senha.</h4>
+             <p>Cadastre uma nova senha de acesso.</p>
         <label>
                     <h5>Nova senha:</h5>
                     <input 

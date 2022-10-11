@@ -1,0 +1,19 @@
+.money-simulador-box{
+    display: flex;
+    background-color: var(--9);
+    padding: 10px;
+}
+
+.simulator-infors div img{
+    max-height: 50px;
+}
+.simulator-infors div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 30px;
+}
+.simulator-infors {
+    display: flex;
+}

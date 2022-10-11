@@ -1,0 +1,56 @@
+@import './../../styles/color';
+@import './../../styles/mixin';
+
+.message-page{
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.message-page-bg{
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    z-index: 4;
+    background-color: rgba(142, 142, 142, 0);
+    backdrop-filter: blur(0px);
+    transition: 0.3s;
+    
+}
+
+.message-bg-animation{
+    background-color: rgba(142, 142, 142, 0.103);
+    backdrop-filter: blur(2px);
+}
+
+.message-box{
+    z-index: 4;
+    background-color: $box-background;
+    width: max-content;
+    height: max-content;
+    max-width: 420px;
+    border-radius:4px;
+    text-align: center;
+    margin-top: 500px;
+    opacity: 0;
+    transition: 0.3s;
+    padding: 16px;
+}
+
+.message-box-animation{
+    margin-top: 0px;
+    opacity: 1;
+}
+
+.message-box p{
+    margin: 16px 0px;
+
+}

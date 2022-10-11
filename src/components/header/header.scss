@@ -1,0 +1,67 @@
+@import './../../styles/color';
+
+.header-page{
+    min-height: 95vh;
+    position: fixed;
+    z-index: 2;
+    background-color:$box-background;
+    display: flex;
+    flex-direction: column;
+    width: 70px;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 20px;
+    margin: 10px;
+    top: 0;
+    div{
+        margin: 20px 0px;
+    }
+    width: 70px;
+    margin-left: -70px;
+
+}
+
+.menu{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    a{
+        margin-top: 30px;
+        opacity: 0.6;
+        transition: 0.2s;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        img{
+            width: 20px;
+            filter: contrast(0.7);
+        
+        }
+        
+    }
+    
+}
+
+
+
+.logo-menu img{
+    width: 50px;
+}
+
+.active{
+    background-color: $secondary-color;
+    border-radius: 100px;
+    opacity: 1!important;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: baseline;
+}
+
+.active img{
+    filter: contrast(1)!important;
+
+}

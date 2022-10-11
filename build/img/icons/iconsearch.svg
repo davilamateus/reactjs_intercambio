@@ -1,0 +1,10 @@
+<svg id="button3" xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 44 44">
+  <rect id="button1" width="44" height="44" rx="14" fill="#5e3d98"/>
+  <g id="Icons_Actions_ic-actions-search" data-name="Icons / Actions / ic-actions-search" transform="translate(10 10)">
+    <rect id="Retângulo_157" data-name="Retângulo 157" width="24" height="24" fill="none"/>
+    <g id="ic-actions-search" transform="translate(-0.41 0.4)">
+      <circle id="Elipse_12" data-name="Elipse 12" cx="7" cy="7" r="7" transform="translate(6.79 3.15)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="bevel" stroke-width="1.5"/>
+      <line id="Linha_50" data-name="Linha 50" x1="4.88" y2="4.88" transform="translate(4.03 15.17)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="bevel" stroke-width="1.5"/>
+    </g>
+  </g>
+</svg>

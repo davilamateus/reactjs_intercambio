@@ -7,7 +7,6 @@ import Radio from './../../components/radio//Radio'
 import Money from './../../components/money/Money'
 import ToDoList from '../../components/toDoList/ToDoListDashboard';
 import Ads from './../../components/ads/Ads'
-import Perfil from './../../components/perfil/Perfil'
 import Seach from './../../components/search/Seach'
 import Finance from './../../components/finance/Finance'
 import Study from './../../components/study/Study'
@@ -44,7 +43,7 @@ const Home = () => {
       };
         await Api.get('/user/useroptions', config).then((data)=>{
           if(!data.data[0]){
-            window.location.href = '/createuseroptions'
+            //window.location.href = '/createuseroptions'
           } else{
             setUser(data.data[0])
 
@@ -57,43 +56,23 @@ const Home = () => {
     /*
               <Ads country={user.countryId}/>
               <Study/>
-    
+
+              <Money/>
+              <Finance goal={user.goal}/>
+              <DaysToTravel when={user.when} city={user.city}/>
+              <InforsBtns/>
     */
 
    
 
   return (
     <>  
-          <div className='home-top'>
-            <h2 className='dashboard-title'>Dashboad</h2>
-              <Perfil />
-          </div>
-        <div className='page-container'>
-          <div className="home-medium">
-              <WeatherComponet country={user.countryId} city={user.city}/>
-              <BlogDashboard countryId={user.countryId}/>
-              <Radio country={user.countryId}/>
-              <ToDoList/>
 
-              <Money/>
-              <Finance goal={user.goal}/>
-              <DaysToTravel when={user.when} city={user.city}/>
-              <InforsBtns/>
-
-
-              <img  className='img-home' src="./../../../img/3dpersoninvert.png"  />
-          </div>
-
-
-
-
-
-
-
-
-
-
-
+        <div className='home container'>
+          <WeatherComponet country={user.countryId} city={user.city}/>
+          <BlogDashboard countryId={user.countryId}/>
+          <Radio country={user.countryId}/>
+          <ToDoList/>
         </div>
     </>
   )

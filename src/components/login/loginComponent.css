@@ -1,125 +1,99 @@
-.login-right{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
+.login-right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #fff;
 }
 
-.login-header{
-    display: flex;
+.login-header-active {
+  opacity: 1 !important;
+  border-bottom: 6px solid #6958A3 !important;
 }
 
-.login-header button{
-    opacity: .3;
-    margin: 20px;
-    border: none;
-    border-bottom: 5px solid rgba(0, 0, 0, 0);
-    background: none;
-    font-size: 22px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: 0.3s;
-    color: var(--5);
-    
+.login-header {
+  margin: 32px 0px;
+}
+.login-header button {
+  background: none;
+  border: none;
+  margin: 0 16px;
+  opacity: 0.3;
+  transition: 0.2s;
 }
 
-
-.login-form, .singup-form{
-    width: 300px;
-    min-height: 500px;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    flex-direction: column;
+.login-form, .singup-form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 
-.login-header-active{
-    opacity: 1!important;
-    border-bottom: 5px solid var(--2)!important;
+.login-form-text {
+  margin: 16px 0;
 }
 
-.login-form-text{
-    padding-top: 10px;
-    padding-bottom: 30px;
+.password-eyes {
+  margin-left: -20px;
 }
 
-.password-eyes{
-    margin-left: -20px;
+.remember {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 32px 0;
 }
 
-.remember-btn{
-    width: 26px;
-    height: 15px;
-    background-color: #dcdcdc;
-    border-radius: 20px;
-    transition: 0.4s;
-    margin-right: 20px;
-}
-.remember-btn-cicle{
-    height: 15px;
-    width: 15px;
-    background-color:#ffffff ;
-    border-radius: 10px;
-    margin-left: 0px;
-    transition: 0.4s;
-    border: 1px solid rgba(0, 0, 0, 0.058);
-}
-.remember-btn-selected{
-    border-radius: 10px;
-    margin-left: 11px;
+.remember-btn {
+  width: 26px;
+  height: 15px;
+  background-color: #dcdcdc;
+  border-radius: 20px;
+  transition: 0.4s;
+  margin-right: 20px;
 }
 
-.remember-btn-box-selected{
-    background-color: #E84660;
+.remember-btn-cicle {
+  height: 15px;
+  width: 15px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  margin-left: 0px;
+  transition: 0.4s;
+  border: 1px solid rgba(0, 0, 0, 0.058);
 }
 
-.remember{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    margin-bottom: 30px;
+.remember-btn-selected {
+  border-radius: 10px;
+  margin-left: 11px;
 }
 
-.remember p{
-    font-weight: 400;
-    font-style: italic;
-    font-size: 14px;
-    color: var(--5);
+.remember-btn-box-selected {
+  background-color: #6958A3;
 }
 
-.forgetPassword{
-    background: none;
-    padding: 19px;
-    margin-top: 40px;
-    border-radius: 100px;
-    border:2px solid var(--2);
-    color: var(--2);
-    opacity: 0.8;
-    transition: 0.2s;
-}
-.forgetPassword:hover{
-    padding-left: 24px;
-    padding-right: 24px;
-    opacity: 1;
+.forgetPassword {
+  background: none;
+  width: 200px;
+  height: 50px;
+  border-radius: 16px;
+  border: 2px solid #6958A3;
+  color: #6958A3;
+  opacity: 0.3;
+  transition: 0.2s;
+  margin: 16px 0;
 }
 
-.require-password  p{
-    font-size: 10px;
-    padding: 0;
-    margin: 0;
-    color: #E84660;
-
+.forgetPassword:hover {
+  opacity: 1;
 }
 
-.require-password{
-    margin-top: -20px;
-    margin-bottom: 40px;
+.require-password p {
+  font-size: 8pt;
+  color: #FA385F;
 }
 
-.require-password-sucess{
-    color: #9BC352!important;
-
-
-}
+.require-password-sucess {
+  color: #68D9A5 !important;
+}/*# sourceMappingURL=loginComponent.css.map */

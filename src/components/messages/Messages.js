@@ -19,7 +19,7 @@ const Messages = ({title, text, status, action, closeMessage}) => {
     <div className='message-page'>
         <div className={`message-page-bg ${bgAnimation}`} onClick={()=>{closeMessage()}}></div>
         <div className={`message-box ${animation}`}  >
-            <h3>{title}</h3>
+            <h4>{title}</h4>
             <p>{text}</p>
             <button
             className={`btn-${status} space-button`}

@@ -1,0 +1,97 @@
+@import './../../styles/color';
+@import './../../styles/mixin';
+
+.login-right{
+    @include displayFlex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: $box-background;
+
+}
+
+.login-header-active{
+    opacity: 1!important;
+    border-bottom: 6px solid $primary-color!important;
+}
+.login-header{
+    margin: 32px 0px;
+    button{
+        background: none;
+        border: none;
+        margin: 0 16px;
+        opacity: 0.3;
+        transition: 0.2s;
+    }
+}
+
+.login-form ,.singup-form  {
+    @include displayFlex;
+    flex-direction: column;
+}
+.login-form-text{
+    margin: 16px 0;
+
+}
+.password-eyes{
+    margin-left: -20px;
+}
+
+.remember{
+    @include displayFlex;
+    margin: 32px 0;
+}
+
+.remember-btn{
+    width: 26px;
+    height: 15px;
+    background-color: #dcdcdc;
+    border-radius: 20px;
+    transition: 0.4s;
+    margin-right: 20px;
+}
+.remember-btn-cicle{
+    height: 15px;
+    width: 15px;
+    background-color:#ffffff ;
+    border-radius: 10px;
+    margin-left: 0px;
+    transition: 0.4s;
+    border: 1px solid rgba(0, 0, 0, 0.058);
+}
+.remember-btn-selected{
+    border-radius: 10px;
+    margin-left: 11px;
+}
+
+.remember-btn-box-selected{
+    background-color: $primary-color;
+}
+
+.forgetPassword{
+    background: none;
+    width: 200px;
+    height: 50px;
+    border-radius: 16px;
+    border: 2px solid $primary-color;
+    color: $primary-color;
+    opacity: 0.3;
+    transition: 0.2s;
+    margin: 16px 0;
+}
+
+.forgetPassword:hover{
+    opacity: 1;
+
+}
+.require-password  p{
+    font-size: 8pt;
+    color: $secondary-color;
+}
+
+
+
+.require-password-sucess{
+    color: $terciary-color!important;
+
+
+}

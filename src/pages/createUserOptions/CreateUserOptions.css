@@ -1,68 +1,42 @@
-.create-options-page{
-    display: flex;
-    background-color: var(--8);
-    min-height: 100vh;
-    justify-content: center;
-    align-items: center;
-    
+.create-options-page {
+  display: flex;
+  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
 }
 
-.create-options-left{
-    min-width: 400px;
-    background-color: var(--9);
-    min-height: 100vh;
-    width: 70vw;
-    border-top-right-radius: 59px;
-    border-bottom-right-radius: 59px;
-    display: flex;
-    justify-content: center;
-    text-align: left;
-}
-.create-options-right{
-    width: 30vw;
+.create-options-left {
+  min-width: 400px;
+  background-color: #fff;
+  min-height: 100vh;
+  width: 70vw;
+  border-top-right-radius: 59px;
+  border-bottom-right-radius: 59px;
+  display: flex;
+  justify-content: center;
+  text-align: left;
 }
 
-.create-options-right img{
-    width: 300px;
-    margin-left: -100px;
-    z-index: 2;
-}
-.city-description{
-    text-align: justify;
-}
-.question-citys div{
-    display: flex;
-    flex-direction: column;
-}
-.city-header, .city-country{
-    display: flex;
-    flex-direction: row!important;
+.create-options-right {
+  width: 30vw;
 }
 
-
-@media only screen and (max-width: 700px) {
-
-    .create-options-page{
-        display: flex;
-        flex-direction: column;
-    }
-
-    .create-options-right img{
-        width: 150px;
-        margin-left: 0px!important;
-        margin-top: -30px;
-    }
-    .create-options-right {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-    .create-options-left{
-        width: 90vw!important;
-        border-radius: 20px;
-        margin-top: 2   0px;
-    }
-
-
-
+.create-options-right img {
+  width: 300px;
+  margin-left: -100px;
+  z-index: 2;
 }
+
+.city-description {
+  text-align: justify;
+}
+
+.question-citys div {
+  display: flex;
+  flex-direction: column;
+}
+
+.city-header, .city-country {
+  display: flex;
+  flex-direction: row !important;
+}/*# sourceMappingURL=CreateUserOptions.css.map */

@@ -1,0 +1,36 @@
+@import './../../styles/color';
+
+
+.forget-password-page form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: $box-background;
+    padding: 30px;
+    border-radius: 10px;
+    width: 420px;
+    
+}
+.forget-description{
+    text-align: center;
+}
+
+
+.forget-password-page{
+    background-color:$background;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+
+.person-img{
+    width: 300px;
+}
+
+.logo{
+    width: 150px;
+    margin: 50px;
+}

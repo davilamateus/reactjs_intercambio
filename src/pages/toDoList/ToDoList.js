@@ -4,7 +4,6 @@ import ToDoListTrello from '../../components/toDoList/ToDoListTrello'
 import Api from '../../axios/Axios'
 import AddToDoList from '../../components/toDoList/AddToDoList'
 import Skeleton, { SkeletonTheme } from 'react-loading-skeleton'
-import Perfil from '../../components/perfil/Perfil'
 
 const ToDoList = () => {
 
@@ -87,10 +86,7 @@ const ToDoList = () => {
     
          // <AddToDoList refresh={refresh} />
     <>  
-        <div className='home-top'>
-            <h2 className='dashboard-title'>Lista de Tarefas</h2>
-              <Perfil />
-          </div>
+
         <div className='todolist-page'>
           <div className="todolist-header-page">
             <button onClick={()=>{setAddShow(true)}} className='btn-add-new'>

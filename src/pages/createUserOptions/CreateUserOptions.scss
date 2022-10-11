@@ -1,0 +1,44 @@
+
+@import './../../styles/color';
+@import './../../styles/mixin';
+
+.create-options-page{
+    display: flex;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.create-options-left{
+    min-width: 400px;
+    background-color: $box-background;
+    min-height: 100vh;
+    width: 70vw;
+    border-top-right-radius: 59px;
+    border-bottom-right-radius: 59px;
+    display: flex;
+    justify-content: center;
+    text-align: left;
+}
+.create-options-right{
+    width: 30vw;
+}
+
+.create-options-right img{
+    width: 300px;
+    margin-left: -100px;
+    z-index: 2;
+}
+.city-description{
+    text-align: justify;
+}
+.question-citys div{
+    display: flex;
+    flex-direction: column;
+}
+.city-header, .city-country{
+    display: flex;
+    flex-direction: row!important;
+}
+

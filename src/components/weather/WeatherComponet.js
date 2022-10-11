@@ -51,7 +51,7 @@ const WeatherComponet = ({city,country}) => {
        <div className='city-div'>
         <div className="city-box">
             <>
-                <h1>{city ||  <Skeleton style={{width:'90px',height:'50px'}}  count={1} />} </h1> 
+                <h4>{city ||  <Skeleton style={{width:'90px',height:'50px'}}  count={1} />} </h4> 
                 <p>{countryTitle[country-1]||  <Skeleton style={{width:'70px',height:'20px'}}  count={1} /> } </p>  
             </>
 
@@ -60,7 +60,7 @@ const WeatherComponet = ({city,country}) => {
         {loading == true? 
             <>
                 <img height={'30px'} src={`http://openweathermap.org/img/wn/${weather.weather[0].icon}@2x.png`} alt={weather.weather[0].main} />
-                <h1>{`${parseFloat((weather.main.temp)-273.15).toFixed(1)}°`}</h1> 
+                <h4>{`${parseFloat((weather.main.temp)-273.15).toFixed(1)}°`}</h4> 
                 <p>{weather.weather[0].main || <Skeleton style={{width:'50px',height:'20px'}}/>}</p>
             </>
         : 

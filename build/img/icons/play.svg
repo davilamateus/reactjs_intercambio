@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="45" height="44" viewBox="0 0 45 44">
+  <g id="button3" transform="translate(-0.263 -0.164)">
+    <rect id="button1" width="45" height="44" rx="22" transform="translate(0.263 0.164)" fill="#5e3d9b"/>
+    <g id="arrow-right" transform="translate(20.064 16.983)">
+      <path id="Path" d="M0,0,6.351,4.763,0,9.527Z" fill="#fff" stroke="#4f38f3" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
+    </g>
+    <g id="arrow-right-2" data-name="arrow-right" transform="translate(18.476 14.601)">
+      <path id="Path-2" data-name="Path" d="M0,0,9.527,7.145,0,14.29Z" fill="#fff"/>
+    </g>
+  </g>
+</svg>

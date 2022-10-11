@@ -1,102 +1,106 @@
-
-
-.login-div{
-    display: flex;
-    min-height: 100vh;
-    justify-content: center;
-    align-items: center;
-    background-color: var(--8);
+.login-div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.login-div-left{
-    width: 400px;
-    display: flex;
-    flex-direction: column;
-    
+
+.login-left-text-mobile {
+  display: none;
 }
-.login-div-right{
-    width: 90vw;
-    height: 97vh;
-    background-color: var(--9);
-    border-top-left-radius: 50px;
-    border-bottom-left-radius: 50px;
+
+.login-div-left {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  align-items: center;
+  justify-content: end;
+}
+
+.login-div-right {
+  width: 65vw;
+  height: 100vh;
+  min-width: 400px;
+  margin-left: auto;
+}
+
+.login-logo {
+  width: 150px;
+  margin-bottom: 64px;
 }
 
 .login-left-text {
-    width: 320px;
+  width: 220px;
+  margin-bottom: 64px;
 }
 
-.login-logo{
-    width: 150px;
-}
-.login-div-left div{
-    display: flex;
-    align-items: center;
-
-}
-
-.login-3dperson{
-    max-width: 400px;
-    z-index: 2;
-    margin-left: -200px;
-    margin-top: 700px;
-    transition: 2s;
-
-
+.login-3dperson {
+  max-width: 400px;
+  z-index: 2;
+  left: 15%;
+  top: 25%;
+  position: absolute;
 }
 
-.login-left-top{
-    height: 80vh;
-    display: flex;
-    padding: 30px;
+.login-3dperson {
+  -webkit-animation-name: floating;
+          animation-name: floating;
+  -webkit-animation-duration: 8s;
+          animation-duration: 8s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+  margin-top: 5px;
 }
 
-.login-left-logo{
-    justify-content: center;
+@-webkit-keyframes floating {
+  0% {
+    transform: translate(-70px, 0px);
+  }
+  50% {
+    transform: translate(0, 50px);
+  }
+  100% {
+    transform: translate(-70px, 0px);
+  }
 }
 
-
-.login-3dperson { 
-    animation-name: floating;
-    animation-duration: 8s;
-    animation-iteration-count: infinite;
-    animation-timing-function: ease-in-out;
-    margin-top: 5px;
-}
- 
 @keyframes floating {
-    0% { transform: translate(-70px,   0px); }
-    50%  { transform: translate(0, 50px); }
-    100%   { transform: translate(-70px, -0px); }   
+  0% {
+    transform: translate(-70px, 0px);
+  }
+  50% {
+    transform: translate(0, 50px);
+  }
+  100% {
+    transform: translate(-70px, 0px);
+  }
 }
-
-
-@media only screen and (max-width: 700px) {
-
-
-    .login-div{
-        flex-direction: column-reverse;
-        margin: 0 auto!important;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-    .login-div-right{
-        border-radius: 10px;
-        width: 95vw;
-        margin-top: 10px;
-    }
-    .login-3dperson{
-        width: 200px;
-        position: absolute;
-
-        margin-top: 50px;
-        margin-left: -70px;
-    }
-    .login-left-top{
-        height: 100px;
-        margin-top: -120px;
-    }
-    .login-left-text{
-    display:none;
-    }
+@media only screen and (max-width: 1024px) {
+  .login-div {
+    flex-direction: column-reverse;
+  }
+  .login-div-right {
+    width: 100vw;
+  }
+  .login-3dperson {
+    left: -10vw;
+    width: 330px;
+    top: 70%;
+  }
+  .login-div-left {
+    height: 300px;
+  }
+  .login-left-text-mobile {
+    display: block;
+    width: 300px;
+  }
+  .login-left-text {
+    display: none;
+  }
 }
+@media only screen and (max-width: 500px) {
+  .login-3dperson {
+    width: 180px;
+  }
+}/*# sourceMappingURL=login.css.map */
