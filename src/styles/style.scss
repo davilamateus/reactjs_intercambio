@@ -1,4 +1,6 @@
 @import './color';
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,700,900');
+
 #root{
     margin-left: 80px;
 }
@@ -9,8 +11,9 @@ body{
 
 h1, h2, h3, h4, h5,button{
     color: $title-color;
-    font-family: "Ubuntu";
-    font-weight: bold;
+    font-family: 'Poppins';
+    font-weight: 700;
+
 }
 
 h1{
@@ -29,7 +32,7 @@ h5{
     font-size: 13pt;
 }
 p{
-    font-size: 13pt;
+    font-size: 11pt;
     color: $paragraph-color;
 
 }
@@ -85,7 +88,7 @@ button{
 
 }
 
- .btn-error,.btn-success{
+ .btn-error,.btn-success,.btn-atention{
     width: 300px;
     height: 50px;
     border:none;
@@ -97,7 +100,7 @@ button{
 }
 
 
-.btn-success:hover, .btn-error:hover{
+.btn-success:hover, .btn-error:hover ,.btn-atention:hover{
     box-shadow: 0 0.3rem 0.6rem rgb(31 52 62 / 16%);
     transform: translate(0.2rem,-0.2rem);}
 
@@ -108,6 +111,10 @@ button{
 }    
 .btn-error{
     background-color: $secondary-color;
+
+}
+.btn-atention {
+    background-color: $quartenary-color;
 
 }
 .btn-inative{

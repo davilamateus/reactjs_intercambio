@@ -36,13 +36,13 @@
     background-color: $box-background;
     width: max-content;
     height: max-content;
-    max-width: 420px;
+    max-width: 350px;
     border-radius:4px;
     text-align: center;
-    margin-top: 500px;
     opacity: 0;
     transition: 0.3s;
-    padding: 16px;
+    padding: 24px 16px;
+    
 }
 
 .message-box-animation{

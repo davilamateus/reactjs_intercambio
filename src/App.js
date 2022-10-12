@@ -1,7 +1,8 @@
 import Style from './components/Style/Style';
 import './styles/style.css';
 import './styles/normalize.css';
-import "@fontsource/alfa-slab-one"; 
+import "@fontsource/lato";
+import "@fontsource/poppins";
 
 
 function App() {

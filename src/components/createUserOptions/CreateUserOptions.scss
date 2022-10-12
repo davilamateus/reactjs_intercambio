@@ -1,14 +1,15 @@
 @import './../../styles/color';
+@import './../../styles/mixin';
 
 .create-options-box{
-    max-width: 400px;
+    max-width: 350px;
     width: 80vw;
     text-align: center;
     display: flex;
     flex-direction: column;
     text-align: left;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center;
 
 }
 
@@ -49,7 +50,7 @@
 
 
 .city-img{
-    width: 500px;
+    width: 100%;
     height: 200px;
     background-size: cover;
     border-radius: 10px;
@@ -83,28 +84,24 @@
 }
 
 
-.question-citys button{
-    width: 300px;
-    background: none;
-    height: 40px;
-    border-radius: 10px;
-    margin-bottom: 5px;
-    opacity: 0.7;
-    align-self: center;
-}
 
-.question-citys button:hover{
-    opacity: 1!important;
-}
-.question-citys {
+
+.question-cities {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    max-width: 350px;
+    text-align: center;
+    p{
+        font-size: 11pt;
+    }
 }
 
-.question-citys span{
+.question-cities span{
     display: flex;
     margin: 32px 0;
+    justify-content: center;
+    align-items: center;
 
     flex-direction: column;
     
@@ -113,7 +110,15 @@
 
     }
 }
-.question-citys span button:hover{
+
+.question-cities span button{
+    width: 300px;
+    height: 40px;
+    background: none;
+    border-radius: 16px;
+    margin-bottom: 12px;
+}
+.question-cities span button:hover{
     box-shadow: 0 0.3rem 0.6rem rgb(31 52 62 / 16%);
     transform: translate(0.2rem,-0.2rem);}
 
@@ -141,6 +146,8 @@
 .city-description{
     margin: 32px 0;
 }
-
+.todolist-suggetion-div{
+    margin: 16px 0px;
+}
 
 

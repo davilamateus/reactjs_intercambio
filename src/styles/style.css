@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:400,700,900");
 #root {
   margin-left: 80px;
 }
@@ -8,8 +9,8 @@ body {
 
 h1, h2, h3, h4, h5, button {
   color: #3B3B3B;
-  font-family: "Ubuntu";
-  font-weight: bold;
+  font-family: "Poppins";
+  font-weight: 700;
 }
 
 h1 {
@@ -33,13 +34,13 @@ h5 {
 }
 
 p {
-  font-size: 13pt;
-  color: #838383;
+  font-size: 11pt;
+  color: #a5a5a5;
 }
 
 .p-small {
   font-size: 11pt;
-  color: #838383;
+  color: #a5a5a5;
 }
 
 a {
@@ -48,7 +49,7 @@ a {
 }
 
 input {
-  color: #838383;
+  color: #a5a5a5;
   min-width: 200px;
   padding: 4px 0;
   margin: 4px 0px;
@@ -79,7 +80,7 @@ select {
   border: none;
   background-color: #F8F8F8;
   border-radius: 4px;
-  color: #838383;
+  color: #a5a5a5;
   margin: 4px 0px;
 }
 
@@ -95,7 +96,7 @@ button {
   cursor: pointer;
 }
 
-.btn-error, .btn-success {
+.btn-error, .btn-success, .btn-atention {
   width: 300px;
   height: 50px;
   border: none;
@@ -106,7 +107,7 @@ button {
   box-shadow: 0px 4px 4px rgba(181, 181, 181, 0.0901960784);
 }
 
-.btn-success:hover, .btn-error:hover {
+.btn-success:hover, .btn-error:hover, .btn-atention:hover {
   box-shadow: 0 0.3rem 0.6rem rgba(31, 52, 62, 0.16);
   transform: translate(0.2rem, -0.2rem);
 }
@@ -117,6 +118,10 @@ button {
 
 .btn-error {
   background-color: #FA385F;
+}
+
+.btn-atention {
+  background-color: #F1F180;
 }
 
 .btn-inative {

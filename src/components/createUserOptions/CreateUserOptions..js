@@ -2,25 +2,32 @@ import {useState,useEffect} from 'react'
 import Api from './../../axios/Axios'
 import './createUserOptions.css'
 import Messages from '../messages/Messages'
+import CardSuggestion from '../toDoList/CardSuggestion'
 
 
 const CreateUserOptions = () => {
 
+
+  // States User
   const [user,setUser] = useState(null)
   const [userImg,setUserImg] = useState('3dpersonface.png')
   const [userCityFromCountry, setUserCityFromCountry] = useState([])
   const [file, setFile] = useState(false);
-  const [stage,setStage] = useState(0)
-
   const [cityValue, setCityValue] = useState(null);
   const [countryValue, setCountryValue] = useState(null);
   const [goalValue, setGoalValue] = useState(null);
   const [whenValue, setWhenValue] = useState();
-  const token = sessionStorage.getItem('token');
-
-
+  
+  //Stage Page
+  const [stage,setStage] = useState(0)
+  const [cities,setCities] = useState([])
+  const [countrys, setCountrys] = useState([])
   const [resCity, setResCity] = useState(null);
   const [cityInfor, setCityInfor] = useState(undefined);
+  const [message, setMessage] = useState({}) 
+  const [listToDoList,setListToDoList] = useState([])
+
+  // States Questions
   const [resAlreadyKnow,setResAlreadyKnow] = useState(false)
   const [resAlreadyBuy,setResAlreadyBuy] = useState(false)
   const [resQuestion01,setResQuestion01] = useState(false)
@@ -29,56 +36,60 @@ const CreateUserOptions = () => {
   const [resQuestion04,setResQuestion04] = useState(false)
   const [resQuestion05,setResQuestion05] = useState(false)
   const [resQuestionStage, setResQuestionStage] = useState(-1)
+  
+  const token = sessionStorage.getItem('token');
 
-
-
-  const [message, setMessage] = useState({}) 
-  function closeMessage(){
-    setMessage({})
-}
-
-  const list = [
-    {title:'Tirar passaporte' , category:"documents", description:'Ir na agencia da policia federal mais próxima a minha casa carregando minha certidão de nascimento ou de casamento e a indentidade.'},
-    {title:'Comprar passagem' ,category:"shop", description:'Pesquisar nos principais sites a passagem área.'},
-    {title:'Reservar acomodação' ,category:"shop", description:'Resevar acomodação temporária ou fixa.'}, 
-    {title:'Ir ao médico' , category:"health",description:'Fazer um checkup completo.'}, 
-    {title:'Ir ao dentista' ,category:"health", description:'Fazer um checkup completo.'}, 
-    {title:'Comprar remédios' , category:"shop",description:'Pegar receitas e comprar os medicamentos.'} , 
-  ] 
-
-  const country = [
-    {title:'Irlanda', slug:'ie', city:[ {title:'Dublin'},{title:'Cork'},{title:'Galway'},{title:'Limerick'},{title:'Waterford'},]},
-    {title:'Canadá', slug:'ca', city:[ {title:'Quebec'},{title:'Ottawa'},{title:'Montreal'},{title:'Toronto'},{title:'Vancouver'},]},
-    {title:'Estados Unidos', slug:'eu', city:[ {title:'Quebec'},{title:'Ottawa'},{title:'Montreal'},{title:'Toronto'},{title:'Vancouver'},]},
-    {title:'Austrália', slug:'au', city:[ {title:'New York'},{title:'Los Angeles'},{title:'Chicago'},{title:'Denver'},{title:'California'},]},
-    {title:'Nova Zelândia', slug:'nz', city:[ {title:'Wellington'},{title:'Christchurch'},{title:'Queenstown'},]},
-  ]
-
-
-  function userCity(value){
-      country.map((item)=>{
-        if(item.slug == value){
-          console.log(item)
-          setUserCityFromCountry(item.city)
-        }
-      })
-
+useEffect(()=>{
+    async function getUser(){
+     await Api.get('/user' , { headers: {"Authorization" : `Bearer ${token}`} })
+          .then((res) => {setUser((res.data))     
+       
+    });
   }
-      useEffect(()=>{
-        userCity('selection')
-        async function getUser(){
+  getUser()
 
-         await Api.get('/user' , { headers: {"Authorization" : `Bearer ${token}`} })
-          .then((res) => {
-          setUser((res.data))     
-        })
-      }
-      
-      getUser()
+
+  async function getCountrys(){
+    await Api.get('/country')
+          .then((res) => {setCountrys((res.data))   
+          })
+ }
+ getCountrys()
 },[])
 
 
 
+useEffect(()=>{
+  
+// function getCities
+  async function getCities(){
+    await Api.get(`/cities?countryId=${countryValue}`,)
+          .then((res) => {setCities((res.data))   
+          })
+ }
+
+ // function getToDoListSuggestion
+ async function getToDoListSuggestion(){
+  await Api.get(`/todolistsuggestion?countryId=${countryValue}`,)
+        .then((res) => {setListToDoList((res.data.data))   
+        })
+}
+ if(countryValue !== null){
+   getCities()
+   getToDoListSuggestion()
+ }
+},[countryValue])
+
+
+
+  function closeMessage(){
+    setMessage({})
+  }
+
+
+
+
+// Update Photos
 const handleInputChange = (event) => {
   setFile(event.target.files[0]);
   
@@ -114,35 +125,37 @@ function nextConfig(){
     setMessage({title:'Falta Informações', text:'Por favor preencha os campos com as informações do seu intercâmbio.',status:'atention', action:'Fechar'})
   } else{
     setStage(2)
-
-
-
   }
-
 }
 
+
+// ToDoList Sujeston
+
+
+
+
+
 let listUser = []
-function addList(value){
+function addUserToDoListSection(value){
+  console.log('teste')
+  addClassSelectionTodoList(value.id)
   if(listUser.includes(value)){
     listUser.splice(listUser.indexOf(value), 1);
   } else{
     listUser.push(value)
-    
   }
-  
-  console.log(listUser)
-
-
+  console.log(value.id)
 }
 
 
-function addClass(index){
 
-  if(document.querySelector(`.btn-${index} `).classList.contains('todolist-selected')){
-    document.querySelector(`.btn-${index}`).classList.remove('todolist-selected')  
+function addClassSelectionTodoList(index){
+
+  if(document.querySelector(`.item-${index} `).classList.contains('todolist-selected')){
+    document.querySelector(`.item-${index}`).classList.remove('todolist-selected')  
   
   } else{
-    document.querySelector(`.btn-${index}`).classList.add('todolist-selected')
+    document.querySelector(`.item-${index}`).classList.add('todolist-selected')
 }
 
 }
@@ -150,7 +163,7 @@ function addClass(index){
 
 function createOptions(){
 
-  const body = {city: cityValue,  country:countryValue, goal:goalValue, lang:'pt-BR', photo:userImg, when:whenValue}
+  const body = {city: cityValue,  countryId:countryValue, goal:goalValue, lang:'pt-BR', photo:userImg, when:whenValue}
   const bodyCommercial = {responser01:resAlreadyKnow,
     responser02:resAlreadyBuy, 
     responser03:resQuestion01,
@@ -167,16 +180,13 @@ function createOptions(){
 
 
   Api.post('/user/useroptions/', body, customConfig).then((res)=>{
+
   })
 
   Api.post('/user/commercial/', bodyCommercial, customConfig).then((res)=>{
   })
 
-  
-  Api.post('/admin/study/create', body, customConfig).then((res)=>{
-
-  })
-
+ 
 
   listUser.map((item)=>{
 
@@ -205,14 +215,14 @@ function createOptions(){
 
 
 
-let Citys = [
+let citiesPoints = [
   {country:'ie',city:"Dublin", question01:[0,3,6], question02:[2,1,1], question03:[2,2,0], question04:[2,0,1], question05:[2,1,0]} ,
   {country:'ie',city:"Galway", question01:[2,1,0], question02:[2,1,1], question03:[2,2,0], question04:[2,0,1], question05:[0,1,5]},
   {country:'ie',city:"Limerick", question01:[1,1,0], question02:[0,1,1], question03:[2,0,0], question04:[1,0,1], question05:[0,5,2]},
 
 ]
 
-let resultToCity = []
+
 
 function next(){
   if(resQuestionStage == 5){
@@ -224,33 +234,31 @@ function next(){
 useEffect(()=>{
   if(resQuestion05 !== false){
       calc()
-  }
-},[resQuestion05])
-
-
-function calc(){
-
-      for(let i = 0; i<Citys.length ;i++){
-          
-          resultToCity.push(Citys[i].question01[resQuestion01] 
-          +  Citys[i].question02[resQuestion02] 
-          +  Citys[i].question03[resQuestion03] 
-          +  Citys[i].question04[resQuestion04] 
-          +  Citys[i].question05[resQuestion05] )
-
+    }
+  },[resQuestion05])
+  
+  let resultToCity = []
+  function calc(){
+    
+    for(let i = 0; i<citiesPoints.length ;i++){
+      
+      resultToCity.push(citiesPoints[i].question01[resQuestion01] 
+        +  citiesPoints[i].question02[resQuestion02] 
+        +  citiesPoints[i].question03[resQuestion03] 
+        +  citiesPoints[i].question04[resQuestion04] 
+        +  citiesPoints[i].question05[resQuestion05] )
       }
-
-
-
-}
-
-useEffect(()=>{
-  if(resultToCity[0] !== undefined){
+    }
+    
+    useEffect(()=>{
+      if(resultToCity[0] !== undefined){
       console.log(`Resposta é${resultToCity}`)
+      console.log(citiesPoints)
+      let res  = citiesPoints[resultToCity.indexOf( resultToCity.reduce(function(prev, current) { 
+        return prev > current ? prev : current; 
+    }))]
+    setResCity(res)
 
-     setResCity(Citys[resultToCity.indexOf( resultToCity.reduce(function(prev, current) { 
-      return prev > current ? prev : current; 
-  }))].city)
           
 }
 },[resultToCity])
@@ -261,7 +269,7 @@ if(resCity !== null){
   console.log('ksldlfkdl')
   console.log(resCity)
   async function getCityInfor(){
-      await Api.get(`/city?city=${resCity}`).then((res)=>{
+      await Api.get(`/city?city=${resCity.city}`).then((res)=>{
           setCityInfor(res.data[0])
       })
   }
@@ -284,12 +292,12 @@ if(cityInfor !== undefined){
      
      {stage ===0 ? 
      <>
-         <div className='question-citys'>
+         <div className='question-cities'>
 
         {resQuestionStage === -1? <>
           <h3>Olá {(user.name).split(' ')[0]}!</h3>
-        <p>Bem vindo a ferramenta que vai te ajudara realizar seu sonho de intercambista.
-          <br /> <br/>Vamos começar te fazendo algumas perguntas.
+          <p>Bem vindo a ferramenta que vai te ajudara realizar seu sonho de intercambista.
+          <br /><br/>Vamos começar te fazendo algumas perguntas.
         </p>
             <span>
             <h5>Você já sabe qual pais e cidade ir?</h5>
@@ -431,12 +439,12 @@ if(cityInfor !== undefined){
           </label>
           <label>
             <h5>Qual pais você vai?</h5>
-            <select onChange={(e)=>{userCity(e.target.value)
-                                    setCountryValue(e.target.value)}} name="country"> 
+            <select onChange={(e)=>{
+                          setCountryValue(e.target.value)}} name="country"> 
                         <option value={undefined}>Selecione um pais</option>
 
-                {country.map((item)=>(
-                  <option key={item.slug} value={item.slug}>{item.title}</option>
+                {countrys.map((item)=>(
+                  <option key={item.id} value={item.id}>{item.title}</option>
                 ))}
             </select>
           </label>
@@ -444,8 +452,8 @@ if(cityInfor !== undefined){
             <h5>Qual a cidade?</h5>
             <select onChange={(e)=>{setCityValue(e.target.value)}} name="city">
                   <option value={undefined}>Selecione uma cidade</option>
-                {userCityFromCountry.map((item)=>(
-                  <option key={item.title} value={item.title}>{item.title}</option>
+                  {cities.map((item)=>(
+                  <option key={item.title} value={item.id}>{item.title}</option>
                 ))}
             </select>
           </label>
@@ -470,33 +478,13 @@ if(cityInfor !== undefined){
             <h5>Lista de tarefas.</h5>
             <p>Por fim vamos te da algumas sugestões detarefas para realizar seu plano.</p>
             
-    
-              {list.map((item,index)=>(
-                <button className={`todolist-item-box btn-${index} `}onClick={()=>{addList(item) 
-                  addClass(index)}} key={item.title}>
-                    <div className={`todolist-color-${item.category}`}></div>
-                    <div className="todolist-text">
-                        <div className="todolist-status">
-                          <div className='todolist-status-open'></div>
-                          <p>Open</p>
-                        </div>
-                        <div className="todolist-container">
-                          <p>{item.title}</p>
-
-                          {item.description.split('') !== undefined ? 
-                          <p className="todolist-description">
-                            
-                            {item.description.split('').length < 37 ? item.description :
-                            item.description.split('').slice(0,40).join('') +'...'
-                          }
-                          </p>
-                          :''}
-
+              <div className="todolist-suggetion-div">
+                  {listToDoList.map((item,)=>(
+                    <div onClick={()=>{addUserToDoListSection(item)}}  className={`item-${item.id}`} > 
+                      <CardSuggestion key={item.id} item={item}/>
                     </div>
-
-                    </div>
-                  </button>
-                  ))}
+                      ))}
+              </div>
                   <p>Lembrando que você poderá adicionar, editar, excluir essas e outras tarefas.</p>
                   <button
                 className={`btn-success space-button`}

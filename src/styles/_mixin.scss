@@ -1,5 +1,16 @@
+@import'./_color.scss';
 @mixin displayFlex {
     display: flex;
     align-items: center;
     justify-content: center;    
+}
+
+@mixin smallP{
+    font-size: 10pt;
+    color: $paragraph-light-color;
+
+}
+@mixin box-shadow{
+    box-shadow: 0 0.3rem 0.6rem rgb(31 52 62 / 16%);
+    transform: translate(0.2rem,-0.2rem);
 }

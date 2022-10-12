@@ -1,0 +1,22 @@
+.todolist-suggestion-item {
+  width: 300px;
+  background-color: #fcfcfc;
+  margin-bottom: 8px;
+  display: flex;
+  border-radius: 8px;
+  transition: 0.3s;
+  min-height: 60px;
+}
+.todolist-suggestion-item div {
+  opacity: 0.6;
+  transition: 0.2s;
+}
+
+.todolist-suggestion-item:hover {
+  box-shadow: 0 0.3rem 0.6rem rgba(31, 52, 62, 0.16);
+  transform: translate(0.2rem, -0.2rem);
+}
+
+.todolist-selected div {
+  opacity: 1 !important;
+}/*# sourceMappingURL=cardSuggestion.css.map */

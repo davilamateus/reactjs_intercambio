@@ -50,7 +50,6 @@ const ForgetPassword = ({closeMessage}) => {
             {reqStatu === false ? <>
             <h3>Esqueci a senha.</h3>
             <p>Digite o seu endereço de email que enviaremos um link com a página para a redefinição de senha.</p>
-            <hr />
             <label>
                 <h5>Email:</h5>
                 <input  onChange={(e)=>{setEmailValue(e.target.value)}} type="text" placeholder='exemplo@gmail.com' />

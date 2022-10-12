@@ -1,5 +1,5 @@
 import {BrowserRouter, Route, Routes  } from 'react-router-dom';
-import Login from './pages/login/login';
+import Login from './pages/login/Login';
 import ConfirmEmail from './pages/confirm-email/confirmEmail';
 import Home from './pages/home/Home';
 import ForgetPassword from './pages/forget-password/ForgetPassword';

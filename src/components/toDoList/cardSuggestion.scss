@@ -1,0 +1,27 @@
+@import './../../styles/color';
+@import './../../styles/mixin';
+
+.todolist-suggestion-item{
+    width: 300px;
+    background-color: $todolist-background;
+    margin-bottom: 8px;
+    display: flex;
+    border-radius: 8px; 
+    transition: 0.3s;
+    min-height: 60px;
+    div{
+        opacity: 0.6;
+        transition: 0.2s;
+
+
+    }
+
+}
+.todolist-suggestion-item:hover{
+    @include box-shadow
+    
+}
+.todolist-selected div{
+    opacity: 1!important;
+
+}

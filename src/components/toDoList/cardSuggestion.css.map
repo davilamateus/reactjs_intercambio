@@ -1,0 +1,1 @@
+{"version":3,"sources":["cardSuggestion.scss","../../styles/_color.scss","cardSuggestion.css","../../styles/_mixin.scss"],"names":[],"mappings":"AAGA;EACI,YAAA;EACA,yBCIiB;EDHjB,kBAAA;EACA,aAAA;EACA,kBAAA;EACA,gBAAA;EACA,gBAAA;AEFJ;AFGI;EACI,YAAA;EACA,gBAAA;AEDR;;AFOA;EGNI,kDAAA;EACA,qCAAA;ADGJ;;AFMA;EACI,qBAAA;AEHJ","file":"cardSuggestion.css"}

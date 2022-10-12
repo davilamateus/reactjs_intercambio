@@ -4,6 +4,10 @@
   "private": true,
   "dependencies": {
     "@fontsource/alfa-slab-one": "^4.5.9",
+    "@fontsource/josefin-sans": "^4.5.11",
+    "@fontsource/lato": "^4.5.10",
+    "@fontsource/poppins": "^4.5.10",
+    "@fontsource/ubuntu": "^4.5.11",
     "@reduxjs/toolkit": "^1.8.6",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
@@ -25,6 +29,8 @@
     "serve": "^14.0.1",
     "styled": "^1.0.0",
     "styled-components": "^5.3.6",
+    "typeface-righteous": "^1.1.13",
+    "typeface-secular-one": "^1.1.13",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
