@@ -45,6 +45,9 @@
   .create-options-page {
     flex-direction: column;
   }
+  .create-options-left {
+    border-radius: 0;
+  }
   .create-options-right {
     display: flex;
     justify-content: center;

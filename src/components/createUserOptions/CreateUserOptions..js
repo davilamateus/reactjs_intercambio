@@ -216,9 +216,9 @@ function createOptions(){
 
 
 let citiesPoints = [
-  {country:'ie',city:"Dublin", question01:[0,3,6], question02:[2,1,1], question03:[2,2,0], question04:[2,0,1], question05:[2,1,0]} ,
-  {country:'ie',city:"Galway", question01:[2,1,0], question02:[2,1,1], question03:[2,2,0], question04:[2,0,1], question05:[0,1,5]},
-  {country:'ie',city:"Limerick", question01:[1,1,0], question02:[0,1,1], question03:[2,0,0], question04:[1,0,1], question05:[0,5,2]},
+  {country:'ie',city:"Dublin", question01:[0,3,16], question02:[2,1,1], question03:[2,2,0], question04:[2,0,1], question05:[2,1,0]} ,
+  {country:'ie',city:"Galway", question01:[2,11,0], question02:[2,1,1], question03:[2,2,0], question04:[2,0,1], question05:[0,1,5]},
+  {country:'ie',city:"Limerick", question01:[13,1,0], question02:[0,1,1], question03:[2,0,0], question04:[1,0,1], question05:[0,5,2]},
 
 ]
 

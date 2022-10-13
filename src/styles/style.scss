@@ -47,7 +47,7 @@ a{
  }
 
 input{
-    color: $paragraph-color;
+    color: $paragraph-dark-color;
     min-width: 200px;
     padding: 4px 0;
     margin: 4px 0px;
@@ -55,6 +55,7 @@ input{
     border: none;
     border-bottom: 1px solid $paragraph-light-color;
     font-size: 11pt;
+    border-radius: 0;
 
 }
 input::placeholder{
@@ -63,18 +64,49 @@ input::placeholder{
 input:focus{
     outline: none;
 }
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+input[type="date"]::-webkit-inner-spin-button,
+input[type="date"]::-webkit-calendar-picker-indicator {
+    display: none;
+    -webkit-appearance: none;
+    
+}
+input[type="date"]{
+    background-image: url('https://mateusdavila.com/iconcalendar.png');
+    background-repeat: no-repeat;
+    background-position-x: 95%;
+    background-position-y: 50%;
+    background-size: 16px;
+    height: 30px;
+    text-align: left;
+}
 
 select{
-    padding: 4px;
+    padding: 12px 36px 12px 12px;
     border: none;
     background-color: $background;
     border-radius: 4px;
     color: $paragraph-color;
     margin: 4px 0px;
-
-
-
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-image: url('https://mateusdavila.com/iconsetabaixo.svg');
+    background-repeat: no-repeat;
+    background-position-x: 95%;
+    background-position-y: 50%;
 }
+
+
 
 label h5{
     margin-top:32px;

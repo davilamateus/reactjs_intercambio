@@ -190,7 +190,8 @@ const LoginComponent = () => {
                         <h5>Email:</h5>
                         <input 
                             name='Email-Login'
-                            onChange={(e)=>{setLoginEmailValue(e.target.value)}} type="text" 
+                            type='email'
+                            onChange={(e)=>{setLoginEmailValue(e.target.value)}} 
                             placeholder='exemplo@google.com' />
                     </label>
                     <label>
@@ -233,7 +234,7 @@ const LoginComponent = () => {
                     <label>
                         <h5>Email:</h5>
                         <input 
-                            type="text" 
+                            type="email" 
                             placeholder='exemplo@google.com' 
                             onChange={(e)=>{setCreateEmailValue(e.target.value) 
                                             setLoginEmailValue(e.target.value)}}

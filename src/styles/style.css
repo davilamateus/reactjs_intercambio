@@ -45,43 +45,78 @@ p {
 
 a {
   text-decoration: none;
-  color: #BCBCBC;
+  color: #dfdfdf;
 }
 
 input {
-  color: #a5a5a5;
+  color: rgb(135, 135, 135);
   min-width: 200px;
   padding: 4px 0;
   margin: 4px 0px;
   background: none;
   border: none;
-  border-bottom: 1px solid #BCBCBC;
+  border-bottom: 1px solid #dfdfdf;
   font-size: 11pt;
+  border-radius: 0;
 }
 
 input::-moz-placeholder {
-  color: #BCBCBC;
+  color: #dfdfdf;
 }
 
 input:-ms-input-placeholder {
-  color: #BCBCBC;
+  color: #dfdfdf;
 }
 
 input::placeholder {
-  color: #BCBCBC;
+  color: #dfdfdf;
 }
 
 input:focus {
   outline: none;
 }
 
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+input[type=date]::-webkit-inner-spin-button,
+input[type=date]::-webkit-calendar-picker-indicator {
+  display: none;
+  -webkit-appearance: none;
+}
+
+input[type=date] {
+  background-image: url("https://mateusdavila.com/iconcalendar.png");
+  background-repeat: no-repeat;
+  background-position-x: 95%;
+  background-position-y: 50%;
+  background-size: 16px;
+  height: 30px;
+  text-align: left;
+}
+
 select {
-  padding: 4px;
+  padding: 12px 36px 12px 12px;
   border: none;
   background-color: #F8F8F8;
   border-radius: 4px;
   color: #a5a5a5;
   margin: 4px 0px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-image: url("https://mateusdavila.com/iconsetabaixo.svg");
+  background-repeat: no-repeat;
+  background-position-x: 95%;
+  background-position-y: 50%;
 }
 
 label h5 {
