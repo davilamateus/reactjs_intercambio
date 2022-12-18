@@ -1,19 +1,16 @@
-.ads-web{
-    width: 880px;
-    height: 170px;
-}
-
 .ads-box {
-    
-    overflow: hidden;
-    border-radius: 20px;
+  background-color: #fff;
+  width: 410px;
+  height: 110px;
+  border-radius: 8px;
+  margin-top: 20px;
+  overflow: hidden;
 }
 
-
-.ads-box div{
-        width: 100%;
-        height: 100%;
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center;
-}
+.ads-web div {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}/*# sourceMappingURL=Ads.css.map */

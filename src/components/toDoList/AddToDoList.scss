@@ -1,0 +1,74 @@
+@import './../../styles/color';
+
+.add-todolist-div{
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    width: 95vw;
+    height: 100vh;
+    margin: 0 auto;
+    align-items: center;
+    z-index: 4;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+}
+.todolist-page{
+    min-height: 100vh;
+}
+.add-bg-degrade{
+    background-color: rgba(0, 0, 0, 0.458);
+    width: 100vw;
+    height: 100vh;
+    backdrop-filter: blur(2px);
+    position: fixed;
+    overflow: hidden;
+}
+
+.add-todolist{
+    position: fixed;
+}
+.add-todolist-container{
+    padding: 36px!important;
+
+    background-color:$box-background;
+    border-radius: 10px;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.add-todolist-configs h5{
+    margin-bottom: 8px;
+    margin-top: 10px;
+}
+.add-todolist-categorys-btns{
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+.add-todolist-categorys-btns button{
+    margin-top:10px;
+    margin-right: 3px;
+    
+}
+
+
+
+.btn-add{
+    width: 270px!important;
+    background-color: $terciary-color!important;
+    margin: 0!important;
+    margin-top: 20px!important;
+    height: 40px;
+    border-radius: 10px;
+    font-size: 16px;
+    text-align: center!important;
+    border: none;
+}
+
+.add-todolist-description{
+    flex-direction: column!important;
+    display: flex;
+}

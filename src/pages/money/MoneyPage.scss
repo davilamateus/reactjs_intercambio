@@ -1,0 +1,73 @@
+@import './../../styles/color';
+
+.money-page{
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    
+}
+
+
+
+.moneyFullChar-Box{
+
+
+    
+}
+
+.money-table{
+    background-color: $box-background;
+    padding: 16px;
+    text-align: end;
+    max-width: 1150px;
+    width: 95%;
+
+    
+}
+
+.money-simulator{
+    background-color: $box-background;
+    margin-top: 16px;
+    max-width: 1150px;
+    width: 95%;
+    padding: 16px;
+}
+.money-simulador-box{
+    justify-content: space-around!important;
+    align-items: center;
+    flex-wrap: wrap;
+
+
+}
+.simulator-infors{
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    div{
+
+    }
+}
+
+.money-select{
+    margin-bottom: 16px;
+    button{
+        padding: 4px 32px;
+        border: none;
+        margin: 4px;
+        border-radius: 8px!important;
+    }
+}
+.btn-finance-interval{
+    background: none;
+}
+
+@media only screen and (max-width: 700px) {
+    .money-page{
+        margin-top: 64px!important;
+        margin-bottom: 128px!Important;
+    }
+
+}

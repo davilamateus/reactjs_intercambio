@@ -36,7 +36,7 @@ const PrincipalArticles = ({item}) => {
                             
                         </div>
                         <Link to={`/blog/article/${item.id}`}>
-                                <h2 className="princial-article-title">{item.title}</h2>
+                                <h3 className="princial-article-title">{item.title}</h3>
                         </Link>
                          <Link to={`/blog/article/${item.id}`}>
                                <p className="principal-article-description">{item.description.split('').slice(0,400).join('')}...</p>

@@ -1,16 +1,16 @@
 .radio-box {
   background-color: #fff;
   width: 310px;
-  height: 150px;
+  height: 130px;
   margin-top: 0px;
-  border-radius: 4px;
+  border-radius: 8px;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
 .radio-controls {
-  width: 162px;
+  width: 182px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -28,8 +28,8 @@
 }
 
 .radio-img {
-  height: 140px;
-  width: 140px;
+  height: 120px;
+  width: 120px;
   border-radius: 4px;
   margin-left: 5px;
   background-size: contain;
@@ -41,10 +41,10 @@
   align-items: center;
   justify-content: space-between;
   width: 100px;
+  margin: 0 auto;
 }
 
-input[type=range] {
-  background-color: aquamarine;
+.radio-volume input[type=range] {
   outline: 0;
   border: none;
   opacity: 0;
@@ -53,7 +53,7 @@ input[type=range] {
   margin: 0;
   z-index: 2;
   margin-top: -13px;
-  position: absolute;
+  position: relative;
 }
 
 .radio-volume-bg {
@@ -66,6 +66,6 @@ input[type=range] {
 
 .radio-volume-barra {
   height: 10px;
-  background-color: #5E3D9B;
+  background-color: #68D9A5;
   border-radius: 10px;
 }/*# sourceMappingURL=Radio.css.map */

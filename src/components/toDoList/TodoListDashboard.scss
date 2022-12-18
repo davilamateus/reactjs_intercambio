@@ -1,0 +1,22 @@
+@import './../../styles/color';
+
+.todolist-box{
+    background-color: $box-background;
+    overflow: hidden;
+    height: 700px;
+    border-radius: 4px;
+    width: 300px;
+  
+}
+.todolist-scrol{
+    overflow: scroll;
+    height: 640px;
+
+}
+.todolist-scrol::-webkit-scrollbar {
+    display: none;
+}
+
+.todolist-status{
+    display: flex;
+}

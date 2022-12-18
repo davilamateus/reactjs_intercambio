@@ -8,7 +8,6 @@
   min-height: 60px;
 }
 .todolist-suggestion-item div {
-  opacity: 0.6;
   transition: 0.2s;
 }
 

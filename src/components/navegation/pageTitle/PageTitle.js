@@ -37,7 +37,7 @@ const PageTitle = () => {
 
   return (
     <div>
-      <h3>{pageTitle}</h3>
+      <h4>{pageTitle}</h4>
     </div>
   )
 }

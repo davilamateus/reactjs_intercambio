@@ -5,54 +5,139 @@
   background-color: #fff;
   display: flex;
   flex-direction: column;
-  width: 70px;
-  align-items: center;
-  justify-content: space-between;
-  border-radius: 20px;
-  margin: 10px;
+  width: 90px;
+  align-items: flex-start;
+  border-radius: 8px;
+  margin: 8px;
+  overflow: hidden;
   top: 0;
-  width: 70px;
-  margin-left: -70px;
+  transition: 0.2s;
+  justify-content: space-between;
 }
 .header-page div {
   margin: 20px 0px;
 }
 
+.header-page:hover {
+  width: 250px;
+}
+.header-page:hover .menu a {
+  width: 230px;
+}
+
 .menu {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  align-items: flex-start;
+}
+.menu a:hover {
+  background-color: #F8F8F8;
 }
 .menu a {
-  margin-top: 30px;
-  opacity: 0.6;
-  transition: 0.2s;
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 40px 200px;
   align-items: center;
   justify-content: center;
+  background-color: rgba(255, 255, 255, 0);
+  margin: 8px 0;
+  margin-left: 8px;
+  width: 70px;
+  overflow: hidden;
+  border-radius: 16px;
+  transition: 0.2s;
+  justify-content: start;
+  padding: 0px 15px;
+  height: 60px;
+}
+.menu a p {
+  margin-left: 22px;
+  width: 300px;
+  display: inline;
+  white-space: nowrap;
 }
 .menu a img {
-  width: 20px;
-  filter: contrast(0.7);
+  margin: 0 auto;
+  display: flex;
+  max-width: 16px;
+  max-height: 16px;
 }
 
-.logo-menu img {
+.logo-menu a {
+  display: flex;
+  width: 300px;
+  align-items: center;
+}
+.logo-menu a img {
   width: 50px;
+  margin-right: 20px;
+  margin-left: 20px;
+}
+.logo-menu a p {
+  font-size: 12px;
 }
 
 .active {
-  background-color: #FA385F;
-  border-radius: 100px;
-  opacity: 1 !important;
-  width: 60px;
-  height: 60px;
-  display: flex;
-  align-items: center;
-  justify-content: baseline;
+  background-color: #68D9A5 !important;
+  box-shadow: 0px 10px 20px rgba(12, 177, 116, 0.493);
+}
+.active p {
+  opacity: 1;
+  color: #000;
+  font-weight: 800;
 }
 
-.active img {
-  filter: contrast(1) !important;
+.exit {
+  display: flex;
+  align-items: center;
+}
+.exit img {
+  opacity: 0.3;
+  margin-left: 30px;
+  margin-right: 42px;
+  transition: 0.8s;
+  width: 26px;
+}
+.exit img:hover {
+  opacity: 1;
+}
+
+@media only screen and (max-width: 750px) {
+  .header-page {
+    z-index: 10;
+    display: flex !important;
+    flex-direction: row;
+    min-width: 100vw;
+    height: 48px;
+    bottom: 0;
+    position: fixed;
+    align-items: center;
+    justify-content: center;
+    min-height: 48px;
+    margin: 0 auto;
+    margin-top: auto;
+  }
+  .header-page div {
+    margin: 0 auto;
+  }
+  .logo-menu {
+    display: none;
+  }
+  .exit {
+    display: none;
+  }
+  .menu {
+    flex-direction: row;
+  }
+  .menu a {
+    max-width: 50px !important;
+    min-width: 50px !important;
+    padding: 0;
+    margin: 0 auto;
+  }
+  .menu a div {
+    margin-left: 16px;
+  }
+  .active {
+    border-radius: 12px !important;
+  }
 }/*# sourceMappingURL=header.css.map */

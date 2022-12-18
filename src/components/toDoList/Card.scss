@@ -1,30 +1,127 @@
 @import "./../../styles/color";
 @import "./../../styles/mixin";
 
-.todolist-category-documents{
+.todolist-category-1{
     width: 8px;
     background-color: $primary-color;
     border-radius: 4px;
+    height: 40px;
 }
-.todolist-category-shop{
+.todolist-category-2{
     width: 8px;
     background-color: $terciary-color;
     border-radius: 4px;
+    height: 40px;
+
 }
-.todolist-category-health{
+.todolist-category-3{
     width: 8px;
     background-color: $secondary-color;
     border-radius: 4px;
+    height: 40px;
+
 }
-.todolist-category-other{
+.todolist-category-4{
     width: 8px;
     background-color: $quartenary-color;
     border-radius: 4px;
+    height: 40px;
+
 }
 
 .todolist-text{
     padding: 8px;
+    width: 93%;
 }
 .todolist-description{
     @include smallP;
+    color: $paragraph-color;
+}
+
+.todolist-container{
+    h5{
+        font-weight: 500;
+        font-size: 11pt;
+    }
+}
+
+.todolist-item{
+    display: flex;
+    background-color: $background;
+    width: 95%;
+    margin: 0 auto;
+    margin-bottom: 6px;
+    align-items: center;
+    min-height: 80px;
+    transition: 1s;
+}
+
+.todolist-status{
+    display: flex;
+    align-items: center;
+    
+    P{
+        font-size: 8pt;
+
+    }
+}
+
+.todolist-status-cicle{
+    width: 4px;
+    height: 4px;
+    border-radius: 8px;
+    background-color: $paragraph-color!important;
+    margin-right: 2px;
+}
+
+.todolist-btns{
+    display: flex;
+    flex-direction: column;
+    margin-left: 0 auto;
+    justify-content: flex-end;
+}
+.todolist-more-btns{
+    width: 5px;
+    height: 5px;
+    background-color:$paragraph-color!important ;
+    margin: 1px;
+    border-radius: 3px;
+}
+
+.todolist-bottom{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 6px;
+}
+
+.todolist-time{
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    img{
+        width: 12px;
+        margin-right: 2px;
+        margin-bottom: 1px;
+    }
+}
+
+.todolist-bottom div button{
+    background: none;
+    border: none;
+    margin-bottom: -3px;
+    margin-right: 8px;
+    font-weight: 500;
+    opacity: 0.5;
+    font-size: 8pt;
+    transition: 0.4s;
+    &:hover{
+        opacity: 1;
+    }
+
+    img{
+        width: 14px;
+        margin-bottom: -2px;
+        margin-right: 2px;
+    }
 }

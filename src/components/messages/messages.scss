@@ -2,7 +2,7 @@
 @import './../../styles/mixin';
 
 .message-page{
-    position: absolute;
+    position: fixed;
     width: 100vw;
     height: 100vh;
     top: 0;
@@ -10,6 +10,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 30;
 }
 
 .message-page-bg{
@@ -27,7 +28,7 @@
 }
 
 .message-bg-animation{
-    background-color: rgba(142, 142, 142, 0.103);
+    background-color: rgb(0 0 0 / 37%);
     backdrop-filter: blur(2px);
 }
 

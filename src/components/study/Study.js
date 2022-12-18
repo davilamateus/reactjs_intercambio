@@ -1,28 +1,179 @@
-import {useEffect,useState} from 'react'
-import './Study.css'
+import { useState, useEffect } from 'react'
 import Api from './../../axios/Axios'
+import './Study.css'
+import Skeleton, { SkeletonTheme } from 'react-loading-skeleton'
+
 
 
 const Study = () => {
 
-  const [listStudy, setListStudy] = useState(undefined);
-  const [itemCount,setItemCount]= useState(0)
-  const [page,setPage]= useState(1)
+
+  const [flashCardsUser, setFlashCardsUser] = useState(null);
+  const [flashCardsFilter, setFlashCardsFilter] = useState([]);
+  const [findFlashCardsUser, setFindFlashCadsUser] = useState(false)
+  const [flashCard, setFlashCard] = useState(false)
+  const [oldFlashCard, setOldFlashCard] = useState([])
+
   const [responserStatus, setResponserStatus] = useState(false)
+  const [loading, setLoading] = useState(false)
 
 
+
+
+// estapa 1 pegar lista do usuario
+  async function getFlashCadsUser() {
+    await Api('/study/user/flashcards', {
+      headers: {
+        'Content-Type': 'application/json',
+        "Authorization": `Bearer ${sessionStorage.getItem('token')}`
+      }
+    }).then((data) => {
+      if(data.data.length >0){
+        setFlashCardsUser(data.data)
+      } else{
+        getMoreFlashCards()
+      }
+    })
+  }
+  useEffect(() => {
+    getFlashCadsUser()
+  }, [])
+  
 
   
+  
+  // verificar se a lista do usuario esta vazia
+  useEffect(()=>{
+  
+    if(flashCardsUser !== null){
+      flashCardsUser.map((item)=>{
+        if(item.when < Date.now()){
+          // Item atrasado
+          setOldFlashCard(prev => [...prev, item])
+        } 
+      })
+      
+    }
+    
+  },[flashCardsUser])
+  
+  
+  useEffect(()=>{
+
+    if(flashCardsUser !== null){
+        if(oldFlashCard[0]!== undefined ){
+          setFlashCard(oldFlashCard[0])
+          setLoading(true)
+        } 
+        else{
+          getMoreFlashCards()
+        }
+
+    }
+
+  },[oldFlashCard,flashCardsUser])
+
+
+  // pegar nova frase 
+  async function getMoreFlashCards() {
+    console.log('geti')
+    await Api('/study/flashcard').then((data) => {
+      //alreadyThisFlashCard(data.data[0])
+      
+    })
+  }
+
+  
+
+  // verificar se palavra ja foi feita pelo usuario
+
+  function alreadyThisFlashCard(flashCard) {
+    let index = flashCardsUser.findIndex(item => item.flashcardId == flashCard.id);
+    if (index <0) {
+      setFlashCard({flashCard:flashCard})
+      setTimeout(() => {
+        //setLoading(true)
+      }, 2000);
+    } else {
+      getMoreFlashCards()
+      
+    }
+  }
+
+  /*
+
+  async function addOrEditFlashCardUser(level) {
+
+    setResponserStatus(false)
+
+
+    const customConfig = {
+      headers: {
+        'Content-Type': 'application/json',
+        "authorization": `Bearer ${sessionStorage.getItem('token')}`
+      }
+    };
+
+
+    // Origigem do item USUARIO
+    if (flashCardsFilter.length > 0) {
+      const body = { flashcardId: flashCard.flashCard.id, level: level, id: flashCard.flashCard.id }
+      await Api.patch(`/study/user/flashcards`, body, customConfig).then((data) => {
+        getFlashCadsUser()
+
+      })
+    } else {
+      const body = { flashcardId: flashCard.flashCard.id, level: level }
+      await Api.post(`/study/user/flashcards`, body, customConfig).then((data) => {
+        getFlashCadsUser()
+
+
+      })
+
+    }
+  }
+
+  
+
+
+  useEffect(() => {
+    setFlashCard(flashCardsFilter[0])
+    if (findFlashCardsUser == true) {
+      console.log('lkasdflkasjd')
+      console.log(flashCardsFilter)
+      if (flashCardsFilter.length > 0) {
+
+      } else {
+        //Não existe
+        getMoreFlashCards()
+      }
+
+    }
+
+  }, [findFlashCardsUser])
+
+
+// Se nao exitir lista ou todo os elementos estão em dias.
+
+
+          <button className='study-btn-trans' onClick={() => { setResponserStatus(true) }}>Ver tradução</button>
+          <button className='study-btn-hard' onClick={() => { addOrEditFlashCardUser(1) }}>Dificl</button>
+          <button className='study-btn-medium' onClick={() => { addOrEditFlashCardUser(3) }}>Médio</button>
+          <button className='study-btn-easy' onClick={() => { addOrEditFlashCardUser(flashCard.flashCard.level + 1) }}>Fácil</button>
+
+*/
+
+
   const synth = window.speechSynthesis;
-  
-  
+
+
   function speak(value) {
     const text = value.split('')
     const index = text.findIndex((item) => item == '“')
-    const text2 = text.slice(index,1000)
+    const text2 = text.slice(index, 1000)
     const text3 = (text2.join(''))
 
-    
+
     const voices = synth.getVoices();
     const utterThis = new SpeechSynthesisUtterance(text3);
     utterThis.lang = 'en-US';
@@ -31,100 +182,49 @@ const Study = () => {
       synth.cancel();
     }
     utterThis.addEventListener('error', () => {
-      console.error('SpeechSynthesisUtterance error');
     });
     utterThis.rate = 0.6;
     synth.speak(utterThis);
 
   }
 
-  const token = sessionStorage.getItem('token');
-  async function loadList(){
-
-    const customConfig = {
-      headers: {
-      'Content-Type': 'application/json',
-      "authorization" : `Bearer ${token}`
-      }
-  };
-    await Api.get(`/study?page=${page}`,customConfig).then((data)=>{
-      
-      setListStudy(data.data)
-      
-    })
-  }
-  useEffect(()=>{
-
-
-    loadList()
-    
-    
-  },[])
-  
-  async function editStudy(level){
-    setResponserStatus(false)
-    if(itemCount == 19){
-      loadList()
-      setItemCount(0)
-    } else{
-      setItemCount(itemCount+1)
-  
-      const body = {level: level, questionId:listStudy[itemCount].id}
-  
-      const token = sessionStorage.getItem('token');
-      const customConfig = {
-        headers: {
-          'Content-Type': 'application/json',
-          "authorization" : `Bearer ${token}`
-        }
-      };
-      console.log(customConfig)
-      await Api.patch(`/study`,body, customConfig).then((data)=>{
-        
-        console.log(data)
-      
-      })
-
-    }
-  }
 
 
 
 
   return (
-    <div className='study-box'>
-                 <div className="box-header">
-                <h5>Pratique o seu inglês</h5>
-                <img src="./../../../img/icons/btnpurper.svg" alt="Adicionar" />
-          </div>
-          {listStudy !== undefined? <>
-          
-            <div>
-              <div className='study-container'>
-                  {responserStatus === true? <p>{listStudy[itemCount].portuguese}</p>: <p></p>}
-                  <div>
-                      <h2>{listStudy[itemCount].english}</h2>
-                      <button onClick={()=>{speak(listStudy[itemCount].english)}} className="study-listen">
-                           <img src="./../../../img/icons/iconlisten.svg" />
-                      </button>
+    <div className='study-div'>
+      {loading !== false ? <>
+        <div className="box-header">
+          <h5>Pratique o Idioma</h5>
+          <img src="./../../../img/icons/btnpurper.svg" alt="Ver mais" />
+        </div>
+        <div className="study-text">
+          <h5 className='translation'>{flashCard !== false && responserStatus !== false ? flashCard.flashcard.portuguese : ''}</h5>
+          <h5>{flashCard !== false ? flashCard.flashcard.original : ''}</h5>
+        </div>
+        <div className="study-btn-levels">
 
-                  </div>
-              </div>
-              <div className="study-btn-levels">
-                  <button className='study-btn-trans' onClick={()=>{setResponserStatus(true)}}>Ver tradução</button>
-                  <button className='study-btn-hard' onClick={()=>{editStudy(2)}}>Dificl</button>
-                  <button className='study-btn-medium' onClick={()=>{editStudy(1)}}>Médio</button>
-                  <button  className='study-btn-easy'onClick={()=>{editStudy(0)}}>Fácil</button>
 
-              </div>
+        </div>
+      </>
+        : <>
+          <SkeletonTheme baseColor="var(--background)" highlightColor="var(--higher)">
+
+            <Skeleton style={{ width: '130px', height: '16px', margin: '10px' }} />
+            <Skeleton style={{ width: '280px', height: '36px', margin: '10px ' }} />
+            <div className="study-btn-skeletons">
+              <Skeleton style={{ width: '110px', height: '26px', margin: '10px' }} />
+              <Skeleton style={{ width: '70px', height: '26px', margin: '10px' }} />
+              <Skeleton style={{ width: '70px', height: '26px', margin: '10px' }} />
+              <Skeleton style={{ width: '70px', height: '26px', margin: '10px' }} />
+
             </div>
 
-          </>
-          
-          
-          
-          
-          :<></>}
+          </SkeletonTheme>
+
+
+        </>}
     </div>
   )
 }

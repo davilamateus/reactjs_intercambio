@@ -127,20 +127,25 @@
 .button-option01{
     border: solid 2px $terciary-color;
     color: var(--3);
+    opacity: 0;
     transition: 0.4s;
 }
 
 .button-option02{
     border: solid 2px $secondary-color;
     color: var(--2);
-    transition: 0.4s;
+    opacity: 0;
+
+    transition: 0.8s;
 
 }
 
 .button-option03{
     border: solid 2px $primary-color;
+    opacity: 0;
+
     color: var(--1);
-    transition: 0.4s;
+    transition: 1s;
 
 }
 .city-description{
@@ -148,6 +153,53 @@
 }
 .todolist-suggetion-div{
     margin: 16px 0px;
+    div{
+        display: flex;
+
+
+    }
+}
+.todolist-check{
+    border: solid 1px $paragraph-light-color;
+    width: 24px;
+    height: 24px;
+    margin-right: 12px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;align-items: center;
+    margin-top: 20px;
+    img{
+        opacity: 0;
+    }
+}
+.todolist-selected{
+    
+    .todolist-check{
+        border: solid 1px $terciary-color;
+        img{
+            opacity: 1!important;
+        }
+    }
 }
 
 
+.image-create-options{
+    display: flex;
+    position: absolute;
+    left: 40px;
+    z-index: 5;
+    top: 20%;
+    margin-top: 50px;
+    opacity: 0;
+    transition:0.6s;
+    
+    img{
+        width: 300px;
+        max-height: 400px;
+    }
+}
+
+.opacityOn{
+    opacity: 1!important;
+    margin-top: 0;
+}

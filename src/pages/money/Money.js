@@ -12,24 +12,22 @@ const Money = () => {
     setMoneyNow(value)
 
   }
-  console.log(moneyNow)
 
   return (
-    <div className='money-page'>
+    <div className='money-page container'>
       <div className="money-select">
-            <select onChange={(e)=>{setInterval(e.target.value)}}>
-                      <option value="7">7 Dias</option>
-                      <option value="15">15 Dias</option>
-                      <option value="30">30 Dias</option>
-                    </select>
+      <button className={interval == 7? 'categorySelected' : 'btn-finance-interval'} onClick={()=>{setInterval(7)}} value="7">7 Dias</button>
+      <button className={interval == 15? 'categorySelected' : 'btn-finance-interval'} onClick={()=>{setInterval(15)}} value="15">15 Dias</button>
+          <button className={interval == 30? 'categorySelected' : 'btn-finance-interval'} onClick={()=>{setInterval(30)}} value="30">30 Dias</button>
+
       </div>
-      <div className="money-table">
+      <div className="money-table ">
           {interval== 7 ?  <MoneyChart days={7} setMoney={setMoney} />:''} 
           {interval== 15 ?  <MoneyChart days={15} setMoney={setMoney} />:''} 
           {interval== 30 ?  <MoneyChart days={30} setMoney={setMoney} />:''} 
 
       </div>
-      <div className="money-simulator">
+      <div className="money-simulator ">
        {moneyNow !== 0 ?<MoneySimulator moneyNow={moneyNow} /> :''} 
       </div>
 

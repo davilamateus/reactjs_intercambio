@@ -11,15 +11,15 @@ const CardSuggestion = ({item, refresh}) => {
   const [show,setShow] = useState(false)
 
 
-    let colorCategory = ''
+  let colorCategory = ''
   if(item.category == '1'){
-    colorCategory = 'var(--2)'
+    colorCategory = '#6958A3'
   }  else if(item.category == '2'){
     colorCategory = '#FA385F'
   }  else if(item.category == '3'){
-    colorCategory = 'var(--1)'
-  }  else if (item.category == '4'){
-    colorCategory = 'var(--4)'
+    colorCategory = '#68D9A5'
+  }  else {
+    colorCategory = '#F1F180'
   }
 
 

@@ -25,6 +25,10 @@
         max-width: 100%;
     
     }
+    .princial-article-title{
+        font-size: 25px;
+        line-height: 28px;
+    }
 
     .princial-article div{
         width: 100%!important;
@@ -47,24 +51,30 @@
             width: 90%;
             margin-bottom: 10px;
         }
-        .princial-article-top{
-            margin-bottom: 20px;
-        }
+
         .other-articles{
             width: 600px;
         }
         .blog-list-category {
             width: 80%;
+            margin: 32px 0!important;
         }
 
 }
 
 @media only screen and (max-width: 760px) {
 
+    .blog-page{
+        max-width: 90vw;
+        overflow: hidden;
+
+        margin: 0 auto;
+    }
+
     .princial-article{
 
         width: 99%!important;
-        height: 740px!important;
+        height: 700px!important;
 
     }
     .princial-article-img{
@@ -79,20 +89,24 @@
 
     }
     .other-articles{
-        width: 100vw;
+        width: 95vw;
 
     }
     .blog-articles-div {
-        width: 100vw;
+        width: 98vw;
+        overflow: hidden;
     }
-    .blog-list-category ul{
-        margin-left: -20px;
-        margin-right: 20px;
-    }
+
     .blog-list-category ul a{
         margin-right: 10px;
     }
-    .other-articles,.princial-article{
+    .other-articles
+    {
+        margin-left: 10px!important;
+
+    }
+    
+    .princial-article{
         margin-left: 0!important;
     }
 

@@ -1,5 +1,5 @@
 import {useEffect, useState} from 'react'
-import './toDolist.css'
+import './todolist.css'
 import ToDoListTrello from '../../components/toDoList/ToDoListTrello'
 import Api from '../../axios/Axios'
 import AddToDoList from '../../components/toDoList/AddToDoList'
@@ -17,18 +17,15 @@ const ToDoList = () => {
   const [editShow, setShow] = useState(false)
 
 
-  
-  const customConfig = {
-    headers: {
-    'Content-Type': 'application/json',
-    "Authorization" : `Bearer ${sessionStorage.getItem('token')}`
-    }
-};
 
 
   async function loadToDoList(){
-    console.log('carregoooou')
-    await Api('/user/todolist' ,customConfig).then((data)=>{
+    await Api('/user/todolist' ,{
+      headers: {
+      'Content-Type': 'application/json',
+      "Authorization" : `Bearer ${sessionStorage.getItem('token')}`
+      }
+  }).then((data)=>{
       setList(data.data.data)
     })
   }
@@ -87,49 +84,51 @@ const ToDoList = () => {
          // <AddToDoList refresh={refresh} />
     <>  
 
-        <div className='todolist-page'>
+        <div className='todolist-page container'>
           <div className="todolist-header-page">
             <button onClick={()=>{setAddShow(true)}} className='btn-add-new'>
-              <svg xmlns="http://www.w3.org/2000/svg" width="17.371" height="17.371" viewBox="0 0 17.371 17.371">
-                <g id="ic-actions-close" transform="matrix(0.719, -0.695, 0.695, 0.719, 2.5, 8.578)">
-                  <line id="Linha_16" data-name="Linha 16" x1="8.749" y1="8.749" transform="translate(0 0)" fill="none" stroke="#fff" />
-                  <line id="Linha_17" data-name="Linha 17" y1="8.749" x2="8.749" transform="translate(0 0)" fill="none" stroke="#fff" />
-                </g>
-              </svg>
+            <img src="./../../img/icons/icomore.svg" />
               <p>
               Adicionar Tarefa
+              </p>
+            </button>
+            <button onClick={()=>{setAddShow(true)}} className='btn-view-suggestion'>
+            <img src="./../../img/icons/icomore.svg" />
+              <p>
+              Ver Sugestões
               </p>
             </button>
           </div>
           {loading=== true?
           <ToDoListTrello open={open} inProgress={inProgress} finished={finished} listToDoList={list} refresh={refresh}/>
           :
-          <SkeletonTheme baseColor="var(--8)" highlightColor="var(--11)">
+          <SkeletonTheme baseColor="var(--background)" highlightColor="var(--higher )">
             <div className="todolist-skeleton">
               <div>
                   <Skeleton style={{width:'100px',height:'20px', margin:'10px 10px' }}/>
-                  <Skeleton style={{width:'94%',height:'120px', margin:'10px 10px' }}/>
-                  <Skeleton style={{width:'94%',height:'120px', margin:'10px 10px' }}/>
-                  <Skeleton style={{width:'94%',height:'120px', margin:'10px 10px' }}/>
-                  <Skeleton style={{width:'94%',height:'120px', margin:'10px 10px' }}/>
+                  <Skeleton style={{width:'94%',height:'60px', margin:'10px 10px' }}/>
+                  <Skeleton style={{width:'94%',height:'60px', margin:'10px 10px' }}/>
+                  <Skeleton style={{width:'94%',height:'60px', margin:'10px 10px' }}/>
+                  <Skeleton style={{width:'94%',height:'60px', margin:'10px 10px' }}/>
 
               </div>
               <div>
                   <Skeleton style={{width:'100px',height:'20px', margin:'10px 10px' }}/>
-                  <Skeleton style={{width:'94%',height:'120px', margin:'10px 10px' }}/>
-                  <Skeleton style={{width:'94%',height:'120px', margin:'10px 10px' }}/>
-                  <Skeleton style={{width:'94%',height:'120px', margin:'10px 10px' }}/>
-                  <Skeleton style={{width:'94%',height:'120px', margin:'10px 10px' }}/>
+                  <Skeleton style={{width:'94%',height:'60px', margin:'10px 10px' }}/>
+                  <Skeleton style={{width:'94%',height:'60px', margin:'10px 10px' }}/>
+                  <Skeleton style={{width:'94%',height:'60px', margin:'10px 10px' }}/>
+                  <Skeleton style={{width:'94%',height:'60px', margin:'10px 10px' }}/>
 
               </div>
               <div>
                   <Skeleton style={{width:'100px',height:'20px', margin:'10px 10px' }}/>
-                  <Skeleton style={{width:'94%',height:'120px', margin:'10px 10px' }}/>
-                  <Skeleton style={{width:'94%',height:'120px', margin:'10px 10px' }}/>
-                  <Skeleton style={{width:'94%',height:'120px', margin:'10px 10px' }}/>
-                  <Skeleton style={{width:'94%',height:'120px', margin:'10px 10px' }}/>
+                  <Skeleton style={{width:'94%',height:'60px', margin:'10px 10px' }}/>
+                  <Skeleton style={{width:'94%',height:'60px', margin:'10px 10px' }}/>
+                  <Skeleton style={{width:'94%',height:'60px', margin:'10px 10px' }}/>
+                  <Skeleton style={{width:'94%',height:'60px', margin:'10px 10px' }}/>
 
               </div>
+
             </div>
             </SkeletonTheme>
           

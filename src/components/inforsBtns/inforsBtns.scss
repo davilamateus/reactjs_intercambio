@@ -1,0 +1,21 @@
+@import './../../styles/color';
+
+.inforbtnsbox{
+    div{
+        margin-bottom: 10px;
+        a{
+            border-radius: 8px;
+            width: 90px;
+            height: 96px;
+            background-color: $box-background;
+            padding: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            h5{
+                font-size: 11px;
+            }
+        }
+    }
+}

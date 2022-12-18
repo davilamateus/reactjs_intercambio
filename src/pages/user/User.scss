@@ -1,0 +1,98 @@
+@import './../../styles/color';
+
+.user-photo-bg{
+    background-repeat: no-repeat;
+    width: 200px;
+    height: 200px;
+    background-size: contain;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.8;
+    transition: 0.4s;
+    img{
+        width: 48px;
+    }
+    &:hover{
+        opacity: 1;
+    }
+}
+
+.page-user{
+    background-color: $box-background;
+    display: flex;
+    padding: 32px;
+}
+.page-user-top{
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+    width: 100%;
+    p{
+        margin-bottom: 16px;
+    }
+    h5{
+        margin-bottom: 8px;
+    }
+}
+
+.password-change-btn{
+    p{
+        margin-bottom: 8px;
+        border-bottom: 1px solid $paragraph-light-color;
+        max-width: 260px;
+    }
+    button{
+        border: none;
+        font-size: 12px;
+        padding: 2px 14px;
+        border-radius: 4px;
+        margin-bottom: 16px!important;
+    
+
+    }
+}
+
+@media only screen and (max-width: 700px) {
+
+    .page-user-top{
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 100%!Important;
+        margin-left: 32px!important;
+        div{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+
+        }
+        
+    }
+
+    .photouser-box{
+        width: 180px!important;
+    }
+    .page-user{
+        width: 90vw;
+        margin: 0 auto!important;
+        margin-top: 64px!Important;
+        margin-bottom: 128px!Important;
+        
+    }
+
+    .btn-success{
+        align-self: center;
+    }
+    .PhoneInput{
+        width: 260px!important;
+        overflow: hidden;
+    }
+
+}
+
+.btn-success{
+    img{
+        width: 50px;
+    }
+}

@@ -3,16 +3,24 @@ import './Article.css'
 import Api from '../../axios/Axios'
 import { useParams } from 'react-router-dom'
 import { Link } from 'react-router-dom'
+import {useSelector} from 'react-redux'
 
 
-const ListArticles = ({user}) => {
+
+const ListArticles = () => {
+  const [user,setUser] = useState(false)
 
     let params = useParams()
     const [articles, setArticles] = useState([]);
+    const userStore = useSelector((state) => state.user);
+    useEffect(()=>{
+      if(userStore.user!== false){
+        setUser(userStore.user)
+      }
+    },[userStore])
 
     const article= params.article;
-    const [btnNext ,setBtnNext] = useState(false)
-    const [btnBack ,setBtnBack] = useState(false)
+
 
     
 
@@ -40,8 +48,7 @@ const ListArticles = ({user}) => {
       
 
       useEffect(()=>{
-        setBtnNext(false)
-        if(user!==undefined){
+        if(user!==false){
 
 
           if(article !== undefined){
@@ -58,22 +65,11 @@ const ListArticles = ({user}) => {
     },[user, params])  
     
     
-    function loadingMoreArticleBtn(){
-
-      window.scrollTo(0, document.body.scrollHeight || document.documentElement.scrollHeight);
-
-    
-      topFunction()
-
-    }
 
 
 
 
-function topFunction() {
-  document.body.scrollTop = 0; 
-  document.documentElement.scrollTop = 0; 
-}
+
 
 return (
   <div >

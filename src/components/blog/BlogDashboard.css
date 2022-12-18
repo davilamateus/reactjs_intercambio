@@ -2,14 +2,14 @@
   width: 100%;
   height: 160px;
   background-size: cover;
-  border-radius: 2px;
+  border-radius: 4px;
   margin-top: -10px;
 }
 
 .blog-box {
   background-color: #fff;
-  height: 480px;
-  border-radius: 4px;
+  height: 420px;
+  border-radius: 8px;
   width: 310px;
 }
 
@@ -28,26 +28,7 @@
   padding: 5px 10px;
 }
 
-.blog-container a button {
-  background: none;
-  border: 1px solid #6958A3;
-  border-radius: 4px;
-  padding: 6px 30px;
-  color: #6958A3;
-  width: 180px;
-  transition: 0.4s;
-}
-
-.blog-container a button:hover {
-  box-shadow: 0 0.3rem 0.6rem rgba(31, 52, 62, 0.16);
-  transform: translate(0.2rem, -0.2rem);
-}
-
-.blog-container a h4 {
-  margin: 0;
-  margin-bottom: 0px;
-  margin-top: 0px;
-  padding: 0;
+.blog-container a h5 {
   text-align: left;
 }
 
@@ -70,12 +51,14 @@
 .btn-blog button {
   background: none;
   border: none;
-  margin-top: 4px;
-  color: rgb(115, 115, 115);
+  margin: 4px;
+  color: #a5a5a5;
+  font-size: 12px;
+  font-weight: 500;
 }
 
 .blog-dashboard-article-category {
-  color: #6958A3;
+  color: #a5a5a5;
   margin-right: auto !important;
   font-size: 14px;
   margin: 8px 0;
@@ -104,12 +87,10 @@
   font-size: 14px !important;
   margin-bottom: 0px !important;
   margin-top: 10px !important;
-  color: var(--7);
 }
 
 .blog-container a .article-time p {
   font-size: 12px !important;
-  color: var(--7);
   margin: 0 !important;
   margin-left: 5px !important;
 }/*# sourceMappingURL=BlogDashBoard.css.map */

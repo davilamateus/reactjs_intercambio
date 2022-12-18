@@ -53,8 +53,8 @@ const Money = () => {
                  `${color}`
                 ],
               borderColor: colorBorder,
-              borderWidth: 4,
-              tension: 0.4, 
+              borderWidth: 5,
+              tension: 0.3, 
           }]
       },
       options: {
@@ -100,11 +100,11 @@ const Money = () => {
     if(data !==undefined){
 
         if(data[1].ask<data[2].ask){
-          setColor('#9dc3660d')
-          setColorBorder('#9DC366')
+          setColor('rgb(0,0,0,0)')
+          setColorBorder('#6AD9A8')
 
         } else{
-          setColor('#FA385F0a')
+          setColor('rgb(0,0,0,0)')
           setColorBorder('#FA3850')
         }
           

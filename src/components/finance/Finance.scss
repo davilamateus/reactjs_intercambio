@@ -1,0 +1,54 @@
+@import'./../../styles/color';
+
+.finance-box{
+    background-color: $box-background;
+    border-radius: 8px;
+    width: 310px;
+    height: 250px;
+}
+
+.finance-container {
+    display: flex;
+}
+
+.finance-right{
+    width: 154px;
+    margin-top: 4px;
+    margin-left: 30px;
+}
+
+.finance-left{
+    margin-left: 15px;
+}
+
+ .finance-left h4{
+    margin: 0px;
+    padding: 0;
+    font-size: 20px;
+}
+
+.finance-left-top h4{
+    color: $terciary-color;
+}
+
+.finance-lessToFoal{
+    color: $secondary-color;
+}
+
+.finance-goal{
+    color: $primary-color;
+}
+
+.finance-left p{
+    padding: 0;
+    margin: 0;
+    margin-top: 4px;
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+.finance-porcents{
+    font-weight: 800;
+    margin-top: -88px;
+    margin-left: 58px;
+}

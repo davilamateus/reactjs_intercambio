@@ -9,13 +9,35 @@ import Money from './pages/money/Money';
 import Finance from './pages/finance/Finance';
 import Blog from './pages/blog/Blog';
 import User from './pages/user/User';
-import React from 'react'
+import {useEffect, useState} from 'react'
 import Header from './components/header/Header';
 import Style from './components/Style/Style'
 import Articles from './pages/blog/Articles';
 import NavegationDiv from './components/navegation/NavegationDiv'
+import Api from './axios/Axios';
+
 
 const Routers = () => {
+  const [use,setUser] = useState()
+
+  useEffect(()=>{
+    getOptions()
+    async function getOptions(){
+      const config = {
+        
+        headers: { Authorization: `Bearer ${window.sessionStorage.getItem('token')}` }
+    };
+      await Api.get('/user/useroptions', config).then((data)=>{
+        if(!data.data[0]){
+          //window.location.href = '/createuseroptions'
+        } else{
+          setUser(data.data[0])
+
+        }
+      })
+    }
+  },[])
+
   return (
     
    

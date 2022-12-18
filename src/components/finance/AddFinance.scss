@@ -1,0 +1,29 @@
+@import './../../styles/color';
+
+.add-finance-div{
+display:flex;
+position: absolute;
+top: 0;
+align-items: center;
+justify-content: center;
+width: 100vw;
+height: 100vh;
+z-index: 4;
+}
+
+.add-finance{
+    display: flex;
+    position: fixed;
+    flex-direction: column;
+    background-color: $box-background;
+    padding: 32px;
+    border-radius: 8px;
+    input{
+        margin-bottom: 16px;
+    }
+    select{
+        margin-bottom: 16px;
+
+    }
+
+}

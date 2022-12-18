@@ -1,5 +1,20 @@
 .navegationDiv {
   display: flex;
-  justify-content: space-between;
-  padding: 32px 0;
+  justify-content: space-between !important;
+  align-items: center;
+  max-width: 90vw;
+}
+.navegationDiv div h4 {
+  line-height: 26px;
+}
+
+@media only screen and (max-width: 700px) {
+  .navegationDiv {
+    margin-top: 16px !important;
+    margin-bottom: 16px !important;
+  }
+  .menu {
+    flex-direction: row;
+    width: 100vw;
+  }
 }/*# sourceMappingURL=navegationDiv.css.map */

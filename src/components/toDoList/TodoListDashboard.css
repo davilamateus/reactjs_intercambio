@@ -1,20 +1,20 @@
-.todolist-box{
-    background-color: var(--9);
-    overflow: hidden;
-    height: 630px;
-    border-radius: 4px;
-    width: 300px;
-  
+.todolist-box {
+  background-color: #fff;
+  overflow: hidden;
+  height: 700px;
+  border-radius: 4px;
+  width: 300px;
 }
-.todolist-scrol{
-    overflow: scroll;
-    height: 570px;
 
+.todolist-scrol {
+  overflow: scroll;
+  height: 640px;
 }
+
 .todolist-scrol::-webkit-scrollbar {
-    display: none;
+  display: none;
 }
 
-.todolist-status{
-    display: flex;
-}
+.todolist-status {
+  display: flex;
+}/*# sourceMappingURL=TodoListDashboard.css.map */

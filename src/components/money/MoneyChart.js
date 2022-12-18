@@ -7,8 +7,8 @@ import Skeleton, { SkeletonTheme } from 'react-loading-skeleton'
 
 const MoneyChart = ({days ,setMoney}) => {
   const [data,setData ]= useState(undefined);
-  const [color,setColor] = useState('#9dc3660d')
-  const [colorBorder,setColorBorder] = useState('#9DC366')
+  const [color,setColor] = useState('#9dc36600')
+  const [colorBorder,setColorBorder] = useState('#68D9A5')
   const [loading,setLoading] = useState(false)
 
   useEffect(()=>{
@@ -129,8 +129,8 @@ const MoneyChart = ({days ,setMoney}) => {
 
       if(days ==7){
         if(data[0].ask<data[1].ask){
-          setColor('#9dc3660d')
-          setColorBorder('#9DC366')
+          setColor('#9dc36600')
+          setColorBorder('#68D9A5')
   
         } else{
           setColor('#FA385F0a')
@@ -141,8 +141,8 @@ const MoneyChart = ({days ,setMoney}) => {
 
       if(days ==15){
         if(data[0].ask<data[2].ask){
-          setColor('#9dc3660d')
-          setColorBorder('#9DC366')
+          setColor('#9dc36600')
+          setColorBorder('#68D9A5')
   
         } else{
           setColor('#FA385F0a')
@@ -153,8 +153,8 @@ const MoneyChart = ({days ,setMoney}) => {
 
       if(days ==30){
         if(data[0].ask<data[4].ask){
-          setColor('#9dc3660d')
-          setColorBorder('#9DC366')
+          setColor('#9dc36600')
+          setColorBorder('#68D9A5')
   
         } else{
           setColor('#FA385F0a')
@@ -188,7 +188,7 @@ const MoneyChart = ({days ,setMoney}) => {
             </div>
             </>
         :
-        <SkeletonTheme baseColor="var(--8)" highlightColor="var(--11)">
+        <SkeletonTheme baseColor="var(--background)" highlightColor="var(--higher)">
             <Skeleton style={{width:'110px',height:'20px',margin:'10px'}}/>
             <Skeleton style={{width:'130px',height:'30px',margin:'0px 10px'}}/>
             <Skeleton style={{width:'310px',height:'80px',margin:'10px 0px 0px 0px',opacity:'0.4'}}/>

@@ -1,0 +1,141 @@
+@import './../../styles/color';
+
+.blog-article-box{
+    width: 310px;
+    height: 330px;
+    overflow: hidden;
+    background-color: $box-background;
+    border-radius: 4px;
+    margin-bottom: 30px;
+
+}
+.blog-article-container{
+    padding: 0px 20px;
+    margin-top: -10px;
+    display: flex;
+    flex-direction: column;
+    height: 199px;
+    justify-content: space-between;
+    color: (var--7);
+}
+.blog-article-container p{
+    font-size: 14px;
+    color: var(--7);
+}
+.article-title{
+    margin: 0;
+    margin-top: 10px;
+}
+
+.article-poster{
+    height: 130px;
+    width: 300px;
+    background-size: cover;
+    border-radius: 2px;
+    margin-left: 5px;
+    margin-top: 5px;
+    margin-bottom: 16px;
+}
+
+.other-articles{
+    display: flex;
+    width: 1100px;
+    max-width: 95vw!important;
+    flex-wrap: wrap;
+    margin-top: 40px;
+    justify-content: center;
+    gap: 15px;
+    margin-left: 100px!important;
+    align-items: center;
+}
+
+
+
+
+
+.princial-article{
+    width: 1100px;
+    max-width: 90vw!important;
+    border-radius: 4px;
+    background-color: $box-background;
+    display: flex;
+    margin-left: 100px;
+}
+
+.princial-article-img{
+    width: 40%;
+    height: 300px;
+    
+}
+
+.princial-article-img div{
+    border-radius: 4px;
+    width: 400px!important;
+    height: 100%;
+    max-width: 100%;
+
+
+    background-size: cover;
+}
+
+.principal-article-container{
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between!important;
+    width: 60%;
+    align-items: flex-start!important;
+    height: 290px;
+    overflow: hidden;
+    margin-right: 10px;
+    
+
+}
+.princial-article-category{
+    margin-bottom: -10px;
+    margin-top: 10px;
+    color: $paragraph-color;
+}
+
+
+
+
+
+.princial-article-title{
+    margin-top: 10px;
+
+}
+
+.blog-articles-div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.principal-article-description{
+    margin: 0;
+}
+.blog-btn-controller{
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 70px;
+}
+
+.blog-btn-controller button{
+    background: none;
+    border: none;
+    padding: 8px;
+}
+.princial-article-time{
+    font-size: 12px;
+}
+
+.article-time{
+        justify-content: left;
+        margin-bottom: 12px;
+}
+
+.article-time img{
+    margin-right: 3px;
+}

@@ -1,17 +1,12 @@
 import React from 'react'
 import './CreateUserOptions.css'
-import CreateUserOptionsComponent from '../../components/createUserOptions/CreateUserOptions.'
+import CreateUserOptionsSteps from '../../components/createUserOptions/CreateOptionsSteps'
 
 
 const CreateUserOptions = () => {
   return (
     <div className='create-options-page'>
-        <div className="create-options-left">
-          <CreateUserOptionsComponent/>
-        </div>
-        <div className="create-options-right">
-          <img src="./../../../img/3dperson2.png"  />
-        </div>
+          <CreateUserOptionsSteps/>
     </div>
   )
 }

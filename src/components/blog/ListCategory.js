@@ -38,7 +38,7 @@ const ListCategory = () => {
   return (
 
 
-            <div className='blog-list-category'>
+            <div className='blog-list-category container'>
               {loading === true? 
                 <ul>  
                     <Link className={category === undefined? 'categorySelected':''} to="/blog"><li>Todas as categorias</li></Link>

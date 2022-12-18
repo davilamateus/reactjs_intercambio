@@ -15,21 +15,20 @@ const Radio = ({country}) => {
 
 useEffect(()=>{
 
-      async function loadRadio(){
-        await Api.get(`/radios?countryId=${country}`).then((data)=>{
-          setListRadio(data.data)
-          setLoading(true)
+  if(country !== undefined){
+    loadRadio()
 
-        })
-      }
-
-      loadRadio()
-
-
+  }
 },[country])
 
 
+async function loadRadio(){
+  await Api.get(`/radios?countryId=${country}`).then((data)=>{
+    setListRadio(data.data)
+    setLoading(true)
 
+  })
+}
 function backRadioChange(value){
   if(page-1 ===-1){
     setPage(listRadio.length-1)
@@ -85,7 +84,7 @@ return (
                    </audio>
                    <div className='radio-volume-bg'>
                     <div style={{width: volume + '%'}} className="radio-volume-barra"></div>
-                  <input  type="range" min="1" max="100"   onChange={(e)=>{setVolume(e.target.value)}}/> 
+                  <input className='radio-volume'  type="range" min="1" max="100"   onChange={(e)=>{setVolume(e.target.value)}}/> 
                    </div>
           </div>
           <div className="radios-bts">
@@ -97,12 +96,12 @@ return (
       </div>
       </>
       :
-      <SkeletonTheme baseColor="var(--8)" highlightColor="var(--11)">
-          <Skeleton style={{width:'130px',height:'130px',margin:'10px'}}/>
-          <div style={{width:'120px', margin:'0 auto', display:'flex', justifyContent:'center',flexDirection:'column'}}>
-            <Skeleton style={{width:'90px',height:'16px',margin:'0 auto'}}/>
-            <Skeleton style={{width:'110px',height:'26px',margin:'0px 0px'}}/>
-            <Skeleton style={{width:'110px',height:'10px',margin:'10px 0px'}}/>
+      <SkeletonTheme baseColor="var(--background)" highlightColor="var(--higher)">
+          <Skeleton style={{width:'110px',height:'110px',margin:'10px'}}/>
+          <div style={{width:'120px', margin:'0 auto', display:'flex',alignItems:'center', justifyContent:'center',flexDirection:'column'}}>
+            <Skeleton style={{width:'120px',height:'16px',margin:'0 auto'}}/>
+            <Skeleton style={{width:'130px',height:'22px',margin:'0px 0px'}}/>
+            <Skeleton style={{width:'135px',height:'10px',margin:'10px 0px'}}/>
             <div style={{display:'flex', alignItems:'center'}}>
             <Skeleton style={{width:'30px',height:'30px',margin:'0 auto'}}/>
             <Skeleton style={{width:'50px',height:'50px',margin:'0 2px'}}/>

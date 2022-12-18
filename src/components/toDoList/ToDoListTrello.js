@@ -7,7 +7,6 @@ import './ToDoListTrello.css'
 
 export default function ToDoListPage({open, inProgress, finished, refresh}) {
 
-
       const [obj, setObj] = useState(
         {
                 
@@ -141,7 +140,7 @@ export default function ToDoListPage({open, inProgress, finished, refresh}) {
                                   ...provided.draggableProps.style
                                 }}
                               >
-                                  {<Card  date={res.createdAt} title={res.title} status={res.status} id={res.id} description={res.description} category={res.category} refresh={refresh}/>}
+                                  {<Card  item={res}  refresh={refresh}/>}
 
                               </div>
                             )}

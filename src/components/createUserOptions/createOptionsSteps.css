@@ -1,0 +1,211 @@
+.create-options-box {
+  background-color: #fff;
+  max-width: 95vw;
+  width: 750px;
+  min-height: 600px;
+  padding: 16px;
+  text-align: center;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.create-options-box p {
+  margin: 24px 0;
+}
+.create-options-box h5 {
+  margin: 16px 0;
+}
+.create-options-box div {
+  justify-content: start;
+}
+
+.create-options-img {
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.create-options-img img {
+  width: 300px;
+  max-height: 300px;
+}
+
+.create-options-steps {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 16px;
+}
+
+.button-option01 {
+  border: solid 2px #68D9A5;
+  color: #68D9A5;
+  transition: 0.4s;
+}
+
+.button-option02 {
+  border: solid 2px #6958A3;
+  color: #6958A3;
+  transition: 0.4s;
+}
+
+.button-option03 {
+  border: solid 2px #FA385F;
+  color: #FA385F;
+  transition: 0.4s;
+}
+
+.button-option02, .button-option01, .button-option03 {
+  width: 300px;
+  height: 36px;
+  border-radius: 8px;
+  background: none;
+  margin-top: 8px;
+}
+
+.button-option02:hover, .button-option01:hover, .button-option03:hover {
+  box-shadow: 0 0.3rem 0.6rem rgba(31, 52, 62, 0.16);
+  transform: translate(0.2rem, -0.2rem);
+}
+
+.city-img {
+  width: 100%;
+  height: 200px;
+  background-size: cover;
+  border-radius: 10px;
+  max-width: 85vw;
+  margin: 32px 0;
+}
+
+.city-header {
+  justify-content: space-between;
+  width: 100%;
+}
+
+.city-country {
+  display: flex;
+  flex-direction: row-reverse !important;
+  align-items: center;
+  justify-content: center;
+}
+
+.city-country-flag {
+  width: 30px;
+  height: 20px;
+  background-size: contain;
+  margin-right: 8px;
+}
+
+.create-option-box {
+  background-color: #fff;
+  width: 750px;
+  max-width: 95vw;
+  justify-content: center;
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  border-radius: 16px;
+}
+.create-option-box div {
+  display: flex;
+  flex-direction: column;
+}
+
+.PhoneInput {
+  display: flex;
+  margin-top: 4px;
+  margin-left: 2px;
+  width: 198px;
+  overflow: hidden;
+  flex-direction: row !important;
+}
+
+.PhoneInputCountryIconImg {
+  width: 25px;
+  position: absolute;
+  margin-top: -25px;
+  border-radius: 2px;
+}
+
+.PhoneInputCountrySelect {
+  width: 0px;
+  height: 0;
+  margin-right: 8px;
+}
+
+.PhoneInputInput {
+  width: 150px;
+}
+
+.photouser-box {
+  width: 180px;
+  height: 150px;
+  background-size: cover;
+  border-radius: 10px;
+  opacity: 0.6;
+  margin-bottom: 0px;
+  transition: 0.7s;
+}
+
+.photouser-box:hover {
+  opacity: 1;
+}
+
+.photouser-box div input {
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+}
+
+.photouser-box div {
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100%;
+  background-size: 60px;
+}
+
+.todolist-suggetion-div {
+  margin: 16px 0px;
+}
+.todolist-suggetion-div div {
+  display: flex;
+}
+
+.todolist-check {
+  border: solid 1px #dfdfdf;
+  width: 8px;
+  height: 8px;
+  margin-right: 12px;
+  border-radius: 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+.todolist-check img {
+  opacity: 0;
+}
+
+.todolist-selected .todolist-check {
+  border: solid 1px #68D9A5;
+  background-color: #68D9A5;
+}
+
+.todolist-container {
+  flex-direction: column;
+  justify-content: center !important;
+  display: flex;
+  align-items: flex-start;
+}
+.todolist-container p {
+  margin: 0;
+}
+
+@media only screen and (max-width: 800px) {
+  .create-options-img {
+    position: relative;
+  }
+}/*# sourceMappingURL=createOptionsSteps.css.map */

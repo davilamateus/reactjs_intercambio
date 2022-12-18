@@ -6,25 +6,20 @@
 }
 
 .create-options-left {
-  min-width: 400px;
+  width: 450px;
+  max-width: 95vw;
   background-color: #fff;
-  min-height: 100vh;
-  width: 70vw;
-  border-top-right-radius: 59px;
-  border-bottom-right-radius: 59px;
+  min-height: 500px;
+  border-radius: 16px;
   display: flex;
   justify-content: center;
   text-align: left;
 }
 
-.create-options-right {
-  width: 30vw;
-}
-
 .create-options-right img {
-  width: 300px;
-  margin-left: -100px;
+  width: 200px;
   z-index: 2;
+  position: absolute;
 }
 
 .city-description {

@@ -1,27 +1,17 @@
-.inforbtnsbox{
-    width: 220px;
-    margin-top: 5px;
+.inforbtnsbox div {
+  margin-bottom: 10px;
 }
-
-.infor-bts-rows div{
-    background-color: var(--9);
-    width: 105px;
-    height: 92px;
-    border-radius: 4px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: -4px;
-
+.inforbtnsbox div a {
+  border-radius: 8px;
+  width: 90px;
+  height: 96px;
+  background-color: #fff;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
-.infor-bts-rows{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 15px;
-}
-
-.infor-bts-rows div a p{
-    margin-right: 0!important;
-    margin-top: 5px;
-}
+.inforbtnsbox div a h5 {
+  font-size: 11px;
+}/*# sourceMappingURL=inforsBtns.css.map */

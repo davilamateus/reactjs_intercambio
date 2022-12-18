@@ -1,8 +1,4 @@
 @import url("https://fonts.googleapis.com/css?family=Poppins:400,700,900");
-#root {
-  margin-left: 80px;
-}
-
 body {
   background-color: #F8F8F8;
 }
@@ -23,6 +19,7 @@ h2 {
 
 h3 {
   font-size: 26pt;
+  line-height: 30pt;
 }
 
 h4 {
@@ -30,7 +27,8 @@ h4 {
 }
 
 h5 {
-  font-size: 13pt;
+  font-size: 11pt;
+  line-height: 15pt;
 }
 
 p {
@@ -50,7 +48,7 @@ a {
 
 input {
   color: rgb(135, 135, 135);
-  min-width: 200px;
+  min-width: 265px;
   padding: 4px 0;
   margin: 4px 0px;
   background: none;
@@ -58,6 +56,12 @@ input {
   border-bottom: 1px solid #dfdfdf;
   font-size: 11pt;
   border-radius: 0;
+}
+
+textarea {
+  padding: 8px;
+  margin: 12px 0px;
+  border: 1px solid #dfdfdf;
 }
 
 input::-moz-placeholder {
@@ -89,8 +93,7 @@ input[type=number] {
 
 input[type=date]::-webkit-inner-spin-button,
 input[type=date]::-webkit-calendar-picker-indicator {
-  display: none;
-  -webkit-appearance: none;
+  opacity: 0;
 }
 
 input[type=date] {
@@ -117,6 +120,7 @@ select {
   background-repeat: no-repeat;
   background-position-x: 95%;
   background-position-y: 50%;
+  width: 265px;
 }
 
 label h5 {
@@ -138,7 +142,7 @@ button {
   border-radius: 16px;
   margin: 16px 0px;
   font-size: 13pt;
-  transition: 0.2s;
+  transition: 0.4s;
   box-shadow: 0px 4px 4px rgba(181, 181, 181, 0.0901960784);
 }
 
@@ -149,6 +153,27 @@ button {
 
 .btn-success {
   background-color: #68D9A5;
+  box-shadow: 0 0.3rem 0.6rem rgba(108, 217, 170, 0.431372549);
+}
+
+.btn-add-new {
+  background-color: #68D9A5 !important;
+  box-shadow: 0 0.3rem 0.6rem rgba(108, 217, 170, 0.431372549);
+  width: -webkit-max-content !important;
+  width: -moz-max-content !important;
+  width: max-content !important;
+  padding: 12px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 8px;
+  margin-left: auto;
+}
+.btn-add-new p {
+  color: #3B3B3B !important;
+  font-weight: 900 !important;
+  margin-left: 4px;
 }
 
 .btn-error {
@@ -166,6 +191,7 @@ button {
 .container {
   max-width: 1150px;
   margin: 0 auto;
+  padding: 16px;
 }
 
 .marginHeader {
@@ -174,6 +200,14 @@ button {
 
 .space-top {
   margin-top: 42px;
+}
+
+.skeletonTheme {
+  baseColor: #000;
+}
+
+#root .container {
+  padding-left: 100px;
 }
 
 @media only screen and (max-width: 1024px) {

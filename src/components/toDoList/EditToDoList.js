@@ -25,8 +25,7 @@ const EditToDoList = ({itemId, itemTitle, itemCategory, itemStatus, itemDescript
         setStatus(itemStatus)
         setDescription(itemDescription)
     },[])
-    console.log(itemStatus)
-    console.log(itemTitle)
+
 
     async function btnEdit(){
         if( title !== undefined && description !== undefined){
@@ -76,7 +75,7 @@ const EditToDoList = ({itemId, itemTitle, itemCategory, itemStatus, itemDescript
                 <div className="edit-todolist-description">
                     <h5>Descrição</h5>
                 <textarea value={description} onChange={(e)=>{setDescription(e.target.value)}} placeholder='Digite aqui a descrição da tarefa' cols="0" rows="7"></textarea>
-                <button onClick={()=>{btnEdit()}} className='btn-edit'>Salvar</button>
+                <button onClick={()=>{btnEdit()}} className='btn-add'>Salvar</button>
                 </div>
 
             </div>

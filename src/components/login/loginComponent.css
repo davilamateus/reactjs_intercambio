@@ -3,8 +3,11 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  min-height: 100vh;
   background-color: #fff;
+  width: 450px;
+  max-width: 95vw;
+  border-radius: 8px;
+  padding: 16px;
 }
 
 .login-header-active {
@@ -28,10 +31,6 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
-}
-
-.login-form-text {
-  margin: 16px 0;
 }
 
 .password-eyes {
@@ -76,13 +75,14 @@
 .forgetPassword {
   background: none;
   width: 200px;
-  height: 50px;
+  height: 30px;
   border-radius: 16px;
-  border: 2px solid #6958A3;
-  color: #6958A3;
+  border: 1px solid rgb(135, 135, 135);
+  color: rgb(135, 135, 135);
   opacity: 0.3;
   transition: 0.2s;
-  margin: 16px 0;
+  font-weight: 500;
+  margin: 16px 0px;
 }
 
 .forgetPassword:hover {
@@ -96,4 +96,48 @@
 
 .require-password-sucess {
   color: #68D9A5 !important;
+}
+
+.login-social {
+  width: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 16px;
+}
+.login-social div {
+  border: 1px solid #F8F8F8;
+  margin: 0 8px;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  transition: 0.3s;
+  overflow: hidden;
+}
+.login-social div span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  opacity: 0;
+  position: absolute;
+}
+.login-social div:hover {
+  box-shadow: 0 0.3rem 0.6rem rgba(31, 52, 62, 0.16);
+}
+
+.login-form-text {
+  margin: 16px 0px;
+}
+
+.kep-login-facebook {
+  border-radius: 0;
+  overflow: hidden;
+  opacity: 0;
+  position: absolute;
+  width: 10px;
+  background-color: aqua !important;
 }/*# sourceMappingURL=loginComponent.css.map */

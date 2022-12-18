@@ -1,0 +1,137 @@
+
+@import './../../styles/color';
+
+.todolist-page{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    
+}
+
+
+.todolist-header-page{
+    display: flex   ;
+    align-items: center!important;
+    justify-content: space-between;
+    width: 100%;
+    }
+.todolist-header-page h1{
+    margin: 0!important;
+    padding: 0!important;
+}
+
+.btn-view-suggestion{
+    display: none!important;
+    bottom: 60px;
+    display: flex;
+    right: 12px;
+    padding: 13px 10px 13px 13px;
+    border-radius: 8px;
+    border: none;
+    background-color: $primary-color;
+    margin-left: 8px;
+    img{
+        filter: brightness(5);
+    }
+    p{
+        font-weight: 500;
+        color: #ffffff;
+        margin-left: 5px;
+
+    }
+
+ }
+
+@media only screen and (max-width: 1064px) {
+    .todolist-page{
+        margin-left: 110px!important;
+    }
+    .toDoList-page-tables{
+        margin-left: -50px!important;
+    }
+    .todolist-header-page{
+        width: 80vw;
+
+    }
+
+}
+
+
+.todolist-skeleton div{
+    background-color: $box-background;
+    width: 300px;
+    height: 600px;
+
+}
+.todolist-skeleton{
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+
+@media only screen and (max-width: 700px) {
+
+    .container{
+        margin: 0 auto!Important;
+    }
+
+    .btn-add-new{
+        position: fixed;
+        bottom: 60px;
+        display: flex;
+        margin: 0 auto;
+        margin-top: 10px!important;
+        right: 12px;
+        padding: 13px 10px 13px 13px;
+        opacity: 1!important;
+        z-index: 2;
+     }
+     .btn-add-new svg{
+        transform: scale(1.4);
+     }  
+
+
+
+    .toDoList-page-tables{
+        width: 90vw!important;
+        margin: 0 auto!important;
+        margin-bottom: 100px!important; 
+        justify-content: center!important;
+        display: flex;
+    }
+    
+
+    .toDoList-page-simple-table{
+        margin-top: 20px!important;
+
+        width: 90vw!important;
+    }
+    .btn-add-new p{
+        display: none;
+    }
+
+    .todolist-item {
+        width: 98%;
+    }
+    .todolist-text{
+        width: 95%;
+    }
+    .todolist-container{
+        width: 95%;
+    }
+
+
+.add-todolist-container{
+    flex-direction: column;
+    gap: 0;
+
+}
+    .add-todolist-title{
+        display: none;
+    }
+    }

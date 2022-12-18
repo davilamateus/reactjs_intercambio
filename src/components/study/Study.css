@@ -1,81 +1,67 @@
-.study-box{
-    background-color: var(--9);
-    border-radius: 20px;
-    width: 540px;
-    height: 155px;
-    margin-bottom: 20px;
-    margin-top: -40px;
+.study-div {
+  background-color: #fff;
+  border-radius: 8px;
+  width: 410px;
+  height: 140px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
-.study-btn-levels button{
-    background: none;
-    border-radius: 20px;
-        margin: 0px 3px;
-        padding: 3px 14px;
-        margin-top: 10px;
-
+.study-text {
+  padding: 0 12px;
+  height: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: -10px;
 }
-.study-btn-levels{
-    margin: 0px 17px;
-    margin-bottom: 10px;
-
-}
-.study-btn-trans{
-
+.study-text h5 {
+  font-size: 18px;
+  font-weight: 600;
 }
 
-.study-container{
-    display: flex;
-    flex-direction: column;
-    margin-top: -10px;
+.study-btn-levels {
+  padding: 0px 12px;
+  margin-bottom: 10px;
+}
+.study-btn-levels button {
+  background: none;
+  margin-right: 8px;
+  padding: 4px 16px;
+  border-radius: 4px;
+  transition: transform 0.4s;
+}
+.study-btn-levels button:hover {
+  box-shadow: 0 0.3rem 0.6rem rgba(31, 52, 62, 0.16);
+  transform: translate(0.2rem, -0.2rem);
 }
 
-.study-container div{
-    display: flex;
-    align-items: center;
-    padding: 0px 20px;
+.study-btn-trans {
+  border: 1px solid #a5a5a5;
+  color: #a5a5a5;
 }
 
-.study-container div button{
-    background: none;
-    border: none;
-    
+.study-btn-medium {
+  border: 1px solid #6958A3;
+  color: #6958A3;
 }
 
-.study-container div h2{
-    padding: 0;
-    margin: 0;
-    font-size: 25px;
+.study-btn-hard {
+  border: 1px solid #FA385F;
+  color: #FA385F;
 }
 
-.study-container  p{
-    margin: 0;
-    padding: 0;
-    font-size: 18px;
-    margin-left: 20px;
-    margin-top: -15px;
-
+.study-btn-easy {
+  border: 1px solid #68D9A5;
+  color: #68D9A5;
 }
 
-.study-btn-trans{
-    border: 1px solid var(--5);
-    opacity: .7;
-    color:var(--5);
+.translation {
+  color: #a5a5a5;
+  font-weight: 500 !important;
 }
 
-.study-btn-hard{
-    border: 1px solid #E74962;
-    color: #E74962;
-}
-
-.study-btn-medium{
-    border: 1px solid #553F8E;
-    color: #553F8E;
-}
-
-
-.study-btn-easy{
-    border: 1px solid #A5C278;
-    color: #A5C278;
-}
-
+.study-btn-skeletons {
+  display: flex;
+}/*# sourceMappingURL=Study.css.map */

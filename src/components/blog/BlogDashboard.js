@@ -83,11 +83,11 @@ const intervals = [
 
 
   return (
-    <SkeletonTheme baseColor="var(--8)" highlightColor="var(--11)">
+    <SkeletonTheme baseColor="var(--background)" highlightColor="var(--higher)">
 
     <div className='blog-div'>
         <div className='blog-box'>
-            {loading == true? 
+            {loading == 1? 
          <>
                 <div className="box-header">
                     <h5>Blog</h5> 
@@ -98,13 +98,8 @@ const intervals = [
                     <Link to={`/blog/article/${article[page].id}`}>
                         <div style={{backgroundImage: `url("${(article[page].img)}")`}} className="blog-img"></div> 
                         <h5 className="blog-dashboard-article-category">{article[page].category.title }</h5>
-                        <h4>{article[page].title}</h4>
-                        <p> {article[page].description.split('').slice(0,200).join('')+"..." }</p>
-                        <div className="article-time">
-                            <img src="./../../../img/icons/icontime.svg" />
-                            <p className="princial-article-time">{timeSince(new Date(article[page].createdAt))}</p>
-                        </div>           
-                        <button>Continuar lendo</button>
+                        <h5>{article[page].title}</h5>
+                        <p> {article[page].description.split('').slice(0,200).join('')+"..." }</p>        
                     </Link>
                 </div>
             </div>
@@ -114,12 +109,12 @@ const intervals = [
         
         <>
             <Skeleton style={{width:'40px',height:'30px', margin:'10px 10px 10px 10px'}}/>
-            <Skeleton style={{width:'290px',height:'190px',margin:'10px 10px 10px 10px'}}/>
+            <Skeleton style={{width:'290px',height:'150px',margin:'10px 10px 10px 10px'}}/>
             <Skeleton style={{width:'90px',height:'20px',margin:'10px 10px 20px 10px'}}/>
             <Skeleton count={2} style={{width:'290px',height:'20px',margin:'0px 0px 0px 10px'}}/>
-            <Skeleton count={1} style={{width:'120px',height:'20px',margin:'0px 10px 0px 10px'}}/>
-            <Skeleton count={1} style={{width:'70px',height:'15px',margin:'20px 40px 20px 10px'}}/>
-            <Skeleton  style={{width:'200px',height:'35px',margin:'0 auto', display:'flex'}}/>
+            <Skeleton count={1} style={{width:'90px',height:'20px',margin:'0px 0px 0px 10px'}}/>
+            <Skeleton count={2} style={{width:'290px',height:'13px',margin:'0px 0px 0px 10px'}}/>
+            <Skeleton count={1} style={{width:'120px',height:'13px',margin:'0px 10px 16px 10px'}}/>
 
         </>
         

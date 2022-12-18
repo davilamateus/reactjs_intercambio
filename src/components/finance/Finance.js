@@ -4,12 +4,23 @@ import Api from './../../axios/Axios'
 import Chart from 'chart.js/auto';
 import Skeleton, { SkeletonTheme } from 'react-loading-skeleton'
 
+import {useSelector} from 'react-redux'
 
 
 
-const Finance = ({goal}) => {
+const Finance = () => {
 
   const token = sessionStorage.getItem('token');
+  const [goal,setGoal] = useState(undefined)
+  const userStore = useSelector((state) => state.user);
+
+  useEffect(()=>{
+    if(userStore.user!== false){
+      setGoal(      userStore.user.goal
+        )
+    }
+  },[userStore])
+
 
   const [finance,setFinance] = useState([{value:0}])
   const [total,setTotal] = useState(0)
@@ -21,16 +32,15 @@ const Finance = ({goal}) => {
   useEffect(()=>{
 
 
-    const customConfig = {
-      headers: {
-      'Content-Type': 'application/json',
-      "Authorization" : `Bearer ${token}`
-      }
-  };
 
 
     async function loadToDoList(){
-      await Api('/user/finance' ,customConfig).then((data)=>{
+      await Api('/user/finance' ,{
+        headers: {
+        'Content-Type': 'application/json',
+        "Authorization" : `Bearer ${sessionStorage.getItem('token')}`
+        }
+    }).then((data)=>{
         setFinance(data.data)
         setLoading(true)
       })
@@ -102,11 +112,11 @@ const Finance = ({goal}) => {
         datasets: [{
             backgroundColor:[
                 '#F5F4F4',
-                '#9EC36E'],
+                '#6AD9A8'],
             data: [(lessToGoal) , total],
             borderRadius:[0,12],
             borderWidth:10,
-            borderColor: ['#34efae00', '#9EC36E'],
+            borderColor: ['#34efae00', '#6AD9A8'],
             borderAlign:'center',
             spacing:-2,
         }]
@@ -154,7 +164,7 @@ const Finance = ({goal}) => {
                 <div className="finance-left">
                   <div className="finance-left-top">
                     <p>Investido:</p>
-                    <h2>{total}</h2>
+                    <h4>{total}</h4>
                   </div>
                   <div className="finance-left-bottom">
                     <div>
@@ -178,20 +188,20 @@ const Finance = ({goal}) => {
             </>
             :
             
-            <SkeletonTheme baseColor="var(--8)" highlightColor="var(--11)">
+            <SkeletonTheme baseColor="var(--background)" highlightColor="var(--higher)">
                 <Skeleton style={{width:'150px',height:'30px', margin:'10px'}}/>
                   <div style={{display:'flex'}}>
                     <div>
                       <Skeleton style={{width:'100px',height:'20px', margin:'3px 10px' }}/>
-                      <Skeleton style={{width:'120px',height:'30px', margin:'3px 10px 25px 10px' }}/>
+                      <Skeleton style={{width:'120px',height:'20px', margin:'3px 10px 15px 10px' }}/>
                       <Skeleton style={{width:'100px',height:'20px', margin:'3px 10px' }}/>
-                      <Skeleton style={{width:'120px',height:'30px', margin:'3px 10px 25px 10px' }}/>
+                      <Skeleton style={{width:'120px',height:'20px', margin:'3px 10px 15px 10px' }}/>
                       <Skeleton style={{width:'100px',height:'20px', margin:'3px 10px' }}/>
-                      <Skeleton style={{width:'120px',height:'30px', margin:'3px 10px 25px 10px' }}/>
+                      <Skeleton style={{width:'120px',height:'20px', margin:'3px 10px 15px 10px' }}/>
 
                     </div>
                     <div>
-                      <Skeleton style={{width:'150px',height:'150px', margin:'40px 10px',borderRadius:'100px' }}/>
+                      <Skeleton style={{width:'150px',height:'150px', margin:'0px 10px',borderRadius:'100px' }}/>
 
                     </div>
                   </div>

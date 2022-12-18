@@ -1,19 +1,21 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="50" height="51" viewBox="0 0 50 51">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="46" height="47" viewBox="0 0 46 47">
   <defs>
-    <filter id="Retângulo_22" x="0" y="0" width="50" height="51" filterUnits="userSpaceOnUse">
-      <feOffset dy="3" input="SourceAlpha"/>
-      <feGaussianBlur stdDeviation="3" result="blur"/>
-      <feFlood flood-opacity="0.161"/>
+    <filter id="Retângulo_22" x="0" y="0" width="46" height="47" filterUnits="userSpaceOnUse">
+      <feOffset dy="4" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3.5" result="blur"/>
+      <feFlood flood-color="#6cd9aa" flood-opacity="0.271"/>
       <feComposite operator="in" in2="blur"/>
       <feComposite in="SourceGraphic"/>
     </filter>
   </defs>
-  <g id="Grupo_764" data-name="Grupo 764" transform="translate(9 6)">
-    <g transform="matrix(1, 0, 0, 1, -9, -6)" filter="url(#Retângulo_22)">
-      <path id="Retângulo_22-2" data-name="Retângulo 22" d="M13,0h4A15,15,0,0,1,32,15v8A10,10,0,0,1,22,33H5a5,5,0,0,1-5-5V13A13,13,0,0,1,13,0Z" transform="translate(9 6)" fill="#5e3d95"/>
+  <g id="Grupo_3648" data-name="Grupo 3648" transform="translate(10.5 6.5)">
+    <g transform="matrix(1, 0, 0, 1, -10.5, -6.5)" filter="url(#Retângulo_22)">
+      <path id="Retângulo_22-2" data-name="Retângulo 22" d="M11.607,0h0A13.393,13.393,0,0,1,25,13.393v3.679A8.929,8.929,0,0,1,16.071,26H4.464A4.464,4.464,0,0,1,0,21.536V11.607A11.607,11.607,0,0,1,11.607,0Z" transform="translate(10.5 6.5)" fill="#6ad9a8"/>
     </g>
-    <circle id="Elipse_5" data-name="Elipse 5" cx="2" cy="2" r="2" transform="translate(14 10)" fill="#fff"/>
-    <circle id="Elipse_6" data-name="Elipse 6" cx="2" cy="2" r="2" transform="translate(14 15)" fill="#fff"/>
-    <circle id="Elipse_7" data-name="Elipse 7" cx="2" cy="2" r="2" transform="translate(14 20)" fill="#fff"/>
+    <g id="Grupo_3649" data-name="Grupo 3649">
+      <circle id="Elipse_5" data-name="Elipse 5" cx="1.5" cy="1.5" r="1.5" transform="translate(11 8)" fill="#454545"/>
+      <circle id="Elipse_6" data-name="Elipse 6" cx="1.5" cy="1.5" r="1.5" transform="translate(11 12)" fill="#454545"/>
+      <circle id="Elipse_7" data-name="Elipse 7" cx="1.5" cy="1.5" r="1.5" transform="translate(11 16)" fill="#454545"/>
+    </g>
   </g>
 </svg>

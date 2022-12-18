@@ -1,29 +1,213 @@
 .home{
     display: grid;
     gap: 10px;
+    grid-template-rows: auto;
+
 }
 .city-div{
     grid-column-start: 0;
     grid-column-end: 1;
-    grid-row-start: 0;
-    grid-row-end: 1;
+    grid-row-end: 2;
 }
-
 .blog-div{
     grid-column-start: 0;
     grid-column-end: 1;
-    grid-row-start: 1;
-    grid-row-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 4;
+    margin-top: -60px;
 }
 .radio-box {
     grid-column-start: 0;
     grid-column-end: 1;
-    grid-row-start: 3;
-    grid-row-end: 4;
+    grid-row-start: 4;
+    grid-row-end: 5;
 }
+
 .todolist-box{
-    grid-column-start: 0;
+    grid-column-start: 1;
     grid-column-end: 2;
-    grid-row-start: 0;
-    grid-row-end: 1;
+    grid-row-end: 5;
+    grid-row-start: 1;
+
+
+}
+
+.money-div{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-end: 2;
+    grid-row-start: 1;
+
+
+}
+
+.finance-box{
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+.inforbtnsbox{
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-end: 3;
+    grid-row-start: 1;
+}
+
+.study-div{
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row-end: 5;
+    grid-row-start: 3;
+}
+
+.ads-box{
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row-end: 6;
+    grid-row-start: 4;
+}
+
+@media only screen and (max-width: 1140px) {
+    .home{
+        max-width: 750px;
+    }
+
+    .blog-div{
+    margin-top: 0px!important;
+    }
+    .money-div{
+        grid-column-start:-2!important;
+        grid-row-end: 7;
+        grid-row-start: 5;
+    
+    
+    }
+    .finance-box{
+        grid-column-start:-1!important;
+        grid-row-start: 5;
+        grid-row-end: 8;
+        width: 300px!important;
+
+
+    }
+    .study-div{
+        grid-column-start: -2;
+        grid-row-end: 8;
+        grid-row-start: 7;
+        width: 310px!important;
+        height: 170px!important;
+    }
+    .ads-box{
+        grid-column-start: -1;
+        grid-row-end: 8;
+        grid-row-start: 7;
+        margin-top: 100px!important;
+        width: 300px!important;
+        height: 150px!important;
+    }
+    .ads-web{
+        display: none;
+    }
+    .ads-mobile{
+        div{
+            width: 300px;
+            height: 300px;
+            background-size: contain;
+            background-repeat: no-repeat;
+
+        }
+    }
+    .study-btn-levels{
+        button{
+            font-size: 12px;
+            padding: 4px 6px!important;
+
+        }
+    }
+
+    .inforbtnsbox{
+        grid-column-start: -2;
+        grid-row-end: 10;
+        grid-row-start: 8;
+        flex-direction: row;
+        display: flex;
+        margin-top: -80px;
+        div a{
+            width: 73px!important;
+            height: 72px!important;
+            margin-right: 5px;
+            overflow: hidden;
+            padding: 0!important;
+            h5{
+                font-size: 9px!important;
+            }
+        }
+    }
+}
+
+
+@media only screen and (max-width: 750px) {
+
+    #root .container{
+        padding-left: 0!important;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        overflow: hidden;
+    }
+    .container{
+        padding: 0;
+        margin-top: 20px!important;
+    }
+    .home{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .city-box{
+        width: 66vw;
+    }
+
+    .city-box {
+        width: 44vw!important;
+
+    }
+
+    #myChart{
+        transform: scale(1.4);
+    }
+
+    .weather-box{
+        width: 40vw!important;
+    }
+
+    .blog-div, .blog-box, .radio-box, .todolist-box ,.finance-box, .money-div ,.study-div,.ads-box{
+        width: 90vw!important;
+    }
+    .todolist-item {
+        padding: 0 8px;
+    }
+
+    .radio-box{
+        justify-content: space-around!important;
+    }
+
+    .ads-box{
+        grid-column-start: -1;
+        grid-row-end: 8;
+        grid-row-start: 7;
+        margin-top: 00px!important;
+        height: 150px!important;
+    }
+    .ads-mobile div {
+        width: 100%!Important;
+    }
+    .inforbtnsbox{
+        margin: 0;
+        margin-bottom: 120px!important;
+
+    }
+
 }

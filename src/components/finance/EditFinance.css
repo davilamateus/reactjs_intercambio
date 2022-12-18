@@ -1,0 +1,30 @@
+.edit-finance-div {
+  display: flex !important;
+  position: absolute;
+  top: 0;
+  left: 0;
+  align-items: center;
+  justify-content: center !important;
+  width: 100vw;
+  height: 100vh;
+  z-index: 4;
+  margin-top: -10px !important;
+  padding: 0 !important;
+}
+
+.edit-finance {
+  display: flex;
+  position: fixed;
+  justify-content: start !important;
+  align-items: flex-start !important;
+  flex-direction: column;
+  background-color: #fff;
+  padding: 32px !important;
+  border-radius: 8px;
+}
+.edit-finance input {
+  margin-bottom: 16px;
+}
+.edit-finance select {
+  margin-bottom: 16px;
+}/*# sourceMappingURL=EditFinance.css.map */

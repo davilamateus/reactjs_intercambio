@@ -1,0 +1,25 @@
+.add-finance-div {
+  display: flex;
+  position: absolute;
+  top: 0;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  z-index: 4;
+}
+
+.add-finance {
+  display: flex;
+  position: fixed;
+  flex-direction: column;
+  background-color: #fff;
+  padding: 32px;
+  border-radius: 8px;
+}
+.add-finance input {
+  margin-bottom: 16px;
+}
+.add-finance select {
+  margin-bottom: 16px;
+}/*# sourceMappingURL=AddFinance.css.map */

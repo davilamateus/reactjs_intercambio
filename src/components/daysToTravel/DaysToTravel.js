@@ -34,7 +34,7 @@ const DaysToTravel = ({city, when}) => {
           <div className='daysToTravel-box'>
             {loading == true ?
             <>
-                <h4>Você estará em <span className='daysToTravel-city'>{city}</span></h4>
+                <h4>Você eseetará em <span className='daysToTravel-city'>{city}</span></h4>
                 <h1>{days >= 0? days : 0}</h1>
                 <h4>dias.</h4>
             </>

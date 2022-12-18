@@ -1,36 +1,31 @@
-.money-div{
-    background-color: var(--9);
-    width: 310px;
-    height: 150px;
-    border-radius: 4px;
-    overflow: hidden;
-
+.money-div {
+  background-color: #fff;
+  width: 310px;
+  height: 150px;
+  border-radius: 4px;
+  overflow: hidden;
 }
 
-
-  #myChart{
-    z-index: 2;
-    margin-top: -px;
-    margin-left: -87px;
-    transform: scale(0.7);
-    width: 470px!important;
-    height: 110px!important;
-
-
-  }
-
-.box-Chart{
-    width:312px;
-    height: 140px;
-    overflow: hidden;
+#myChart {
+  z-index: 2;
+  margin-top: -20px;
+  margin-left: -87px;
+  transform: scale(0.7);
+  width: 470px !important;
+  height: 140px !important;
 }
 
-.Cot-number{
-    margin-bottom: -86px;
-    margin-top: -10px;
-    margin-left: 10px;
-    font-size: 22px;
-    font-weight: 800;
-    z-index: 3;
-    position: absolute;
+.box-Chart {
+  width: 312px;
+  height: 140px;
+  overflow: hidden;
 }
+
+.Cot-number {
+  margin-bottom: -86px;
+  margin-top: -15px;
+  margin-left: 10px;
+  font-size: 18px;
+  z-index: 3;
+  position: absolute;
+}/*# sourceMappingURL=Money.css.map */

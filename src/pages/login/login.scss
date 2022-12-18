@@ -5,43 +5,34 @@
 
 .login-div{
     @include displayFlex;
+    flex-direction: column;
+    min-height: 100vh;
+    justify-content: center;
 
 }
-.login-left-text-mobile{
+
+.login-text-mobile{
     display: none;
 }
-.login-div-left{
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-    align-items: center;
-    justify-content: end;
 
-
+.login-text{
+    width: 300px;
 }
-.login-div-right{
-    width: 65vw;
-    height: 100vh;
-    min-width: 400px;
-    margin-left: auto;
+
+.login-top{
+    @include displayFlex;
 
 }
-.login-logo{
-    width: 150px;
-    margin-bottom: 64px;
 
+.login-logo {
+    width: 100px;
 }
-.login-left-text {
-    width: 220px;
-    margin-bottom: 64px;
-}
+
 .login-3dperson{
     max-width: 400px;
     z-index: 2;
     left:15%;
     top: 25%;
-    position: absolute;
-
 }
 .login-3dperson { 
     animation-name: floating;
@@ -50,6 +41,11 @@
     animation-timing-function: ease-in-out;
     margin-top: 5px;
 }
+
+.login-footer{
+    bottom: 10px;
+    position: absolute;
+}
  
 @keyframes floating {
     0% { transform: translate(-70px,   0px); }
@@ -57,32 +53,41 @@
     100%   { transform: translate(-70px, -0px); }   
 }
 
-@media only screen and (max-width: 1024px){
-    .login-div{
-        flex-direction: column-reverse;
 
-    }
-    .login-div-right{
-        width: 100vw;
-    }
-    .login-3dperson{
-        left:-10vw;
-        width: 330px;
-        top: 70%;
-    }
-    .login-div-left{
-        height: 300px;
-    }
-    .login-left-text-mobile{
-        display: block;
-        width: 300px;
-    }
-    .login-left-text{
+@media only screen and (max-width: 1200px) {
+    .login-text{
         display: none;
     }
-}
-@media only screen and (max-width: 500px){
-    .login-3dperson{
-        width: 180px;
+    .login-text-mobile{
+        display: flex;
+        width: 300px;
     }
+    .login-footer{
+        bottom: 10px;
+        position: relative;
+        margin-top: 64px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+    }
+    .login-3dperson{
+        width: 300px;
+        margin-left: -160px;
+        position: absolute;
+    }
+
 }
+@media only screen and (max-width: 750px) {
+    .login-top{
+        display: flex;
+        .login-3dperson{
+            width: 200px;
+            position: absolute;
+            margin-left: -150px;
+            bottom: 0;
+        }
+    }
+    
+}
+

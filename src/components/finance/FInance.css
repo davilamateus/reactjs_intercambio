@@ -1,52 +1,52 @@
-.finance-box{
-    background-color: var(--9);
-    border-radius: 4px;
-    width: 310px;
-    height: 300px;
+.finance-box {
+  background-color: #fff;
+  border-radius: 8px;
+  width: 310px;
+  height: 250px;
 }
 
 .finance-container {
-    display: flex;
+  display: flex;
 }
 
-.finance-right{
-    width: 154px;
-    margin-top: 40px;
-    margin-left: 30px;
+.finance-right {
+  width: 154px;
+  margin-top: 4px;
+  margin-left: 30px;
 }
 
-.finance-left{
-    margin-left: 15px;
+.finance-left {
+  margin-left: 15px;
 }
 
-.finance-left h2, .finance-left h4{
-    margin: 0px;
-    padding: 0;
+.finance-left h4 {
+  margin: 0px;
+  padding: 0;
+  font-size: 20px;
 }
 
-.finance-left h2{
-    color: var(--3);
+.finance-left-top h4 {
+  color: #68D9A5;
 }
 
-.finance-lessToFoal{
-    color: var(--1);
+.finance-lessToFoal {
+  color: #FA385F;
 }
 
-.finance-goal{
-    color: var(--2);
+.finance-goal {
+  color: #6958A3;
 }
 
-.finance-left p{
-    padding: 0;
-    margin: 0;
-    margin-top: 20px;
-    margin-bottom: 5px;
-    font-size: 14px;
+.finance-left p {
+  padding: 0;
+  margin: 0;
+  margin-top: 4px;
+  margin-bottom: 5px;
+  font-size: 14px;
 }
 
-.finance-porcents{
-    font-weight: 800;
-    color: var(--5);
-    margin-top: -88px;
-    margin-left: 58px;
-}
+.finance-porcents {
+  font-weight: 800;
+  margin-top: -88px;
+  margin-left: 58px;
+}/*# sourceMappingURL=Finance.css.map */

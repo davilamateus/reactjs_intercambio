@@ -1,19 +1,20 @@
 
 @media only screen and (max-width: 1060px) {
     .article-page{
-        max-width: 80%;
-        margin-left: 10 0px!important ;
         margin-bottom: 100px;
-
+        
+        
+        margin: 0 auto;
     }
+.article-page{
 
+}
 }
 
 
 @media only screen and (max-width: 760px) {
     .article-page{
-        max-width: 95%;
-        margin-left: 0px!important ;
+        max-width: 100%;
         margin-bottom: 100px;
     }
 

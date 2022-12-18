@@ -6,31 +6,37 @@ import Skeleton, { SkeletonTheme } from 'react-loading-skeleton'
 
 const ToDoList = () => {
 
-  const token = sessionStorage.getItem('token');
 
   const [toDoList,setToDoList] = useState(undefined)
   const [loading, setLoading] = useState(false)
   
-      const customConfig = {
+
+  
+  
+  async function loadToDoList(){
+    await Api('/user/todolist' ,{
         headers: {
         'Content-Type': 'application/json',
-        "Authorization" : `Bearer ${token}`
-        }
-    };
-  
-  
-      async function loadToDoList(){
-        await Api('/user/todolist' ,customConfig).then((data)=>{
+        "Authorization" : `Bearer ${sessionStorage.getItem('token')}`
+      }
+    }).then((data)=>{
           setToDoList(data.data.data)
-          setLoading(true)
         })
       }
 
+
   useEffect(()=>{
 
-    loadToDoList()
-  },[])
 
+      loadToDoList()
+    
+
+  },[])
+useEffect(()=>{
+  if(toDoList !== undefined){
+    setLoading(true)
+  }
+},[toDoList])
   
 
 
@@ -44,19 +50,17 @@ const ToDoList = () => {
               </div>
               <div className='todolist-scrol'>
                   {toDoList.map((item)=>(
-                    <Card key={item.id} refresh={loadToDoList} date={item.createdAt} id={item.id} title={item.title} status={item.status} category={item.category} description={item.description} />
+                    <Card key={item.id} refresh={loadToDoList} item={item}  />
 
                   ))  }      
                 </div>
             
             </>
             :
-            <SkeletonTheme baseColor="var(--8)" highlightColor="var(--11)">
+            <SkeletonTheme baseColor="var(--background)" highlightColor="var(--higher)">
                 <Skeleton style={{width:'150px',height:'30px', margin:'10px'}}/>
-                <Skeleton style={{width:'93%',height:'110px', margin:'3px 10px' }}/>
-                <Skeleton style={{width:'93%',height:'110px', margin:'3px 10px' }}/>
-                <Skeleton style={{width:'93%',height:'110px', margin:'3px 10px' }}/>
-                <Skeleton style={{width:'93%',height:'110px', margin:'3px 10px' }}/>
+                <Skeleton count={7} style={{width:'93%',height:'80px', margin:'3px 10px' }}/>
+  
             </SkeletonTheme>
             
             }

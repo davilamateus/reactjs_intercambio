@@ -1,0 +1,59 @@
+@import './../../styles/color';
+
+.edit-todolist-div{
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    margin: 0 auto;
+    align-items: center;
+    z-index: 4;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+}
+.todolist-page{
+    min-height: 100vh;
+}
+.edit-bg-degrade{
+    background-color: rgba(0, 0, 0, 0.458);
+    width: 100vw;
+    height: 100vh;
+    backdrop-filter: blur(2px);
+    position: fixed;
+}
+
+.edit-todolist{
+    position: fixed;
+}
+.edit-todolist-container{
+    background-color: $box-background;
+    border-radius: 10px;
+    padding: 26px;
+    display: flex;
+    gap: 30px;
+}
+
+.edit-todolist-configs h5{
+    margin-bottom: 8px;
+    margin-top: 10px;
+}
+.edit-todolist-categorys-btns{
+    display: flex;
+    margin: 0;
+}
+.edit-todolist-categorys-btns button{
+    margin-top:10px;
+    margin-right: 3px;
+    
+}
+
+
+
+
+
+.edit-todolist-description{
+    flex-direction: column!important;
+    display: flex;
+}

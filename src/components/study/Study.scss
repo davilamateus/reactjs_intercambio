@@ -1,0 +1,68 @@
+@import'./../../styles/color';
+
+
+.study-div{
+    background-color: $box-background;
+    border-radius: 8px;
+    width: 410px;
+    height: 140px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.study-text{
+    padding: 0 12px;
+    height: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: -10px;
+    h5{
+        font-size: 18px;
+        font-weight: 600;
+    }
+}
+.study-btn-levels{
+    padding: 0px 12px;
+    margin-bottom: 10px;
+    button{
+        background: none;
+        margin-right: 8px;
+        padding: 4px 16px;
+        border-radius: 4px;
+        transition: transform 0.4s ;
+        &:hover{
+            box-shadow: 0 0.3rem 0.6rem rgb(31 52 62 / 16%);
+            transform: translate(0.2rem,-0.2rem);
+        }
+    }
+}
+.study-btn-trans{
+    border: 1px solid $paragraph-color;
+    color: $paragraph-color;
+}
+
+.study-btn-medium{
+    border: 1px solid $primary-color;
+    color: $primary-color;
+}
+
+.study-btn-hard{
+    border: 1px solid $secondary-color;
+    color: $secondary-color;
+}
+.study-btn-easy{
+    border: 1px solid $terciary-color;
+    color: $terciary-color;
+}
+
+.translation{
+    color: $paragraph-color;
+    font-weight: 500!important;
+
+}
+
+.study-btn-skeletons{
+    display: flex;
+}
