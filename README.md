@@ -1,71 +1,117 @@
-# Getting Started with Create React App
+# ReactJS Intercâmbio Project
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Overview
 
-## Available Scripts
+This project is a responsive web application built using ReactJS and TypeScript, primarily aimed at providing information or promotional content related to exchange programs, cultural exchange experiences, or educational opportunities abroad. The application is structured to provide users with an engaging interface and efficient navigation.
 
-In the project directory, you can run:
+## Installation
 
-### `npm start`
+To set up and run this project locally, please follow the detailed instructions below:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Prerequisites
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+* **Node.js** (version 14.x or higher)
+* **npm** (Node Package Manager, usually included with Node.js)
+* **Git** (optional, for cloning the repository)
 
-### `npm test`
+### Steps
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. **Clone the Repository**
 
-### `npm run build`
+Clone the project from GitHub or your source repository:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```bash
+git clone <repository-url>
+cd reactjs_intercambio-main
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+2. **Install Dependencies**
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Install all necessary project dependencies with npm:
 
-### `npm run eject`
+```bash
+npm install
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+3. **Run the Application**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Start the application in development mode:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+```bash
+npm start
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+The application should now be running at [http://localhost:3000](http://localhost:3000).
 
-## Learn More
+### Build for Production
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+To create a production-ready build:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```bash
+npm run build
+```
 
-### Code Splitting
+The build artifacts will be stored in the `build` directory.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Project Structure
 
-### Analyzing the Bundle Size
+This ReactJS project is organized as follows:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+```
+reactjs_intercambio-main/
+├── public/
+│   ├── fonts/ (Custom Poppins fonts)
+│   ├── images/
+│   ├── icons/
+│   ├── index.html (Main HTML file)
+│   └── manifest.json
+├── src/
+│   ├── components/ (Reusable React components)
+│   ├── pages/ (Application pages or views)
+│   ├── styles/ (CSS Modules or Styled Components)
+│   ├── utils/ (Utility functions and helpers)
+│   ├── App.tsx (Main component)
+│   └── index.tsx (Entry point for React application)
+├── package.json (Project dependencies and scripts)
+├── package-lock.json (Dependency lock file)
+└── tsconfig.json (TypeScript compiler configuration)
+```
 
-### Making a Progressive Web App
+## Technologies Used
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+This project incorporates the following technologies and tools:
 
-### Advanced Configuration
+* **ReactJS** (JavaScript library for building user interfaces)
+* **TypeScript** (Programming language that adds static typing to JavaScript)
+* **CSS Modules or Styled Components** (for scoped and maintainable CSS)
+* **Custom Fonts (Poppins)** (for consistent and appealing typography)
+* **Webpack or Create React App** (for bundling and project setup)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## Contribution Guidelines
 
-### Deployment
+Contributions are welcome! Follow these steps to contribute:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+1. **Fork the repository** on GitHub.
+2. **Create a feature branch** for your new functionality or bug fix:
 
-### `npm run build` fails to minify
+```bash
+git checkout -b feature/YourFeature
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-# reactjs_intercambio
+3. **Commit your changes** with a clear and descriptive message:
+
+```bash
+git commit -m 'Add YourFeature functionality'
+```
+
+4. **Push your changes** to your fork:
+
+```bash
+git push origin feature/YourFeature
+```
+
+5. **Open a Pull Request** on GitHub.
+
+## License
+
+This project is open-source. Please review the included LICENSE file or the specific licensing conditions within the repository.
