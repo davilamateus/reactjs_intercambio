@@ -1,9 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="15.476" height="15.476" viewBox="0 0 15.476 15.476">
-  <g id="vuesax_outline_eye" data-name="vuesax/outline/eye" transform="translate(-108 -188)">
-    <g id="eye" transform="translate(108 188)">
-      <path id="Vector" d="M2.792,5.584A2.792,2.792,0,1,1,5.584,2.792,2.793,2.793,0,0,1,2.792,5.584Zm0-4.617A1.825,1.825,0,1,0,4.617,2.792,1.827,1.827,0,0,0,2.792.967Z" transform="translate(4.946 4.946)" fill="#cecece"/>
-      <path id="Vector-2" data-name="Vector" d="M6.8,11.633A7.612,7.612,0,0,1,.513,7.751a3.906,3.906,0,0,1,0-3.869A7.629,7.629,0,0,1,6.8,0,7.61,7.61,0,0,1,13.08,3.882a3.906,3.906,0,0,1,0,3.869A7.61,7.61,0,0,1,6.8,11.633ZM6.8.967A6.66,6.66,0,0,0,1.332,4.4a2.93,2.93,0,0,0,0,2.824A6.66,6.66,0,0,0,6.8,10.665a6.66,6.66,0,0,0,5.468-3.437,2.93,2.93,0,0,0,0-2.824A6.66,6.66,0,0,0,6.8.967Z" transform="translate(0.938 1.922)" fill="#cecece"/>
-      <path id="Vector-3" data-name="Vector" d="M0,0H15.476V15.476H0Z" fill="none" opacity="0"/>
-    </g>
-  </g>
-</svg>

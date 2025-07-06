@@ -1,8 +1,0 @@
-<svg id="ic-actions-paper-close" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-  <rect id="Retângulo_473" data-name="Retângulo 473" width="24" height="24" fill="none"/>
-  <g id="ic-actions-paper-close-2" data-name="ic-actions-paper-close">
-    <path id="Caminho_445" data-name="Caminho 445" d="M14.856,2H6A2,2,0,0,0,4,4V20a2,2,0,0,0,2,2H18a2,2,0,0,0,2-2V8.919a1,1,0,0,0-.181-.574L15.675,2.426A1,1,0,0,0,14.856,2Z" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="bevel" stroke-width="1.5" fill-rule="evenodd"/>
-    <line id="Linha_568" data-name="Linha 568" x1="7.071" y1="7.071" transform="translate(8.464 9.239)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="bevel" stroke-width="1.5"/>
-    <line id="Linha_569" data-name="Linha 569" y1="7.071" x2="7.071" transform="translate(8.464 9.239)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="bevel" stroke-width="1.5"/>
-  </g>
-</svg>
